@@ -48,6 +48,3 @@ Parsed: filter id 34 and cfe [E]
 
 User: What is the way to change the prediction for the data point with the id number 34?
 Parsed: filter id 34 and cfe [E]
-
-User: Could you please tell me the predictions for id 5132 and what you have to do to flip the prediction?
-Parsed: filter id 54 and predict and cfe [E]

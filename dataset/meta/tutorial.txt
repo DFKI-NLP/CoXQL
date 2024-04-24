@@ -1,0 +1,92 @@
+User: What's counterfactual generation in NLP?
+Parsed: qatutorial qacfe [E]
+
+User: How does counterfactual work?
+Parsed: qatutorial qacfe [E]
+
+User: What is a counterfactual?
+Parsed: qatutorial qacfe [E]
+
+User: Can you explain the concept of counterfactual generation in NLP?
+Parsed: qatutorial qacfe [E]
+
+User: What are the key aspects of counterfactual generation in the NLP domain?
+Parsed: qatutorial qacfe [E]
+
+User: How does counterfactual reasoning work in NLP applications?
+Parsed: qatutorial qacfe [E]
+
+User: What's data augmentation?
+Parsed: qatutorial qada [E]
+
+User: How does data augmentation work?
+Parsed: qatutorial qada [E]
+
+User: Explain data augmentation to me
+Parsed: qatutorial qada [E]
+
+User: Can you provide an overview of data augmentation in the context of NLP?
+Parsed: qatutorial qada [E]
+
+User: What are the main objectives of using data augmentation techniques in NLP?
+Parsed: qatutorial qada [E]
+
+User: What's feature attribution in NLP domain?
+Parsed: qatutorial qafa [E]
+
+User: Feature attribution in NLP?
+Parsed: qatutorial qafa [E]
+
+User: What's feature importance?
+Parsed: qatutorial qafa [E]
+
+User: How does feature attribution work in the NLP domain?
+Parsed: qatutorial qafa [E]
+
+User: Can you explain feature attribution in the context of NLP?
+Parsed: qatutorial qafa [E]
+
+User: What role does feature attribution play in NLP?
+Parsed: qatutorial qafa [E]
+
+User: Could you provide an overview of feature attribution in the NLP domain?
+Parsed: qatutorial qafa [E]
+
+User: What are the applications of feature attribution in NLP?
+Parsed: qatutorial qafa [E]
+
+User: What's rationalization in NLP?
+Parsed: qatutorial qarationale [E]
+
+User: How does rationalization work?
+Parsed: qatutorial qarationale [E]
+
+User: What are generated rationales used for?
+Parsed: qatutorial qarationale [E]
+
+User: Can you provide an explanation of rationalization in the NLP domain?
+Parsed: qatutorial qarationale [E]
+
+User: Explain the rationalization
+Parsed: qatutorial qarationale [E]
+
+User: What are the main objectives of rationalization in NLP research?
+Parsed: qatutorial qarationale [E]
+
+User: What's semantic similarity?
+Parsed: qatutorial qasim [E]
+
+User: Definition of semantic similarity?
+Parsed: qatutorial qasim [E]
+
+User: Explain semantic similarity to me.
+Parsed: qatutorial qasim [E]
+
+User: Can you provide an overview of semantic similarity in the context of NLP?
+Parsed: qatutorial qasim [E]
+
+User: How is semantic similarity measured in NLP tasks?
+Parsed: qatutorial qasim [E]
+
+User: Can you provide a concise definition of semantic similarity in the context of NLP?
+Parsed: qatutorial qasim [E]

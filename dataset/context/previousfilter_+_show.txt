@@ -1,2 +1,0 @@
-User: show me this data point
-Parsed: previousfilter and show [E]
