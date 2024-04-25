@@ -288,7 +288,7 @@ if __name__ == "__main__":
     device = "cuda"
     # initializing the multi-prompt parsing model
     parser = MultiPromptParser(decoder_model, tokenizer, st_model, device)
-    evaluation_file = "experiments/testset_without_flag.txt"  # "experiments/testset.txt" # "experiments/testset_without_flag.txt"
+    evaluation_file = "dataset/testset_without_flag.txt"  # "dataset/testset.txt" 
     correct_parses = []
     user_inputs = []
     with open(evaluation_file) as f:
