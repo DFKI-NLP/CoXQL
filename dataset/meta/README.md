@@ -1,0 +1,8 @@
+# Meta
+| File name    | Function                  | Grammar            | Additional Attributes                                                               | Description                                                                                      |
+|--------------|---------------------------|--------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------| 
+| data.txt     | data()                    | data               | -                                                                                   | Show the metadata of the dataset                                                                 |
+| domain.txt   | domain(query)             | domain             | -                                                                                   | Explain terminology or concepts outside of the system’s functionality, but related to the domain |
+| function.txt | function()                | function           | -                                                                                   | Explain the functionality of the system                                                                  |
+| model.txt    | model()                   | model              | -                                                                                   | Show the metadata of the model|
+| tutorial.txt | qatutorial(op_name) | qatutorial op_name | qacfe, qada, qafa, qarationale, qasim, qaadv, qainflu, qaedit, qalearn, qaunlearn | Show most similar instances                                                                      | 
