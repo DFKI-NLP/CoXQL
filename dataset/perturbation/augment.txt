@@ -21,3 +21,42 @@ Parsed: filter id 175 and augment [E]
 
 User: Kindly generate a new variant based on id 200.
 Parsed: filter id 200 and augment [E]
+
+User: Could you please augment instance 120 somehow?
+Parsed: filter id 120 and augment [E]
+
+User: Do you support data augmentation for instance 32?
+Parsed: filter id 32 and augment [E]
+
+User: I'd like to see an augmented version for id 84.
+Parsed: filter id 84 and augment [E]
+
+User: Is data augmentation available for id 32?
+Parsed: filter id 32 and augment [E]
+
+User: Does your system offer data augmentation capabilities for id 673?
+Parsed: filter id 673 and augment [E]
+
+User: Are you capable of performing data augmentation for id 344?
+Parsed: filter id 344 and augment [E]
+
+User: Is data augmentation available for id 32?
+Parsed: filter id 32 and augment [E]
+
+User: Does your system offer data augmentation capabilities for id 673?
+Parsed: filter id 673 and augment [E]
+
+User: Can I apply data augmentation for ID 970?
+Parsed: filter id 970 and augment [E]
+
+User: Is data augmentation an option for ID 278?
+Parsed: filter id 278 and augment [E]
+
+User: Does the system support data augmentation for ID 704?
+Parsed: filter id 704 and augment [E]
+
+User: Does your system provide data augmentation capabilities for ID 457?
+Parsed: filter id 457 and augment [E]
+
+Is it possible to augment data for ID 2673?
+Parsed: filter id 2673 and augment [E]

@@ -27,3 +27,42 @@ Parsed: filter id 34 and predict [E]
 
 User: predict 22
 Parsed: filter id 22 and predict [E]
+
+User: What is the most likely prediction for id 47?
+Parsed: filter id 47 and predict [E]
+
+User: What was predicted for id 99?
+Parsed: filter id 99 and predict [E]
+
+User: Id 780. What does the model predict?
+Parsed: filter id 780 and predict [E]
+
+User: What is the most probable inference for id 47?
+Parsed: filter id 47 and predict [E]
+
+User: What is the expected prediction for id 873?
+Parsed: filter id 873 and predict [E]
+
+User: What is the likely outcome or forecast for id 391?
+Parsed: filter id 391 and predict [E]
+
+User: What is the most probable inference for id 47?
+Parsed: filter id 47 and predict [E]
+
+User: What is the expected prediction for id 873?
+Parsed: filter id 873 and predict [E]
+
+User: What is the most probable inference for ID 437?
+Parsed: filter id 437 and predict [E]
+
+User: Could you provide the expected prediction for ID 502?
+Parsed: filter id 502 and predict [E]
+
+User: What is the prediction most likely for ID 923?
+Parsed: filter id 923 and predict [E]
+
+User: What is the expected prediction for ID 517?
+Parsed: filter id 517 and predict [E]
+
+User: Can you tell me the most probable inference for ID 1823?
+Parsed: filter id 1823 and predict [E]

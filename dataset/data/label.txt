@@ -12,3 +12,27 @@ Parsed: label [E]
 
 User: Show how often which target label appears in the entire dataset
 Parsed: label [E]
+
+User: What labels do we have?
+Parsed: label [E]
+
+User: Tell me about the dataset labels, please.
+Parsed: label [E]
+
+User: What classification labels do we have at our disposal?
+Parsed: label [E]
+
+User: What are the different labeling options we have?
+Parsed: label [E]
+
+User: What label options do we currently have access to?
+Parsed: label [E]
+
+User: What classification labels do we have at our disposal?
+Parsed: label [E]
+
+User: What are the different labeling options we have?
+Parsed: label [E]
+
+User: What label options do we currently have access to?
+Parsed: label [E]

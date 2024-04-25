@@ -9,3 +9,78 @@ Parsed: function [E]
 
 User: what can i do?
 Parsed: function [E]
+
+User: Show me the functions available in the system
+Parsed: function [E]
+
+User: What can this chat do for me?
+Parsed: function [E]
+
+User: What are the functions that you can perform?
+Parsed: function [E]
+
+User: Tell me about your functionality, please.
+Parsed: function [E]
+
+User: What are the tasks you are capable of completing?
+Parsed: function [E]
+
+User: What abilities do you possess in terms of functionality?
+Parsed: function [E]
+
+User: What are the operations you can carry out?
+Parsed: function [E]
+
+User: What actions are you able to perform?
+Parsed: function [E]
+
+User: What are the various tasks you can execute?
+Parsed: function [E]
+
+User: What are the tasks you are capable of completing?
+Parsed: function [E]
+
+User: What abilities do you possess in terms of functionality?
+Parsed: function [E]
+
+User: What are the operations you can carry out?
+Parsed: function [E]
+
+User: What actions are you able to perform?
+Parsed: function [E]
+
+User: What are the features and capabilities that you have?
+Parsed: function [E]
+
+User: What functions do you have at your disposal?
+Parsed: function [E]
+
+User: What tasks are within your range of capabilities?
+Parsed: function [E]
+
+User: What functionalities do you offer?
+Parsed: function [E]
+
+User: What are the tasks you are capable of completing?
+Parsed: function [E]
+
+User: What abilities do you possess in terms of functionality?
+Parsed: function [E]
+
+User: What tasks can you successfully accomplish?
+Parsed: function [E]
+
+User: What functional capabilities do you possess?
+Parsed: function [E]
+
+User: What tasks are within your capabilities?
+Parsed: function [E]
+
+User: Tell me about the tasks you can handle.
+Parsed: function [E]
+
+User: What functionalities are you capable of?
+Parsed: function [E]
+
+User: What are the various tasks you can execute?
+Parsed: function [E]

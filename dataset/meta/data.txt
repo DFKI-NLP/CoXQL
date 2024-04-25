@@ -22,11 +22,23 @@ Parsed: data [E]
 User: show me the features
 Parsed: data [E]
 
-User: more info about the data and model
-Parsed: data and model [E]
+User: Introduce me something about data!
+Parsed: data [E]
 
-User: Could you describe the data and model?
-Parsed: data and model [E]
+User: What does the data look like?
+Parsed: data [E]
 
-User: What's the data like and what can you do?
-Parsed: data and function [E]
+User: Can you provide some information about the concept of data?
+Parsed: data [E]
+
+User: Could you introduce me to the topic of data and its significance?
+Parsed: data [E]
+
+User: Tell me about the characteristics and types of data.
+Parsed: data [E]
+
+User: What can you tell me about the nature and structure of data?
+Parsed: data [E]
+
+User: I'm interested in learning more about data. Can you provide an introduction to the topic?
+Parsed: data [E]

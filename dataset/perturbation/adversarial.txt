@@ -54,3 +54,27 @@ Parsed: filter id 79 and adversarial [E]
 
 User: Show me a case where the model would be confused by instance 33
 Parsed: filter id 33 and adversarial [E]
+
+User: Any adversarial samples for id 67?
+Parsed: filter id 67 and adversarial [E]
+
+User: I would like to use adversarial training to generate new exaples. Could you show me some for id 53?
+Parsed: filter id 53 and adversarial [E]
+
+User: Adversarial attack on sample 115, please.
+Parsed: filter id 115 and adversarial [E]
+
+User: What would be an adversarial alternative for id 77?
+Parsed: filter id 77 and adversarial [E]
+
+User: Are there any generated adversarial examples corresponding to ID 67?
+Parsed: filter id 67 and adversarial [E]
+
+User: Can you provide me with adversarial samples related to ID 53?
+Parsed: filter id 53 and adversarial [E]
+
+User: Are there any specifically crafted adversarial inputs for ID 209?
+Parsed: filter id 209 and adversarial [E]
+
+User: Do you have any examples of adversarial attacks targeted at ID 2013?
+Parsed: filter id 2013 and adversarial [E]

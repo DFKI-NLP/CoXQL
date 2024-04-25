@@ -9,3 +9,24 @@ Parsed: model [E]
 
 User: tell me about the model
 Parsed: model [E]
+
+User: Tell me something about the model?
+Parsed: model [E]
+
+User: describe the model!
+Parsed: model [E]
+
+User: Can you provide some details about the model?
+Parsed: model [E]
+
+User: Could you describe the model in more detail?
+Parsed: model [E]
+
+User: Tell me about the characteristics and features of the model.
+Parsed: model [E]
+
+User: What can you tell me about the model and its functioning?
+Parsed: model [E]
+
+User: I'm interested in learning more about the model. Can you provide a description?
+Parsed: model [E]

@@ -69,3 +69,66 @@ Parsed: filter id 6583 and rationalize [E]
 
 User: break down id 2741 with a clear explanation
 Parsed: filter id 2741 and rationalize [E]
+
+User: Provide an elaborate explanation with rationalization for id 1000, please.
+Parsed: filter id 1000 and rationalize [E]
+
+User: What would be the rationale for the prediction that the model outputs for id 134?
+Parsed: filter id 134 and rationalize [E]
+
+User: Please rationalize for me the output for id 14.
+Parsed: User: filter id 14 and rationalize [E]
+
+User: What rationale can you generate for id 93?
+Parsed: filter id 93 and rationalize [E]
+
+User: I need a rationale for the output specifically attributed to id 14.
+Parsed: filter id 14 and rationalize [E]
+
+User: Please rationalize the output for id 590 by providing a clear explanation.
+Parsed: filter id 590 and rationalize [E]
+
+User: I would like a rationalization for the output linked to id 2084, please.
+Parsed: filter id 2084 and rationalize [E]
+
+User: Can you offer an explanation for the output produced by id 1329?
+Parsed: filter id 1329 and rationalize [E]
+
+User: Please provide a rationale for the output associated with id 2231.
+Parsed: filter id 2231 and rationalize [E]
+
+User: I need a rationale for the output specifically attributed to id 14.
+Parsed: filter id 14 and rationalize [E]
+
+User: Please rationalize the output for id 590 by providing a clear explanation.
+Parsed: filter id 590 and rationalize [E]
+
+User: I would like a rationalization for the output linked to id 2084, please.
+Parsed: filter id 2084 and rationalize [E]
+
+User: Can you offer an explanation for the output produced by id 1329?
+Parsed: filter id 1329 and rationalize [E]
+
+User: Please provide a rationale for the output associated with id 2231.
+Parsed: filter id 2231 and rationalize [E]
+
+User: I need a rationale for the output specifically attributed to id 14.
+Parsed: filter id 14 and rationalize [E]
+
+User: Please rationalize the output for id 590 by providing a clear explanation.
+Parsed: filter id 590 and rationalize [E]
+
+User: Provide me a rationale for the output specifically attributed to id 3.
+Parsed: filter id 3 and rationalize [E]
+
+User: Give me a clear explanation by rationalizing the output for id 2742.
+Parsed: filter id 2742 and rationalize [E]
+
+User: Provide an explanation for the output associated with id 987, offering a rationale for it.
+Parsed: filter id 987 and rationalize [E]
+
+User: Offer a clear explanation by providing a rationale for the output related to id 721.
+Parsed: filter id 721 and rationalize [E]
+
+User: Generate a rationale for the output specifically associated with id 406.
+Parsed: filter id 406 and rationalize [E]

@@ -27,3 +27,66 @@ Parsed: mistake sample [E]
 
 User: could you show me a few examples of data that you get wrong?
 Parsed: mistake sample [E]
+
+User: How many mistakes do we get here?
+Parsed: mistake count [E]
+
+User: Are the mistakes frequent? How often do they occur?
+Parsed: mistake count [E]
+
+User: I want to see the amount of the mistakes made by the model.
+Parsed: mistake count [E]
+
+User: What would be the misclassified samples?
+Parsed: mistake sample [E]
+
+User: Please show me some randomly picked mistakes made by the model.
+Parsed: mistake sample [E]
+
+User: Can you compute the number of mistakes?
+Parsed: mistake count [E]
+
+User: Can we see what are the wrong outputs/misclassified examples?
+Parsed: mistake sample [E]
+
+User: What is the frequency of mistakes? Are they common?
+Parsed: mistake count [E]
+
+User: Are mistakes frequent? How frequently do they occur?
+Parsed: mistake count [E]
+
+User: Do errors occur regularly? What is their occurrence rate?
+Parsed: mistake count [E]
+
+User: How often do mistakes happen? Are they frequent?
+Parsed: mistake count [E]
+
+User: Please provide a selection of random errors committed by the model.
+Parsed: mistake sample [E]
+
+User: Can you show me a few randomly chosen inaccuracies made by the model?
+Parsed: mistake sample [E]
+
+User: I would like to see a collection of randomly selected mistakes made by the model.
+Parsed: mistake sample [E]
+
+User: How often do mistakes happen? Are they frequent?
+Parsed: mistake count [E]
+
+User: Please provide a selection of random errors committed by the model.
+Parsed: mistake sample [E]
+
+User: How often do mistakes happen? Are they frequent?
+Parsed: mistake count [E]
+
+User: Could you share some random errors committed by the model?
+Parsed: mistake sample [E]
+
+User: Are mistakes frequent in the model's outputs? How often do they occur?
+Parsed: mistake count [E]
+
+User: Please provide a selection of random errors made by the model.
+Parsed: mistake sample [E]
+
+User: Are errors in the model's predictions common? How frequently do they happen?
+Parsed: mistake count [E]

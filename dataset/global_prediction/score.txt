@@ -47,8 +47,7 @@ User: display score
 Parsed: score accuracy [E]
 
 User: show me the test set performance
-Parsed: score accuracy
- [E]
+Parsed: score accuracy [E]
 
 User: testing f1
 Parsed: score f1 [E]
@@ -59,14 +58,8 @@ Parsed: score f1 [E]
 User: what is the f1 score on the evaluation data
 Parsed: score f1 [E]
 
-User: What is the micro-F1 score?
-Parsed: score f1 micro [E]
-
-User: What is the macro-F1 score?
-Parsed: score f1 macro [E]
-
-User: What is the weighted F1 score?
-Parsed: score f1 weighted [E]
+User: What is the F1 score?
+Parsed: score f1 [E]
 
 User: can you show me the precision on the data?
 Parsed: score precision [E]
@@ -74,14 +67,9 @@ Parsed: score precision [E]
 User: can you show me the precision on the training data?
 Parsed: score precision [E]
 
-User: What is the micro precision?
-Parsed: score precision micro [E]
+User: What is the precision?
+Parsed: score precision [E]
 
-User: What is the macro precision?
-Parsed: score precision macro [E]
-
-User: What is the weighted precision?
-Parsed: score precision weighted [E]
 
 User: give the recall score
 Parsed: score recall [E]
@@ -92,17 +80,35 @@ Parsed: score recall [E]
 User: when determining {class_names}, what is your recall score?
 Parsed: score recall [E]
 
-User: What is the micro recall?
-Parsed: score recall micro [E]
-
-User: What is the macro recall?
-Parsed: score recall macro [E]
-
-User: What is the weighted recall?
-Parsed: score recall weighted [E]
+User: What is the recall?
+Parsed: score recall [E]
 
 User: can you show me the roc score on the testing data?
 Parsed: score roc [E]
 
 User: what's the roc score
 Parsed: score roc [E]
+
+User: I would like to check the accuracy of the model.
+Parsed: score accuracy [E]
+
+User: Can you tell me how accurate the model is?
+Parsed: score accuracy [E]
+
+User: I would like to check the accuracy of the model.
+Parsed: score accuracy [E]
+
+User: What is the F1 score on the data?
+Parsed: score f1 [E]
+
+User: I would like to know the level of accuracy of the model.
+Parsed: score accuracy [E]
+
+User: Could you provide me with information regarding the accuracy of the model?
+Parsed: score accuracy [E]
+
+User: Tell me, how accurate is the model?
+Parsed: score accuracy [E]
+
+User: It would be helpful if you could inform me about the model's F1 score.
+Parsed: score f1 [E]

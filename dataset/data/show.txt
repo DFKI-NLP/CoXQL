@@ -9,3 +9,45 @@ Parsed: filter id 215 and show [E]
 
 User: Please display id 105111
 Parsed: filter id 105111 and show [E]
+
+User: Let's look at the sample number 11.
+Parsed: filter id 11 and show [E]
+
+User: Show me the instance with id 15, please.
+Parsed: filter id 15 and show [E]
+
+User: What about id 25, can you show it to me?
+Parsed: filter id 25 and show [E]
+
+User: Can you present the contents associated with id 25?
+Parsed: filter id 25 and show [E]
+
+User: I'd like to view the data related to id 675. Can you show it to me?
+Parsed: filter id 675 and show [E]
+
+User: Is it possible to access and display the record with id 821?
+Parsed: filter id 821 and show [E]
+
+User: Could you retrieve and present the information pertaining to id 120?
+Parsed: filter id 120 and show [E]
+
+User: Can you present the contents associated with id 25?
+Parsed: filter id 25 and show [E]
+
+User: I'd like to view the data related to id 675. Can you show it to me?
+Parsed: filter id 675 and show [E]
+
+User: Can you display the information linked with ID 54?
+Parsed: filter id 54 and show [E]
+
+User: What details are associated with ID 752? Please present them.
+Parsed: filter id 752 and show [E]
+
+User: Could you show me the contents related to ID 923?
+Parsed: filter id 923 and show [E]
+
+User: I want to examine the data for ID 987. Can you present it?
+Parsed: filter id 987 and show [E]
+
+User: What data is linked with ID 213? Please show it to me.
+Parsed: filter id 213 and show [E]

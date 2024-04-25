@@ -36,3 +36,36 @@ Parsed: countdata [E]
 
 User: show me the item ids on the training data
 Parsed: countdata [E]
+
+User: Tell me how many datapoints are in the dataset?
+Parsed: countdata [E]
+
+User: How many data points does the dataset contain?
+Parsed: countdata [E]
+
+User: Please inform me about the quantity of datapoints present in the dataset.
+Parsed: countdata [E]
+
+User: What is the count of datapoints within the dataset?
+Parsed: countdata [E]
+
+User: How many data points does the dataset contain?
+Parsed: countdata [E]
+
+User: Please inform me about the quantity of datapoints present in the dataset.
+Parsed: countdata [E]
+
+User: How many data points are there in the dataset?
+Parsed: countdata [E]
+
+User: Could you provide information about the total number of data points in the dataset?
+Parsed: countdata [E]
+
+User: Please let me know the quantity of data points present in the dataset.
+Parsed: countdata [E]
+
+User: Can you share the count of data points in the dataset?
+Parsed: countdata [E]
+
+User: I'm interested in knowing the number of data points in the dataset. Could you provide that information?
+Parsed: countdata [E]

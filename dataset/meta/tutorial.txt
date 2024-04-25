@@ -90,3 +90,18 @@ Parsed: qatutorial qasim [E]
 
 User: Can you provide a concise definition of semantic similarity in the context of NLP?
 Parsed: qatutorial qasim [E]
+
+User: What is counterfactual?
+Parsed: qatutorial qacfe [E]
+
+User: Can you provide a concise definition of semantic similarity?
+Parsed: qatutorial qasim [E]
+
+User: Explain me data augmentation
+Parsed: qatutorial qada [E]
+
+User: Explain me rationalization
+Parsed: qatutorial qarationale [E]
+
+User: What's feature importance?
+Parsed: qatutorial qafa [E]

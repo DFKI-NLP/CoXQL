@@ -105,3 +105,90 @@ Parsed: filter id 30 and nlpattribute topk 8 [E]
 
 User: 7 most important features for ids 2
 Parsed: filter id 2 and nlpattribute topk 7 [E]
+
+User: I need an explanation for the model's prediction in terms of token attributions for the sample number 8.
+Parsed: filter id 8 and nlpattribute all [E]
+
+User: What are the features that are the most important ones for id 145.
+Parsed: filter id 145 and nlpattribute all [E]
+
+User: What are the top tokens contributing to the prediction for instance number 49.
+Parsed: filter id 49 and nlpattribute all [E]
+
+User: Can you explain to me how the model decides on the predictions for the instances with id 145 and id 122?
+Parsed: filter id 145 or filter id 122 and nlpattribute all [E]
+
+User: Show me please the most important five features for instances with id 100 and 102.
+Parsed: filter id 100 or filter id 102 and nlpattribute topk 5 [E]
+
+User: Explain please what the model predicts for id 89.
+Parsed: filter id 89 and nlpattribute all [E]
+
+User: Can you provide me with an explanation of the model's prediction by analyzing token attributions for sample number 8?
+Parsed: filter id 8 and nlpattribute all [E]
+
+User: I'm looking for a detailed breakdown of the model's prediction, specifically focusing on token attributions for sample number 201.
+Parsed: filter id 201 and nlpattribute all [E]
+
+User: Could you elaborate on how token attributions contribute to the model's prediction for sample number 302?
+Parsed: filter id 302 and nlpattribute all [E]
+
+User: I'd like to see the most important five features for instance 102, if possible.
+Parsed: filter id 102 and nlpattribute topk 5 [E]
+
+User: Display the key ten features for instance 429, please.
+Parsed: filter id 429 and nlpattribute topk 10 [E]
+
+User: Could you present the top three essential characteristics for instance 872?
+Parsed: filter id 872 and nlpattribute topk 3 [E]
+
+User: Why predict the instance 20 using lime?
+Parsed: filter id 20 and nlpattribute lime [E]
+
+User: Explain me the prediction of id 301 using attention?
+Parsed: filter id 301 and nlpattribute attention [E]
+
+User: Show me the key features for id 1023 using input gradient?
+Parsed: filter id 1023 and nlpattribute input_x_gradient [E]
+
+User: I want to see the most important three features for id 97 using integrated gradient?
+Parsed: filter id 97 and nlpattribute topk 3 integrated_gradient [E]
+
+User: Can you provide me with an explanation of the model's prediction by analyzing token attributions for sample number 8?
+Parsed: filter id 8 and nlpattribute all [E]
+
+User: I'm looking for a detailed breakdown of the model's prediction, specifically focusing on token attributions for sample number 201.
+Parsed: filter id 201 and nlpattribute all [E]
+
+User: Could you explain how the model arrived at its prediction for sample number 1932, using token attributions as a basis?
+Parsed: filter id 1932 and nlpattribute all [E]
+
+User: I require a thorough explanation of the model's prediction, taking into account token attributions for sample number 947.
+Parsed: filter id 947 and nlpattribute all [E]
+
+User: Display the key ten features for instance 429, please.
+Parsed: filter id 429 and nlpattribute topk 10 [E]
+
+User: Could you present the top three essential characteristics for instance 872?
+Parsed: filter id 872 and nlpattribute topk 3 [E]
+
+User: Can you provide me with an explanation of the model's prediction by analyzing token attributions for sample number 8?
+Parsed: filter id 8 and nlpattribute all [E]
+
+User: I'm looking for a detailed breakdown of the model's prediction, specifically focusing on token attributions for sample number 201.
+Parsed: filter id 201 and nlpattribute all [E]
+
+User: Can you provide me with a breakdown of the model's prediction by analyzing token attributions for sample number 74?
+Parsed: filter id 74 and nlpattribute all [E]
+
+User: I'm interested in a detailed analysis of the model's prediction, particularly focusing on token attributions for sample number 349.
+Parsed: filter id 349 and nlpattribute all [E]
+
+User: Can you give me an explanation of the model's prediction by examining token attributions for sample number 79?
+Parsed: filter id 79 and nlpattribute all [E]
+
+User: I would like to understand the model's prediction in depth, specifically looking at token attributions for sample number 1024.
+Parsed: filter id 1024 and nlpattribute all [E]
+
+User: Please provide me with an analysis of the model's prediction, specifically focusing on token attributions for sample number 836.
+Parsed: filter id 836 and nlpattribute all [E]
