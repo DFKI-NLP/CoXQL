@@ -84,3 +84,39 @@ Parsed: function [E]
 
 User: What are the various tasks you can execute?
 Parsed: function [E]
+
+User: What are your capabilities?
+Parsed: function [E]
+
+User: What can you do?
+Parsed: function [E]
+
+User: What are your functional abilities?
+Parsed: function [E]
+
+User: What tasks can you perform?
+Parsed: function [E]
+
+User: What is your range of capabilities?
+Parsed: function [E]
+
+User: What functionalities do you support?
+Parsed: function [E]
+
+User: What are your strengths in terms of functionality?
+Parsed: function [E]
+
+User: What can you accomplish?
+Parsed: function [E]
+
+User: What are your functional strengths?
+Parsed: function [E]
+
+User: Can you list your capabilities?
+Parsed: function [E]
+
+User: What are the tasks you can handle successfully?
+Parsed: function [E]
+
+User: What are your functional abilities like?
+Parsed: function [E]

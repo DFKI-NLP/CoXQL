@@ -1,4 +1,26 @@
-This is where the prompt templates are stored.  
-These are accessed in logic/prompts.py.  
-In each of the directories, the gold parses of the respective action/prompt categories are listed with their counts of how often they appear.  
-*talktomodel* includes deprecated prompts.
+# CoXQL Dataset
+- count_data.txt: 47
+- keywords.txt: 25
+- label.txt: 48
+- show.txt: 57
+- similarity.txt: 42
+- mistake.txt: 40
+- score.txt: 38
+- attribute.txt: 89
+- influence.txt: 32
+- rationalize.txt: 45
+- likelihood.txt: 44
+- prediction.txt: 36
+- data.txt: 42
+- domain.txt: 26
+- function.txt: 41
+- model.txt: 38
+- tutorial.txt: 90
+- edit_label.txt: 45
+- learn.txt: 32
+- unlearn.txt: 16
+- adversarial.txt: 44
+- augment.txt: 41
+- cfe.txt: 42
+---
+In total: 1000

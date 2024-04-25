@@ -25,9 +25,6 @@ Parsed: filter id 3421 and predict [E]
 User: please display the prediction of the instance with id 34
 Parsed: filter id 34 and predict [E]
 
-User: predict 22
-Parsed: filter id 22 and predict [E]
-
 User: What is the most likely prediction for id 47?
 Parsed: filter id 47 and predict [E]
 
@@ -66,3 +63,45 @@ Parsed: filter id 517 and predict [E]
 
 User: Can you tell me the most probable inference for ID 1823?
 Parsed: filter id 1823 and predict [E]
+
+User: Can you display the prediction for ID 219?
+Parsed: filter id 219 and predict [E]
+
+User: What is the predicted outcome for ID 981?
+Parsed: filter id 981 and predict [E]
+
+User: Show me the prediction for ID 5678.
+Parsed: filter id 5678 and predict [E]
+
+User: I'd like to see the prediction for ID 192.
+Parsed: filter id 192 and predict [E]
+
+User: What is the prediction for the instance with ID 654?
+Parsed: filter id 654 and predict [E]
+
+User: Can you provide the prediction for ID 8123?
+Parsed: filter id 8123 and predict [E]
+
+User: Display the predicted outcome for ID 421.
+Parsed: filter id 421 and predict [E]
+
+User: Prediction of id 312.
+Parsed: filter id 312 and predict [E]
+
+User: Deliver me the prediction of instance with 994.
+Parsed: filter id 994 and predict [E]
+
+User: What is the prediction for ID 8123?
+Parsed: filter id 8123 and predict [E]
+
+User: Show the predicted result for ID 421.
+Parsed: filter id 421 and predict [E]
+
+User: Provide the prediction for the instance with ID 994.
+Parsed: filter id 994 and predict [E]
+
+User: Can you provide the predicted value for ID 5001?
+Parsed: filter id 5001 and predict [E]
+
+User: What prediction does the model make for the instance with ID 994?
+Parsed: filter id 994 and predict [E]

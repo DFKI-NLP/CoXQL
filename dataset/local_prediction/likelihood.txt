@@ -1,35 +1,131 @@
-User: What is the probability that id 2215 is predicted as {class_names} by the model?
+User: How likely would you do this given prediction for instance 2215?
 Parsed: filter id 2215 and likelihood [E]
 
-User: What is the likelihood that id 15 is predicted as {class_names} by the model?
+User: Give me the confidence score for this prediction on id 15?
 Parsed: filter id 15 and likelihood [E]
 
-User: What is the probability of id 10 being predicted {class_names}?
-Parsed: filter id 10 and likelihood [E]
+User: How likely is the predicted output for instance 355?
+Parsed: filter id 355 and likelihood [E]
 
-User: probability of id 532 predicted {class_names}?
-Parsed: filter id 532 and likelihood [E]
+User: What is the confidence score for the prediction on item with ID 135?
+Parsed: filter id 135 and likelihood [E]
 
-User: how likely is it id 155 is {class_names}?
-Parsed: filter id 155 and likelihood [E]
+User: What is the likelihood for the prediction on data point with ID 988?
+Parsed: filter id 988 and likelihood [E]
 
-User: what is the chance that the data point with id 2149 is {class_names}
-Parsed: filter id 2149 and likelihood [E]
+User: How likely is the predicted output for instance 2?
+Parsed: filter id 2 and likelihood [E]
 
-User: show the probability that id 515 is {class_names}
-Parsed: filter id 515 and likelihood [E]
+User: What is the confidence score for the prediction on item with ID 352?
+Parsed: filter id 352 and likelihood [E]
 
-User: probability data point 22 is predicted by the model {class_names}
-Parsed: filter id 22 and likelihood [E]
+User: How likely is the predicted output for instance 886?
+Parsed: filter id 886 and likelihood [E]
 
-User: I want you to tell me the probability of the instance with id 100 being predicted in the "{class_names}" class by the model
-Parsed: filter id 100 and likelihood [E]
+User: What is the confidence score for the prediction on item with ID 342?
+Parsed: filter id 342 and likelihood [E]
 
-User: return the probability that instance 233 is predicted in the {class_names} class
-Parsed: filter id 233 and likelihood [E]
+User: What is the likelihood for the prediction on data point with ID 1988?
+Parsed: filter id 1988 and likelihood [E]
 
-User: what's the chance instance id 324 is scored as {class_names}
-Parsed: filter id 324 and likelihood [E]
+User: How likely is the predicted output for instance 4792?
+Parsed: filter id 4792 and likelihood [E]
 
-User: probability that id 44 is predicted as "{class_names}" from the model
-Parsed: filter id 44 and likelihood [E]
+User: What is the confidence score for the prediction on item with ID 1356?
+Parsed: filter id 1356 and likelihood [E]
+
+User: How likely is the predicted output for instance 8245?
+Parsed: filter id 8245 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 3729?
+Parsed: filter id 3729 and likelihood [E]
+
+User: What is the likelihood for the prediction on data point with ID 6184?
+Parsed: filter id 6184 and likelihood [E]
+
+User: How likely is the predicted output for instance 9103?
+Parsed: filter id 9103 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 2517?
+Parsed: filter id 2517 and likelihood [E]
+
+User: How likely is the predicted output for instance 7631?
+Parsed: filter id 7631 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 4908?
+Parsed: filter id 4908 and likelihood [E]
+
+User: What is the likelihood for the prediction on data point with ID 1792?
+Parsed: filter id 1792 and likelihood [E]
+
+User: What is the likelihood of the prediction for instance 5432?
+Parsed: filter id 5432 and likelihood [E]
+
+User: Can you provide the confidence score for the prediction on item 9876?
+Parsed: filter id 9876 and likelihood [E]
+
+User: How likely is the predicted output for data point 2468?
+Parsed: filter id 2468 and likelihood [E]
+
+User: What is the confidence level for the prediction on instance 7890?
+Parsed: filter id 7890 and likelihood [E]
+
+User: Please let me know the likelihood of the prediction for data point 1357.
+Parsed: filter id 1357 and likelihood [E]
+
+User: Can you tell me the confidence score for the prediction on item 6789?
+Parsed: filter id 6789 and likelihood [E]
+
+User: What is the likelihood of the predicted output for instance 4321?
+Parsed: filter id 4321 and likelihood [E]
+
+User: Please provide the confidence score for the prediction on data point 8765.
+Parsed: filter id 8765 and likelihood [E]
+
+User: How likely is the predicted output for item 3456?
+Parsed: filter id 3456 and likelihood [E]
+
+User: What is the confidence level for the prediction on instance 2109?
+Parsed: filter id 2109 and likelihood [E]
+
+User: How likely is the predicted output for instance 3421?
+Parsed: filter id 3421 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 9856?
+Parsed: filter id 9856 and likelihood [E]
+
+User: How likely is the predicted output for instance 4679?
+Parsed: filter id 4679 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 1298?
+Parsed: filter id 1298 and likelihood [E]
+
+User: What is the likelihood for the prediction on data point with ID 7532?
+Parsed: filter id 7532 and likelihood [E]
+
+User: How likely is the predicted output for instance 6284?
+Parsed: filter id 6284 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 3519?
+Parsed: filter id 3519 and likelihood [E]
+
+User: How likely is the predicted output for instance 9823?
+Parsed: filter id 9823 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 1942?
+Parsed: filter id 1942 and likelihood [E]
+
+User: What is the likelihood for the prediction on data point with ID 8173?
+Parsed: filter id 8173 and likelihood [E]
+
+User: How likely is the predicted output for instance 6549?
+Parsed: filter id 6549 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 4591?
+Parsed: filter id 4591 and likelihood [E]
+
+User: How likely is the predicted output for instance 3826?
+Parsed: filter id 3826 and likelihood [E]
+
+User: What is the confidence score for the prediction on item with ID 2758?
+Parsed: filter id 2758 and likelihood [E]

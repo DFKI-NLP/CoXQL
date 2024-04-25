@@ -36,3 +36,108 @@ Parsed: label [E]
 
 User: What label options do we currently have access to?
 Parsed: label [E]
+
+User: Tell me something about the label distribution
+Parsed: label [E]
+
+User: What are the labels for all the data items?
+Parsed: label [E]
+
+User: Could you show the gold labels?
+Parsed: label [E]
+
+User: How is the data labeled?
+Parsed: label [E]
+
+User: What are the true labels in the dataset and how often do they occur?
+Parsed: label [E]
+
+User: What is the frequency of each target label in the entire dataset?
+Parsed: label [E]
+
+User: What are the labels in the dataset?
+Parsed: label [E]
+
+User: Could you provide information about the dataset labels?
+Parsed: label [E]
+
+User: What classification labels do we have available?
+Parsed: label [E]
+
+User: What are the different label options we have?
+Parsed: label [E]
+
+User: What label options do we currently have access to?
+Parsed: label [E]
+
+User: What classification labels do we have available?
+Parsed: label [E]
+
+User: What are the different label options we have?
+Parsed: label [E]
+
+User: What label options do we currently have access to?
+Parsed: label [E]
+
+User: Could you tell me about the label distribution?
+Parsed: label [E]
+
+User: Can you display the gold labels?
+Parsed: label [E]
+
+User: What is the labeling of the data?
+Parsed: label [E]
+
+User: What are the actual labels in the dataset and their occurrence rates?
+Parsed: label [E]
+
+User: What is the distribution of each target label across the dataset?
+Parsed: label [E]
+
+User: What labels are present in the dataset?
+Parsed: label [E]
+
+User: Could you provide the true labels?
+Parsed: label [E]
+
+User: How are the data points labeled?
+Parsed: label [E]
+
+User: What are the real labels in the dataset and their frequencies?
+Parsed: label [E]
+
+User: Can you show the occurrence of each target label in the dataset?
+Parsed: label [E]
+
+User: What labels are used in the dataset?
+Parsed: label [E]
+
+User: what labels are assigned to the data?
+Parsed: label [E]
+
+User: Could you display the gold labels?
+Parsed: label [E]
+
+User: What are the true labels in the dataset and their frequencies?
+Parsed: label [E]
+
+User: Show the frequency of each target label in the dataset
+Parsed: label [E]
+
+User: What labels are available?
+Parsed: label [E]
+
+User: Provide information about the dataset labels, please.
+Parsed: label [E]
+
+User: What are the available classification labels?
+Parsed: label [E]
+
+User: What labeling options are there?
+Parsed: label [E]
+
+User: Which label options can we access?
+Parsed: label [E]
+
+User: Can you tell me about the label distribution?
+Parsed: label [E]

@@ -30,3 +30,84 @@ Parsed: model [E]
 
 User: I'm interested in learning more about the model. Can you provide a description?
 Parsed: model [E]
+
+User: Would you tell me something related to the model?
+Parsed: model [E]
+
+User: Can you inform me information about the deployed model?
+Parsed: model [E]
+
+User: Can you explain what the model is?
+Parsed: model [E]
+
+User: Could you provide an overview of the model?
+Parsed: model [E]
+
+User: What is the model?
+Parsed: model [E]
+
+User: Please describe the model.
+Parsed: model [E]
+
+User: I'd like to know more about the model. Can you provide details?
+Parsed: model [E]
+
+User: Tell me about the model's features and characteristics.
+Parsed: model [E]
+
+User: What can you tell me about the model's functionality?
+Parsed: model [E]
+
+User: Could you give me some insights into the model?
+Parsed: model [E]
+
+User: I want to learn about the model. Can you give me an explanation?
+Parsed: model [E]
+
+User: What details can you provide about the model?
+Parsed: model [E]
+
+User: Can you elaborate on what the model is?
+Parsed: model [E]
+
+User: I'd like to understand the model better. Can you provide an explanation?
+Parsed: model [E]
+
+User: What information can you give me about the model?
+Parsed: model [E]
+
+User: Could you shed some light on the model's features?
+Parsed: model [E]
+
+User: Please explain the model to me.
+Parsed: model [E]
+
+User: I'm curious about the model. Can you provide a description?
+Parsed: model [E]
+
+User: Tell me about the architecture and features of the model.
+Parsed: model [E]
+
+User: Can you provide some background on the model?
+Parsed: model [E]
+
+User: What can you tell me about the model's design and functionality?
+Parsed: model [E]
+
+User: I want to know more about the model. Could you give me an overview?
+Parsed: model [E]
+
+User: Could you explain the model to me?
+Parsed: model [E]
+
+User: I'd like to know more about the model. Can you give me a description?
+Parsed: model [E]
+
+User: Could you describe the architecture and features of the model?
+Parsed: model [E]
+
+User: Can you offer some background information on the model?
+Parsed: model [E]
+
+User: What information can you provide about the model's design and functionality?
+Parsed: model [E]

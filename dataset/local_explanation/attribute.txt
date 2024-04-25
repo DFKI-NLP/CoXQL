@@ -192,3 +192,75 @@ Parsed: filter id 1024 and nlpattribute all [E]
 
 User: Please provide me with an analysis of the model's prediction, specifically focusing on token attributions for sample number 836.
 Parsed: filter id 836 and nlpattribute all [E]
+
+User: Could you clarify the prediction of the instance 220 using lime?
+Parsed: filter id 220 and nlpattribute lime [E]
+
+User: Can you explain the prediction of id 6501 using attention?
+Parsed: filter id 6501 and nlpattribute attention [E]
+
+User: Display the key features for id 4023 using input gradient?
+Parsed: filter id 4023 and nlpattribute input_x_gradient [E]
+
+User: I'd like to see the top three most important features for id 937 using integrated gradient.
+Parsed: filter id 937 and nlpattribute topk 3 integrated_gradient [E]
+
+User: What is the most significant feature for data point 44 using integrated gradient?
+Parsed: filter id 44 and nlpattribute topk 1 integrated_gradients [E]
+
+User: Which feature is most significant for instance 9 by attention?
+Parsed: filter id 9 and nlpattribute topk 1 attention [E]
+
+User: What is the most critical feature for id 8 using lime?
+Parsed: filter id 8 and nlpattribute topk 1 lime [E]
+
+User: What are the top 2 features influencing the model's prediction on data point 29 using input gradient?
+Parsed: filter id 29 and nlpattribute topk 2 input_x_gradient [E]
+
+User: Which 2 features are most relevant for the model's decision on data point 27 using input gradient?
+Parsed: filter id 27 and nlpattribute topk 2 input_x_gradient [E]
+
+User: Please list the 4 most critical features for data point 78 using input gradient.
+Parsed: filter id 78 and nlpattribute topk 4 input_x_gradient [E]
+
+User: Show me the 5 most important features for data point 81 by attention.
+Parsed: filter id 81 and nlpattribute topk 5 attention [E]
+
+User: What are the 4 most important features for ids 987 using lime?
+Parsed: filter id 987 and nlpattribute topk 4 lime [E]
+
+User: Which are the top 5 influential features for ids 12 using integrated gradient?
+Parsed: filter id 12 and nlpattribute topk 5 integrated_gradients [E]
+
+User: List the top 6 features affecting the predictions for ids 1234 using integrated gradients.
+Parsed: filter id 1234 and nlpattribute topk 6 integrated_gradients [E]
+
+User: Which feature is most influential for data point 55 using attention?
+Parsed: filter id 55 and nlpattribute topk 1 attention [E]
+
+User: What is the primary feature for instance 13 by lime?
+Parsed: filter id 13 and nlpattribute topk 1 lime [E]
+
+User: What are the 3 top features that impact the model's prediction for data point 37 using integrated gradient?
+Parsed: filter id 37 and nlpattribute topk 3 integrated_gradients [E]
+
+User: Please show the top 3 features that are most relevant for the model's decision on data point 40 using lime.
+Parsed: filter id 40 and nlpattribute topk 3 lime [E]
+
+User: Which are the 5 most critical features for data point 99 using input gradient?
+Parsed: filter id 99 and nlpattribute topk 5 input_x_gradient [E]
+
+User: Show the 7 most significant features for data point 105 by attention.
+Parsed: filter id 105 and nlpattribute topk 7 attention [E]
+
+User: What are the top 4 influential features for ids 1001 using lime?
+Parsed: filter id 1001 and nlpattribute topk 4 lime [E]
+
+User: Which 6 features have the most impact on the predictions for ids 1111 using integrated gradients?
+Parsed: filter id 1111 and nlpattribute topk 6 integrated_gradients [E]
+
+User: Please list the 8 most important features for data point 115 by input gradient.
+Parsed: filter id 115 and nlpattribute topk 8 input_x_gradient [E]
+
+User: What are the top 9 features affecting the outcomes for ids 12345 using attention?
+Parsed: filter id 12345 and nlpattribute topk 9 attention [E]

@@ -42,3 +42,84 @@ Parsed: data [E]
 
 User: I'm interested in learning more about data. Can you provide an introduction to the topic?
 Parsed: data [E]
+
+User: What is data?
+Parsed: data [E]
+
+User: Describe the data.
+Parsed: data [E]
+
+User: What is the overview of data?
+Parsed: data [E]
+
+User: What does data consist of?
+Parsed: data [E]
+
+User: Can you elaborate on the data?
+Parsed: data [E]
+
+User: What are the characteristics of data?
+Parsed: data [E]
+
+User: What features are in data?
+Parsed: data [E]
+
+User: Show the features of data.
+Parsed: data [E]
+
+User: Introduce data to me.
+Parsed: data [E]
+
+User: What is the structure of data?
+Parsed: data [E]
+
+User: What is the concept of data?
+Parsed: data [E]
+
+User: Can you introduce data and its importance?
+Parsed: data [E]
+
+User: What are the types and characteristics of data?
+Parsed: data [E]
+
+User: What is the nature and organization of data?
+Parsed: data [E]
+
+User: Can you introduce me to the concept of data?
+Parsed: data [E]
+
+User: What is the data about?
+Parsed: data [E]
+
+User: Can you provide a data summary?
+Parsed: data [E]
+
+User: What are the key aspects of data?
+Parsed: data [E]
+
+User: What is the data composed of?
+Parsed: data [E]
+
+User: Can you give me an overview of data?
+Parsed: data [E]
+
+User: What are the main features of data?
+Parsed: data [E]
+
+User: Can you describe the data in detail?
+Parsed: data [E]
+
+User: What is the data like?
+Parsed: data [E]
+
+User: Can you provide information about data?
+Parsed: data [E]
+
+User: What are the essential characteristics of data?
+Parsed: data [E]
+
+User: What does data entail?
+Parsed: data [E]
+
+User: Can you tell me about the data?
+Parsed: data [E]

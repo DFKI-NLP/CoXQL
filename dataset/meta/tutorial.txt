@@ -105,3 +105,165 @@ Parsed: qatutorial qarationale [E]
 
 User: What's feature importance?
 Parsed: qatutorial qafa [E]
+
+User: What are adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: Could you explain adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: Introduce me adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: Can you describe adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: How would you define adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: Could you give an overview of adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: Please explain adversarial examples.
+Parsed: qatutorial qaadv [E]
+
+User: What's the concept behind adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: Provide information about adversarial examples.
+Parsed: qatutorial qaadv [E]
+
+User: Could you detail adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: How do you define adversarial examples?
+Parsed: qatutorial qaadv [E]
+
+User: What's influence about?
+Parsed: qatutorial qainflu [E]
+
+User: What does influence mean in this context?
+Parsed: qatutorial qainflu [E]
+
+User: Can you explain the concept of influence?
+Parsed: qatutorial qainflu [E]
+
+User: Could you clarify the term influence?
+Parsed: qatutorial qainflu [E]
+
+User: How would you describe influence?
+Parsed: qatutorial qainflu [E]
+
+User: What is the meaning of influence in this scenario?
+Parsed: qatutorial qainflu [E]
+
+User: Could you elaborate on the concept of influence?
+Parsed: qatutorial qainflu [E]
+
+User: What do you understand by influence?
+Parsed: qatutorial qainflu [E]
+
+User: Can you provide insight into the term influence?
+Parsed: qatutorial qainflu [E]
+
+User: How does label edit work?
+Parsed: qatutorial qaedit [E]
+
+User: Can you explain how label edit functions?
+Parsed: qatutorial qaedit [E]
+
+User: Could you clarify the operation of label edit?
+Parsed: qatutorial qaedit [E]
+
+User: Could you provide an explanation of how label edit operates?
+Parsed: qatutorial qaedit [E]
+
+User: What's the process of label edit?
+Parsed: qatutorial qaedit [E]
+
+User: How is label edit implemented?
+Parsed: qatutorial qaedit [E]
+
+User: Can you describe the mechanism of label edit?
+Parsed: qatutorial qaedit [E]
+
+User: What does label edit involve?
+Parsed: qatutorial qaedit [E]
+
+User: Could you detail the workings of label edit?
+Parsed: qatutorial qaedit [E]
+
+User: What are the steps involved in label edit?
+Parsed: qatutorial qaedit [E]
+
+User: How can I use label edit?
+Parsed: qatutorial qaedit [E]
+
+User: Can you walk me through label edit?
+Parsed: qatutorial qaedit [E]
+
+User: What is the procedure for label edit?
+Parsed: qatutorial qaedit [E]
+
+User: Could you explain the functionality of label edit?
+Parsed: qatutorial qaedit [E]
+
+User: Clarify me what's the functionality "learn"?
+Parsed: qatutorial qalearn [E]
+
+User: Can you explain the functionality of "learn"?
+Parsed: qatutorial qalearn [E]
+
+User: Tell me the functionality of "learn"?
+Parsed: qatutorial qalearn [E]
+
+User: Could you explain what the "learn" functionality does?
+Parsed: qatutorial qalearn [E]
+
+User: What does the "learn" functionality entail?
+Parsed: qatutorial qalearn [E]
+
+User: How does the "learn" functionality work?
+Parsed: qatutorial qalearn [E]
+
+User: What is the purpose of the "learn" functionality?
+Parsed: qatutorial qalearn [E]
+
+User: Can you describe the "learn" functionality?
+Parsed: qatutorial qalearn [E]
+
+User: What are the features of the "learn" functionality?
+Parsed: qatutorial qalearn [E]
+
+User: Could you provide details on the "learn" functionality?
+Parsed: qatutorial qalearn [E]
+
+User: What does "unlearn" do?
+Parsed: qatutorial qaunlearn [E]
+
+User: Can you explain what the "unlearn" functionality does?
+Parsed: qatutorial qaunlearn [E]
+
+User: Provide details on the "unlearn" functionality?
+Parsed: qatutorial qaunlearn [E]
+
+User: How does the "unlearn" functionality operate?
+Parsed: qatutorial qaunlearn [E]
+
+User: What is the purpose of the "unlearn" functionality?
+Parsed: qatutorial qaunlearn [E]
+
+User: Could you elaborate on the "unlearn" functionality?
+Parsed: qatutorial qaunlearn [E]
+
+User: What are the features of the "unlearn" functionality?
+Parsed: qatutorial qaunlearn [E]
+
+User: Can you describe the "unlearn" functionality?
+Parsed: qatutorial qaunlearn [E]
+
+User: How is the "unlearn" functionality implemented?
+Parsed: qatutorial qaunlearn [E]
+
+User: What does the "unlearn" functionality entail?
+Parsed: qatutorial qaunlearn [E]

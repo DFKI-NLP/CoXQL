@@ -78,3 +78,54 @@ Parsed: filter id 209 and adversarial [E]
 
 User: Do you have any examples of adversarial attacks targeted at ID 2013?
 Parsed: filter id 2013 and adversarial [E]
+
+User: Show me an adversarial attack on ID 115.
+Parsed: filter id 115 and adversarial [E]
+
+User: What is an adversarial alternative for ID 42?
+Parsed: filter id 42 and adversarial [E]
+
+User: Can you generate adversarial examples for ID 91?
+Parsed: filter id 91 and adversarial [E]
+
+User: Are there any adversarial samples corresponding to ID 13?
+Parsed: filter id 13 and adversarial [E]
+
+User: Provide an adversarial input for ID 85.
+Parsed: filter id 85 and adversarial [E]
+
+User: Do you have any adversarial attacks on ID 61?
+Parsed: filter id 61 and adversarial [E]
+
+User: Can you craft an adversarial example for ID 129?
+Parsed: filter id 129 and adversarial [E]
+
+User: Are there any targeted adversarial inputs for ID 197?
+Parsed: filter id 197 and adversarial [E]
+
+User: Generate an adversarial attack on ID 219.
+Parsed: filter id 219 and adversarial [E]
+
+User: What is the adversarial counterpart for ID 43?
+Parsed: filter id 43 and adversarial [E]
+
+User: Can you create an adversarial example for ID 97?
+Parsed: filter id 97 and adversarial [E]
+
+User: Are there any adversarial inputs related to ID 151?
+Parsed: filter id 151 and adversarial [E]
+
+User: Provide an adversarial sample for ID 189.
+Parsed: filter id 189 and adversarial [E]
+
+User: Do you have any adversarial attacks targeting ID 237?
+Parsed: filter id 237 and adversarial [E]
+
+User: Can you craft an adversarial alternative for ID 59?
+Parsed: filter id 59 and adversarial [E]
+
+User: Are there any specifically designed adversarial inputs for ID 271?
+Parsed: filter id 271 and adversarial [E]
+
+User: Can you show me an adversarial attack on ID 311?
+Parsed: filter id 311 and adversarial [E]

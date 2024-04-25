@@ -46,23 +46,29 @@ Parsed: keywords 4 [E]
 User: I'm interested in seeing the 10 keywords that occur most often. Could you display them?
 Parsed: keywords 10 [E]
 
-User: Please display the keyword tokens with the highest frequency.
+User: Could you display the most common keyword tokens?
 Parsed: keywords all [E]
 
-User: I would like to see the keyword tokens that appear most frequently.
+User: Can you show the keyword tokens with the highest occurrence?
 Parsed: keywords all [E]
 
-User: Can you present the keyword tokens with the highest frequency?
+User: I'd like to see the top 3 most common keywords. Can you list them?
+Parsed: keywords 3 [E]
+
+User: Please show the top 4 keywords based on their frequency of appearance.
+Parsed: keywords 4 [E]
+
+User: Could you list the 10 most frequently occurring keywords?
+Parsed: keywords 10 [E]
+
+User: Can you display the keyword tokens that appear most often?
 Parsed: keywords all [E]
 
-User: I'm interested in viewing the keyword tokens that have the highest frequency. Could you display them?
-Parsed: keywords all [E]
+User: I'd like to see a list of the 3 most common keywords. Could you present them?
+Parsed: keywords 3 [E]
 
-User: What are the keyword tokens with the highest frequency? Please show them.
-Parsed: keywords all [E]
+User: What are the top 2 keywords by frequency of occurrence?
+Parsed: keywords 2 [E]
 
-User: Could you display the keyword tokens that appear most frequently?
-Parsed: keywords all [E]
-
-User: I would like to see the keyword tokens that have the highest frequency. Can you present them?
-Parsed: keywords all [E]
+User: I'm interested in the 5 keywords that occur most often. Can you show them?
+Parsed: keywords 5 [E]

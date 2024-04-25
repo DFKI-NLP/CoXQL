@@ -40,12 +40,6 @@ Parsed: filter id 673 and augment [E]
 User: Are you capable of performing data augmentation for id 344?
 Parsed: filter id 344 and augment [E]
 
-User: Is data augmentation available for id 32?
-Parsed: filter id 32 and augment [E]
-
-User: Does your system offer data augmentation capabilities for id 673?
-Parsed: filter id 673 and augment [E]
-
 User: Can I apply data augmentation for ID 970?
 Parsed: filter id 970 and augment [E]
 
@@ -60,3 +54,72 @@ Parsed: filter id 457 and augment [E]
 
 Is it possible to augment data for ID 2673?
 Parsed: filter id 2673 and augment [E]
+
+User: Can you generate an augmented version of id 211?
+Parsed: filter id 211 and augment [E]
+
+User: Can the system perform data augmentation on ID 704?
+Parsed: filter id 704 and augment [E]
+
+User: Is data augmentation available for ID 457 in your system?
+Parsed: filter id 457 and augment [E]
+
+User: Does data augmentation work for ID 2673?
+Parsed: filter id 2673 and augment [E]
+
+User: Can an augmented version of ID 211 be created?
+Parsed: filter id 211 and augment [E]
+
+User: Can the system augment data for ID 982?
+Parsed: filter id 982 and augment [E]
+
+User: Is data augmentation available for ID 135?
+Parsed: filter id 135 and augment [E]
+
+User: Is the system supported data augmentation for ID 649?
+Parsed: filter id 649 and augment [E]
+
+User: Can you generate an augmented version of ID 817?
+Parsed: filter id 817 and augment [E]
+
+User: Is data augmentation possible for ID 421?
+Parsed: filter id 421 and augment [E]
+
+User: Can the system do data augmentation on ID 935?
+Parsed: filter id 935 and augment [E]
+
+User: Can you augment data for ID 1982?
+Parsed: filter id 1982 and augment [E]
+
+User: Could you produce an augmented version of ID 817?
+Parsed: filter id 817 and augment [E]
+
+User: Is it possible to perform data augmentation for ID 421?
+Parsed: filter id 421 and augment [E]
+
+User: Can the system apply data augmentation to ID 935?
+Parsed: filter id 935 and augment [E]
+
+User: Could you augment the data for ID 1982?
+Parsed: filter id 1982 and augment [E]
+
+User: Does the system allow data augmentation for ID 649?
+Parsed: filter id 649 and augment [E]
+
+User: Can you create an augmented dataset for ID 817?
+Parsed: filter id 817 and augment [E]
+
+User: Is data augmentation supported for ID 421?
+Parsed: filter id 421 and augment [E]
+
+User: Please augment the data for ID 1982.
+Parsed: filter id 1982 and augment [E]
+
+User: Augment ID 323.
+Parsed: filter id 323 and augment [E]
+
+User: Do augmentation on ID 66.
+Parsed: filter id 66 and augment [E]
+
+User: Apply augmentation on instance 923.
+Parsed: filter id 923 and augment [E]

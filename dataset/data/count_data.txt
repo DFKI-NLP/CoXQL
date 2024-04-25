@@ -69,3 +69,72 @@ Parsed: countdata [E]
 
 User: I'm interested in knowing the number of data points in the dataset. Could you provide that information?
 Parsed: countdata [E]
+
+User: What is the count of the data items?
+Parsed: countdata [E]
+
+User: What is the number of data points?
+Parsed: countdata [E]
+
+User: Can you provide the total count of the data points?
+Parsed: countdata [E]
+
+User: What is the number of data points?
+Parsed: countdata [E]
+
+User: Could you inform me about the number of items in the data?
+Parsed: countdata [E]
+
+User: What is the number of rows in the data?
+Parsed: countdata [E]
+
+User: What is the number of data points in the training data set?
+Parsed: countdata [E]
+
+User: What is the total number of training items in the data?
+Parsed: countdata [E]
+
+User: What is the total number of elements in the data?
+Parsed: countdata [E]
+
+User: What is the number of rows across all the items in the data?
+Parsed: countdata [E]
+
+User: Could you please provide the number of items in the data?
+Parsed: countdata [E]
+
+User: What are the IDs of all the data items?
+Parsed: countdata [E]
+
+User: Can you show me the item IDs in the training data?
+Parsed: countdata [E]
+
+User: What is the count of data points in the dataset?
+Parsed: countdata [E]
+
+User: What is the number of data points contained in the dataset?
+Parsed: countdata [E]
+
+User: Could you please inform me about the quantity of data points present in the dataset?
+Parsed: countdata [E]
+
+User: What is the count of data points within the dataset?
+Parsed: countdata [E]
+
+User: How many data points are present in the dataset?
+Parsed: countdata [E]
+
+User: Could you please provide information about the quantity of data points present in the dataset?
+Parsed: countdata [E]
+
+User: What is the total number of data points in the dataset?
+Parsed: countdata [E]
+
+User: Could you share the count of data points in the dataset?
+Parsed: countdata [E]
+
+User: I would like to know the quantity of data points present in the dataset. Could you please provide that information?
+Parsed: countdata [E]
+
+User: Can you give me the count of data points in the dataset?
+Parsed: countdata [E]

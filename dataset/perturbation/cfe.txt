@@ -93,3 +93,33 @@ Parsed: filter id 1864 and cfe [E]
 
 User: I'm interested in exploring the alternative outcomes for ID 2421. Could you show me the counterfactuals?
 Parsed: filter id 2421 and cfe [E]
+
+User: I'd like to see the counterfactual analysis for ID 819, can you show me the alternative outcomes?
+Parsed: filter id 819 and cfe [E]
+
+User: Can you provide the counterfactuals for ID 351?
+Parsed: filter id 351 and cfe [E]
+
+User: What are the alternative outcomes for ID 942 through counterfactual analysis?
+Parsed: filter id 942 and cfe [E]
+
+User: I'm interested in exploring the counterfactuals for ID 1298, can you show me the results?
+Parsed: filter id 1298 and cfe [E]
+
+User: Can you generate the counterfactual analysis for ID 567?
+Parsed: filter id 567 and cfe [E]
+
+User: Can you show me the alternative outcomes for ID 473 through counterfactual analysis?
+Parsed: filter id 473 and cfe [E]
+
+User: I'd like to explore the counterfactuals for ID 1982, can you provide them?
+Parsed: filter id 1982 and cfe [E]
+
+User: What are the counterfactuals for ID 756, can you generate them?
+Parsed: filter id 756 and cfe [E]
+
+User: Can you provide the counterfactual analysis for ID 1239?
+Parsed: filter id 1239 and cfe [E]
+
+User: I'm interested in seeing the alternative outcomes for ID 628 through counterfactual analysis.
+Parsed: filter id 628 and cfe [E]

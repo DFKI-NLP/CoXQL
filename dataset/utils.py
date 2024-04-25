@@ -43,7 +43,7 @@ def output_number_of_pairs_per_file():
         })
 
     jsonString = json.dumps(output)
-    jsonFile = open(f"final_coxql.jsonl", "w")
+    jsonFile = open(f"final_coxql.json", "w")
     jsonFile.write(jsonString)
     jsonFile.close()
 

@@ -1,0 +1,96 @@
+User: Retrain the model based on instance 14
+Parsed: filter id 14 and learn [E]
+
+User: Use instance 323 to fine-tune the model
+Parsed: filter id 323 and learn [E]
+
+User: Ground on instance with id 897, train the model again!
+Parsed: filter id 897 and learn [E]
+
+User: Apply training to the model using instance 473
+Parsed: filter id 473 and learn [E]
+
+User: Fine-tune the model with instance 1254
+Parsed: filter id 1254 and learn [E]
+
+User: Base the training on the model using instance 690
+Parsed: filter id 690 and learn [E]
+
+User: Retrain the model using instance 56
+Parsed: filter id 56 and learn [E]
+
+User: Incorporate instance 432 to fine-tune the model
+Parsed: filter id 432 and learn [E]
+
+User: Train the model on instance 1789
+Parsed: filter id 1789 and learn [E]
+
+User: Utilize instance 3112 for retraining the model
+Parsed: filter id 3112 and learn [E]
+
+User: Apply instance 4654 to fine-tune the model
+Parsed: filter id 4654 and learn [E]
+
+User: Rebase the model's training on instance 345
+Parsed: filter id 345 and learn [E]
+
+User: Adjust the model's training with instance 234
+Parsed: filter id 234 and learn [E]
+
+User: Incorporate instance 567 to retrain the model
+Parsed: filter id 567 and learn [E]
+
+User: Use instance 890 to fine-tune the model
+Parsed: filter id 890 and learn [E]
+
+User: Refine the model's training based on instance 123
+Parsed: filter id 123 and learn [E]
+
+User: Apply training to the model using instance 456
+Parsed: filter id 456 and learn [E]
+
+User: Implement instance 789 to fine-tune the model
+Parsed: filter id 789 and learn [E]
+
+User: Reconstruct the model's training with instance 678
+Parsed: filter id 678 and learn [E]
+
+User: Employ instance 901 for retraining the model
+Parsed: filter id 901 and learn [E]
+
+User: Enhance the model's training using instance 234
+Parsed: filter id 234 and learn [E]
+
+User: Adjust the model's training with instance 567
+Parsed: filter id 567 and learn [E]
+
+
+User: Train the model based on instance 345
+Parsed: filter id 345 and learn [E]
+
+User: Utilize instance 678 for fine-tuning the model
+Parsed: filter id 678 and learn [E]
+
+User: Refine the model using instance 901
+Parsed: filter id 901 and learn [E]
+
+User: Modify the training with instance 3234
+Parsed: filter id 3234 and learn [E]
+
+User: Incorporate instance 1671 for retraining the model
+Parsed: filter id 1671 and learn [E]
+
+User: Implement instance 890 to fine-tune the model
+Parsed: filter id 890 and learn [E]
+
+User: Update the model's training based on instance 4123
+Parsed: filter id 4123 and learn [E]
+
+User: Adjust the training with instance 864
+Parsed: filter id 864 and learn [E]
+
+User: Use instance 874 to retrain the model
+Parsed: filter id 874 and learn [E]
+
+User: Refine the model's training using instance 629
+Parsed: filter id 629 and learn [E]
