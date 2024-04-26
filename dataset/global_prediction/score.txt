@@ -70,14 +70,10 @@ Parsed: score precision [E]
 User: What is the precision?
 Parsed: score precision [E]
 
-
 User: give the recall score
 Parsed: score recall [E]
 
 User: testing recall score
-Parsed: score recall [E]
-
-User: when determining {class_names}, what is your recall score?
 Parsed: score recall [E]
 
 User: What is the recall?
@@ -112,3 +108,54 @@ Parsed: score accuracy [E]
 
 User: It would be helpful if you could inform me about the model's F1 score.
 Parsed: score f1 [E]
+
+User: Can you provide the ROC score for the testing data?
+Parsed: score roc [E]
+
+User: What is the ROC score?
+Parsed: score roc [E]
+
+User: Show me the ROC score on the testing data.
+Parsed: score roc [E]
+
+User: Can you display the ROC score?
+Parsed: score roc [E]
+
+User: What's the F1 score on the evaluation data?
+Parsed: score f1 [E]
+
+User: I meant, what is the F1 score on the evaluation data?
+Parsed: score f1 [E]
+
+User: Can you provide the F1 score on the evaluation data?
+Parsed: score f1 [E]
+
+User: What is the F1 score?
+Parsed: score f1 [E]
+
+User: Provide the recall score.
+Parsed: score recall [E]
+
+User: What's the recall score for testing?
+Parsed: score recall [E]
+
+User: Recall score?
+Parsed: score recall [E]
+
+User: Provide the precision score.
+Parsed: score precision [E]
+
+User: Can you display the precision on the training data?
+Parsed: score precision [E]
+
+User: What is the precision value?
+Parsed: score precision [E]
+
+User: Show me the precision score.
+Parsed: score precision [E]
+
+User: What's the precision on the data?
+Parsed: score precision [E]
+
+User: Precision score
+Parsed: score precision [E]

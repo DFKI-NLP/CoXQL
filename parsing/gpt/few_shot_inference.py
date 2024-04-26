@@ -1,4 +1,3 @@
-"""Few shot inference via gpt-j / neo series models."""
 import sys
 from os.path import dirname, abspath
 
@@ -12,19 +11,16 @@ sys.path.append(parent)
 from parsing.guided_decoding.gd_logits_processor import GuidedParser, GuidedDecodingLogitsProcessor
 
 
-@gin.configurable
 def get_few_shot_predict_f(
         model,
         tokenizer,
-        device: str = "cpu",
         use_guided_decoding: bool = True
     ):
     """Gets the few shot prediction model.
 
     Args:
-        model: the gpt series model for few shot prediction
-        tokenizer: the gpt tokenizer for the chosen model
-        device:
+        model: the model for few shot prediction
+        tokenizer: the tokenizer for the chosen model
         use_guided_decoding: whether to use guided decoding
     """
 

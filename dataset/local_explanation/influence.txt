@@ -1,95 +1,95 @@
-User: Provide the most influential training data instance
-Parsed: influence topk 1 [E]
+User: Provide the most influential training data instance for id 3
+Parsed: filter id 3 and influence topk 1 [E]
 
-User: Can you tell me the most 5 influential training data instances?
-Parsed: influence topk 5 [E]
+User: For instance with id 400 Can you tell me the most 5 influential training data instances?
+Parsed: filter id 400 and influence topk 5 [E]
 
-User: Show the most influential important data instance.
-Parsed: influence topk 1 [E]
+User: Show the most influential important data instance for id 912.
+Parsed: filter id 912 and influence topk 1 [E]
 
-User: Could you list the top 3 most dominant training data instances?
-Parsed: influence topk 3 [E]
+User: Could you list the top 3 most dominant training data instances for data point 1023?
+Parsed: filter id 1023 and influence topk 3 [E]
 
-User: Would you given me the top 5 most influential training data instances?
-Parsed: influence topk 5 [E]
+User: Would you give me the top 5 most influential training data instances for id 554?
+Parsed: filter id 554 and influence topk 5 [E]
 
-User: Display the most significant training data instance.
-Parsed: influence topk 1 [E]
+User: Display the most significant training data instance for data point 2034.
+Parsed: filter id 2034 and influence topk 1 [E]
 
-User: Can you show the top 3 most dominant training data instances?
-Parsed: influence topk 3 [E]
+User: For data point 588, can you show the top 3 most dominant training data instances?
+Parsed: filter id 588 and influence topk 3 [E]
 
-User: Would you give me the top 5 most influential training data instances?
-Parsed: influence topk 5 [E]
+User: For instance with id 777, Would you give me the top 5 most influential training data instances?
+Parsed: filter id 777 and influence topk 5 [E]
 
-User: Inform me the top 2 most dominant training data.
-Parsed: influence topk 2 [E]
+User: Inform me the top 2 most dominant training data for id 9989.
+Parsed: filter id 9989 and influence topk 2 [E]
 
-User: Output the top 4 most prominent training data.
-Parsed: influence topk 4 [E]
+User: Output the top 4 most prominent training data for instance 742.
+Parsed: filter id 742 and influence topk 4 [E]
 
-User: Can you provide the top 5 most influential training data?
-Parsed: influence topk 5 [E]
+User: Can you provide the top 5 most influential training data for id 2?
+Parsed: filter id 2 and influence topk 5 [E]
 
-User: Show the top 4 most prominent training data instances.
-Parsed: influence topk 4 [E]
+User: Show the top 4 most prominent training data instances for 401.
+Parsed: filter id 401 and influence topk 4 [E]
 
-User: Tell me the top 10 most dominant training data.
-Parsed: influence topk 10 [E]
+User: For instance with id 391, tell me the top 10 most dominant training data.
+Parsed: filter id 391 and influence topk 10 [E]
 
-User: Display the top 4 most prominent training data.
-Parsed: influence topk 4 [E]
+User: Display the top 4 most prominent training data regarding id 999.
+Parsed: filter id 999 and influence topk 4 [E]
 
-User: What are the top 2 most dominant training data instances?
-Parsed: influence topk 2 [E]
+User: What are the top 2 most dominant training data instances for id 1002?
+Parsed: filter id 1002 and influence topk 2 [E]
 
-User: Provide the top 5 most influential training data instances?
-Parsed: influence topk 5 [E]
+User: Provide the top 5 most influential training data instances regarding instance with id 871?
+Parsed: filter id 871 and influence topk 5 [E]
 
-User: Could you display the most influential training data instance?
-Parsed: influence topk 1 [E]
+User: Could you display the most influential training data instance for id 2304?
+Parsed: filter id 2304 and influence topk 1 [E]
 
-User: Can you list the top 5 most influential training data instances?
-Parsed: influence topk 5 [E]
+User: Can you list the top 5 most influential training data instances for id 3940?
+Parsed: filter id 3940 and influence topk 5 [E]
 
-User: Show the most influential training data instance.
-Parsed: influence topk 1 [E]
+User: Show the most influential training data instance for id 664.
+Parsed: filter id 664 and influence topk 1 [E]
 
-User: Could you provide the top 3 most dominant training data instances?
-Parsed: influence topk 3 [E]
+User: Could you provide the top 3 most dominant training data instances for id 14?
+Parsed: filter id 14 and influence topk 3 [E]
 
-User: Would you give me the top 5 most influential training data instances?
-Parsed: influence topk 5 [E]
+User: For id 92, would you give me the top 5 most influential training data instances?
+Parsed: filter id 92 and influence topk 5 [E]
 
-User: Display the most significant training data instance.
-Parsed: influence topk 1 [E]
+User: For instance with id 21, display the most significant training data instance.
+Parsed: filter id 21 and influence topk 1 [E]
 
-User: Can you show the top 3 most dominant training data instances?
-Parsed: influence topk 3 [E]
+User: Can you show the top 3 most dominant training data instances for instance with id 54?
+Parsed: filter id 54 and influence topk 3 [E]
 
-User: Would you list the top 5 most influential training data instances?
-Parsed: influence topk 5 [E]
+User: Would you list the top 5 most influential training data instances for id 3?
+Parsed: filter id 3 and influence topk 5 [E]
 
-User: Inform me of the top 2 most dominant training data.
-Parsed: influence topk 2 [E]
+User: Inform me of the top 2 most dominant training data for instance 54.
+Parsed: filter id 54 and influence topk 2 [E]
 
-User: Output the top 4 most prominent training data.
-Parsed: influence topk 4 [E]
+User: Output the top 4 most prominent training for id 67.
+Parsed: filter id 67 and influence topk 4 [E]
 
-User: Can you provide the top 5 most influential training data?
-Parsed: influence topk 5 [E]
+User: Can you provide the top 5 most influential training data for instance 8590?
+Parsed: filter id 8590 and influence topk 5 [E]
 
-User: Show the top 4 most prominent training data instances.
-Parsed: influence topk 4 [E]
+User: For id 40, show the top 4 most prominent training data instances.
+Parsed: filter id 40 and influence topk 4 [E]
 
-User: Tell me the top 10 most dominant training data.
-Parsed: influence topk 10 [E]
+User: For instance with id 98, tell me the top 10 most dominant training data.
+Parsed: filter id 98 and influence topk 10 [E]
 
-User: Display the top 4 most prominent training data.
-Parsed: influence topk 4 [E]
+User: Based on instance with id 75, display the top 4 most prominent training data.
+Parsed: filter id 75 and influence topk 4 [E]
 
-User: What are the top 2 most dominant training data instances?
-Parsed: influence topk 2 [E]
+User: Based on id 389, what are the top 2 most dominant training data instances?
+Parsed: filter id 389 and influence topk 2 [E]
 
-User: Could you list the top 5 most influential training data instances?
-Parsed: influence topk 5 [E]
+User: Based on id 92, could you list the top 5 most influential training data instances?
+Parsed: filter id 92 and influence topk 5 [E]

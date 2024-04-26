@@ -5,7 +5,7 @@
 - show.txt: 57
 - similarity.txt: 42
 - mistake.txt: 40
-- score.txt: 38
+- score.txt: 54
 - attribute.txt: 89
 - influence.txt: 32
 - rationalize.txt: 45
@@ -23,4 +23,4 @@
 - augment.txt: 41
 - cfe.txt: 42
 ---
-In total: 1000
+In total: 1016
