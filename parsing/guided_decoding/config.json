@@ -1,0 +1,7 @@
+{
+  "model": "tiiuae/falcon-rw-1b",
+  "tokenizer": "tiiuae/falcon-rw-1b",
+  "use_guided_decoding": "true",
+  "num_shots": 3,
+  "sentence_transformer": "all-mpnet-base-v2"
+}

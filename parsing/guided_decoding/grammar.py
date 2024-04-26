@@ -31,7 +31,7 @@ topkword: " topk"
 methodflag: " integrated_gradients" | " attention" | " lime" | " input_x_gradient"
 
 filter: filterword featuretype
-filterword: " filter"
+filterword: " filter id"
 featuretype: {availablefeaturetypes}
 
 function: " function"
