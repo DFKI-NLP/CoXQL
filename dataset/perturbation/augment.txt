@@ -52,7 +52,7 @@ Parsed: filter id 704 and augment [E]
 User: Does your system provide data augmentation capabilities for ID 457?
 Parsed: filter id 457 and augment [E]
 
-Is it possible to augment data for ID 2673?
+User: Is it possible to augment data for ID 2673?
 Parsed: filter id 2673 and augment [E]
 
 User: Can you generate an augmented version of id 211?
