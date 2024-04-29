@@ -2,7 +2,7 @@ import json
 
 import torch
 from sentence_transformers import SentenceTransformer, util
-from transformers import MaxLengthCriteria, AutoModelForCausalLM, AutoTokenizer
+from transformers import MaxLengthCriteria, AutoModelForCausalLM, AutoTokenizer, GPTQConfig
 
 from parsing.guided_decoding.gd_logits_processor import GuidedParser, GuidedDecodingLogitsProcessor
 from parsing.guided_decoding.grammar import GRAMMAR
@@ -18,8 +18,8 @@ def add_terminal_or(name: str, cur_terminals: str) -> str:
     return cur_terminals
 
 
-def get_topk_grammar_text(num=50):
-    """Gets text for the available top k features."""
+def get_num_grammar_text(num=20):
+    """Gets text for the available num features."""
     grammar_text = ""
     for num in range(1, num):
         grammar_text = add_terminal_or(str(num), grammar_text)
@@ -50,28 +50,42 @@ def predict_f(text: str, grammar: str, model, tokenizer, use_guided_decoding):
 
 
 def load_config():
+    """load configuration, model and sentence transformer"""
     f = open("./config.json")
     data = json.load(f)
 
     use_guided_decoding = data["use_guided_decoding"]
     num_shots = data["num_shots"]
+    use_cuda = data["use_cuda"]
 
-    model = AutoModelForCausalLM.from_pretrained(data["model"])
-    tokenizer = AutoTokenizer.from_pretrained(data["tokenizer"])
+    if use_cuda and torch.cuda.is_available():
+        device = "cuda"
+    else:
+        device = "cpu"
 
     print(f"[UPDATE] loading model - {data['model']}")
 
-    sentence_transformer = SentenceTransformer(data["sentence_transformer"])
+    if data["model"] != "NN":
+        # quantization_config = GPTQConfig(disable_exllama=True)
+        # model = AutoModelForCausalLM.from_pretrained(data["model"], low_cpu_mem_usage=True, device_map="auto", quantization_config=quantization_config)
+        model = AutoModelForCausalLM.from_pretrained(data["model"], device_map="auto", load_in_8bit=True)
+        tokenizer = AutoTokenizer.from_pretrained(data["tokenizer"])
+
+        model.config.pad_token_id = model.config.eos_token_id
+
+        sentence_transformer = SentenceTransformer(data["sentence_transformer"]).to(device)
+    else:
+        tokenizer = None
+        model = SentenceTransformer(data["sentence_transformer"]).to(device)
+        sentence_transformer = model
+        num_shots = None
 
     print(f"[UPDATE] loading sentence transformer - {data['sentence_transformer']}")
-
-    model.config.pad_token_id = model.config.eos_token_id
-
-    return model, tokenizer, sentence_transformer, use_guided_decoding, num_shots
+    return model, tokenizer, sentence_transformer, use_guided_decoding, num_shots, device
 
 
-def load_evaluation_pairs():
-    f = open("../../dataset/final_coxql.json")
+def load_evaluation_pairs(filename):
+    f = open(f"../../dataset/{filename}")
     data = json.load(f)
 
     texts = []
@@ -84,13 +98,14 @@ def load_evaluation_pairs():
     return texts, sqls
 
 
-def prepare_prompt_template(idx, embeddings, texts, sqls, num_shots, current_text):
-    cosine_scores = util.cos_sim(embeddings[idx], embeddings)
+def prepare_prompt_template(test_embedding, train_embeddings, texts, sqls, num_shots, current_text):
+    """selection of top k demonstrations and fill them into prompt template"""
+    cosine_scores = util.cos_sim(test_embedding, train_embeddings)
     _, indices = torch.sort(cosine_scores[0], descending=True)
 
     prompt_template = ""
 
-    for i in indices[1:num_shots+1]:
+    for i in indices[:num_shots]:
         prompt_template += f"User: {texts[i]}\n"
         prompt_template += f"Parsed: {sqls[i]}\n\n"
     prompt_template += f"User: {current_text}\n"
@@ -99,32 +114,62 @@ def prepare_prompt_template(idx, embeddings, texts, sqls, num_shots, current_tex
     return prompt_template
 
 
+def post_process(parsed_text):
+    """required for mistral and llama model (<s> contained in the generation)"""
+    ls = parsed_text.split(" ")
+    for (idx, i) in enumerate(ls):
+        if "<s>" in i:
+            ls[idx] = i.split("<s>")[0]
+    ls = [i for i in ls if i != '']
+    parsed_text = " ".join(ls)
+
+    return parsed_text
+
+
 def few_shot_prompting():
-    model, tokenizer, sentence_transformer, use_guided_decoding, num_shots = load_config()
+    model, tokenizer, sentence_transformer, use_guided_decoding, num_shots, device = load_config()
 
-    # load evaluation pairs
-    texts, sqls = load_evaluation_pairs()
+    # load train/test sets
+    train_texts, train_sqls = load_evaluation_pairs("coxql_train.json")
+    test_texts, test_sqls = load_evaluation_pairs("coxql_test.json")
 
-    embeddings = sentence_transformer.encode(texts, convert_to_tensor=True)
-
-    # predictions = []
-
-    grammar = GRAMMAR.format(topkvalues=get_topk_grammar_text(), availablefeaturetypes=get_topk_grammar_text(10000))
+    train_embeddings = sentence_transformer.encode(train_texts, convert_to_tensor=True)
+    test_embeddings = sentence_transformer.encode(test_texts, convert_to_tensor=True)
 
     counter = 0
 
-    for i, text in enumerate(texts[:5]):
-        prompt_template = prepare_prompt_template(i, embeddings, texts, sqls, num_shots, text)
+    if num_shots:
+        """few-shot prompting"""
+        grammar = GRAMMAR.format(topkvalues=get_num_grammar_text(), availablefeaturetypes=get_num_grammar_text(9999))
 
-        generation = predict_f(prompt_template, grammar, model, tokenizer, use_guided_decoding)
-        parsed_text = generation.split(prompt_template)[1].replace("[e]", "[E]").strip()
-        # predictions.append(parsed_text)
-        print(f"{sqls[i]} >>> {parsed_text} >> {sqls[i] == parsed_text}")
+        for i, text in enumerate(test_texts):
+            prompt_template = prepare_prompt_template(test_embeddings[i], train_embeddings, train_texts, train_sqls, num_shots, text)
 
-        if sqls[i] == parsed_text:
-            counter += 1
+            generation = predict_f(prompt_template, grammar, model, tokenizer, use_guided_decoding)
+            parsed_text = generation.split(prompt_template)[1].replace("[e]", "[E]").strip()
 
-    print(f"Matched: {counter}; Total: {len(texts)}; Accuracy: {round(counter/len(texts)*100, 2)}%")
+            # post-process the parsed text
+            parsed_text = post_process(parsed_text)
+
+            print(f"Index: {i}; {test_sqls[i]} >>> {parsed_text} >> {test_sqls[i] == parsed_text}")
+
+            if test_sqls[i] == parsed_text:
+                counter += 1
+    else:
+        """baseline - nearest neighbor"""
+        for i, text in enumerate(test_texts):
+            # get the most similar one
+            cosine_scores = util.cos_sim(test_embeddings[i], train_embeddings)
+            _, indices = torch.sort(cosine_scores[0], descending=True)
+
+            parsed_text = train_sqls[indices[0]]
+
+            print(f"Index {i}: {test_sqls[i]} >>> {parsed_text} >> {test_sqls[i] == parsed_text}")
+
+            if test_sqls[i] == parsed_text:
+                counter += 1
+
+    print(f"Matched: {counter}; Total: {len(test_sqls)}; Accuracy: {round(counter/len(test_sqls)*100, 2)}%")
 
 
 few_shot_prompting()
