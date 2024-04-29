@@ -28,10 +28,10 @@ featureattributionword: " nlpattribute"
 allfeaturesword: " all"
 topk: topkword ( {topkvalues} )
 topkword: " topk"
-methodflag: " integrated_gradients" | " attention" | " lime" | " input_x_gradient"
+methodflag: " default" | " integrated_gradients" | " attention" | " lime" | " input_x_gradient"
 
 filter: filterword featuretype
-filterword: " filter id"
+filterword: " filter id" | " filter" 
 featuretype: {availablefeaturetypes}
 
 function: " function"
