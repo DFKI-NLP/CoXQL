@@ -66,7 +66,7 @@ def load_config():
     print(f"[UPDATE] loading model - {data['model']}")
 
     if data["model"] != "NN":
-        # quantization_config = GPTQConfig(disable_exllama=True)
+        # quantization_config = GPTQConfig(bits=8, disable_exllama=True)
         # model = AutoModelForCausalLM.from_pretrained(data["model"], low_cpu_mem_usage=True, device_map="auto", quantization_config=quantization_config)
         model = AutoModelForCausalLM.from_pretrained(data["model"], device_map="auto", load_in_8bit=True)
         tokenizer = AutoTokenizer.from_pretrained(data["tokenizer"])
@@ -172,4 +172,4 @@ def few_shot_prompting():
     print(f"Matched: {counter}; Total: {len(test_sqls)}; Accuracy: {round(counter/len(test_sqls)*100, 2)}%")
 
 
-few_shot_prompting()
+# few_shot_prompting()

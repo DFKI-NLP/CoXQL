@@ -1,0 +1,17 @@
+User: how many data points have "honor" in it
+Parsed: includes and countdata [E]
+
+User: what's the number of instances with "fool"
+Parsed: includes and countdata [E]
+
+User: tell me how many instances in the data include "waterfall"
+Parsed: includes and countdata [E]
+
+User: for "apology", how many instances in the data are there?
+Parsed: includes and countdata [E]
+
+User: for those where "suit" is part of the input, could you tell me the total number of items in the data
+Parsed: includes and countdata [E]
+
+User: please state the number of "calculation" in the data
+Parsed: includes and countdata [E]

@@ -1,0 +1,23 @@
+User: In the data, how many documents are with label true?
+Parsed: labelfilter true and countdata [E]
+
+User: number of data points are labeled as true?
+Parsed: labelfilter true and countdata [E]
+
+User: How many texts in the data have the false label?
+Parsed: labelfilter false and countdata [E]
+
+User: What is the number of data points that are labeled as false?
+Parsed: labelfilter false and countdata [E]
+
+User: How many documents in the data have the true label?
+Parsed: labelfilter true and countdata [E]
+
+User: What is the number of data points that are labeled as true?
+Parsed: labelfilter true and countdata [E]
+
+User: How many texts in the data have the false label?
+Parsed: labelfilter false and countdata [E]
+
+User: What is the number of data points that are labeled as false?
+Parsed: labelfilter false and countdata [E]

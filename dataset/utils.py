@@ -19,12 +19,17 @@ def save_dataset_as_json(X, y, split="train"):
     jsonFile.close()
 
 
-def output_number_of_pairs_per_file():
+def output_number_of_pairs_per_file(save=False, without_logic=True):
     """
     Merge all (user question, parsed text) pairs, calculate the total number of pairs and store them in jsonl file
     """
     prefix = "./"
-    folder_names = [i for i in os.listdir() if os.path.isdir(prefix + i) and i != "filter" and i != "talktomodel" and i != "work_in_progress"]
+
+    if without_logic:
+        folder_names = [i for i in os.listdir() if
+                        os.path.isdir(prefix + i) and i != "includes" and i != "filters"]
+    else:
+        folder_names = [i for i in os.listdir() if os.path.isdir(prefix + i)]
 
     user_question = []
     parsed_text = []
@@ -47,14 +52,16 @@ def output_number_of_pairs_per_file():
 
                 after = len(user_question)
 
-                print(f"{f}: {after-before}")
+                print(f"{f}: {after - before}")
 
     print(f"In total: {len(user_question)}")
 
-    X_train, X_test, y_train, y_test = train_test_split(user_question, parsed_text, shuffle=True, random_state=42, test_size=0.2)
+    if save:
+        X_train, X_test, y_train, y_test = train_test_split(user_question, parsed_text, shuffle=True, random_state=42,
+                                                            test_size=0.2)
 
-    save_dataset_as_json(X_train, y_train, "train")
-    save_dataset_as_json(X_test, y_test, "test")
+        save_dataset_as_json(X_train, y_train, "train")
+        save_dataset_as_json(X_test, y_test, "test")
 
 
-output_number_of_pairs_per_file()
+output_number_of_pairs_per_file(without_logic=False)
