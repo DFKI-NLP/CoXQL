@@ -5,7 +5,7 @@ from openai import OpenAI
 from tqdm import tqdm
 
 skip_api_call = False
-API_KEY = "sk-proj-r7YA96Q798RgILhW6Zc8T3BlbkFJKJCWE90s3dhVvoFNMDBM"
+API_KEY = "sk-proj-r7YA96Q798RgILhW6Zc8T3BlbkFJKJCWE90s3dhVvoFNMDBM"  # Key is revoked. Replace with own key.
 API_ENDPOINT = "https://api.openai.com/v1/chat/completions"
 
 
@@ -117,7 +117,7 @@ if __name__ == "__main__":
                 print(f"{generation}")
                 instance[style_id] = generation
 
-            # Save output to list
-            final_instances.append(instance)
+        # Save output to list
+        final_instances.append(instance)
 
     pd.DataFrame(final_instances).to_csv("results.csv", index=False)
