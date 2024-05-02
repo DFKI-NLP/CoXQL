@@ -64,4 +64,4 @@ def output_number_of_pairs_per_file(save=False, without_logic=True):
         save_dataset_as_json(X_test, y_test, "test")
 
 
-output_number_of_pairs_per_file(without_logic=False)
+output_number_of_pairs_per_file(without_logic=True, save=True)

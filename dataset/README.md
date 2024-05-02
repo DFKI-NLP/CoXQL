@@ -1,5 +1,5 @@
 # CoXQL Dataset
-Total number of user question, parsed text pairs: 1178
+Total number of user question, parsed text pairs: 1179
 
 ## Main Operation
 - count_data.txt: 47
@@ -15,7 +15,7 @@ Total number of user question, parsed text pairs: 1178
 - likelihood.txt: 44
 - prediction.txt: 36
 - data.txt: 42
-- domain.txt: 26
+- domain.txt: 27
 - function.txt: 41
 - model.txt: 38
 - tutorial.txt: 90
@@ -26,7 +26,7 @@ Total number of user question, parsed text pairs: 1178
 - augment.txt: 42
 - cfe.txt: 42
 ---
-In total: 1017
+In total: 1018
 
 ## Logic Operation
 - includes.txt: 18
