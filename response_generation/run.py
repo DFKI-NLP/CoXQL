@@ -2,7 +2,9 @@ import json
 import pandas as pd
 import requests
 from openai import OpenAI
+from tqdm import tqdm
 
+skip_api_call = False
 API_KEY = "sk-proj-r7YA96Q798RgILhW6Zc8T3BlbkFJKJCWE90s3dhVvoFNMDBM"
 API_ENDPOINT = "https://api.openai.com/v1/chat/completions"
 
@@ -58,7 +60,7 @@ if __name__ == "__main__":
     )
 
     final_instances = []
-    df = pd.read_csv("data.csv")
+    df = pd.read_csv("prompt_data.csv")
 
     system_prompt = ("In the following, you will read a dialogue between a self-explaining AI and a user who is "
                      "knowledgeable in AI. The self-explaining AI can be requested to talk about the training data, do "
@@ -82,10 +84,10 @@ if __name__ == "__main__":
         "elaborate_and_complex": "elaborate and written for the AI expert user",
     }
 
-    for i, instance in df.iterrows():
-        for style in text_styles.values():
-            if instance[style]:
-                print(f"Already generated:\n\t{instance[style]}\n")
+    for i, instance in tqdm(df.iterrows(), total=len(df)):
+        for style_id, style in text_styles.items():
+            if not pd.isna(instance[style_id]):
+                print(f"Already generated:\n\t{instance[style_id]}\n")
                 continue
 
             instruction = (
@@ -105,14 +107,17 @@ if __name__ == "__main__":
                       + "AI:\n> " + instance["system"].replace("\n", "\n> ") + "\n\n"
                       + "Rival AI's response:\n> "
                       )
+            # Save prompt
+            instance[f"prompt_{style_id}"] = prompt
 
-            # Inference
-            output = gpt.get_completion(prompt)
-            generation = output.replace(prompt, '')  # Removing the prompt
-            print(f"{generation}")
+            if not skip_api_call:
+                # Inference
+                output = gpt.get_completion(prompt)
+                generation = output.replace(prompt, '')  # Removing the prompt
+                print(f"{generation}")
+                instance[style_id] = generation
 
             # Save output to list
-            instance[style] = generation
             final_instances.append(instance)
 
     pd.DataFrame(final_instances).to_csv("results.csv", index=False)

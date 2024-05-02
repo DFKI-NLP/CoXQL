@@ -1,0 +1,766 @@
+index,explanation_category,explanation_type,source_file,dataset,context_1_id,user_context_1,system_context_1,context_2_id,user_context_2,system_context_2,id,user,system,short_and_easy,short_and_complex,elaborate_and_easy,elaborate_and_complex
+1,rationale,rationalize,1,boolq,215f11dc590a5388e4b12f53ebb4957f6492b993f6d2cf602dad7b6365a9,what are some data points you get incorrect?,"For all the instances in the data, the model is incorrect 912 out of 3270 times (error rate 0.279).",5e0143a4de413c425d8e70062b95d8ab5d7a11d8f3804f234982d7ab1f75,what are the most important words overall?,"hypothetical, metaphor, avoided, problematic, unsuitable, shepard, limitation, dubious, ##utable, and scout are the most attributed.",254188d2e68f806d5a31aa597e55ee40bc5fa6ba0bda02e47224bf39e8cf,interpret id 8 in plain language,"Original text: Question: can u drive in canada with us license Passage: American entry into Canada by land -- Persons driving into Canada must have their vehicle's registration document and proof of insurance.
+Prediction: true
+Explanation: The American government must prove that the person driving the vehicle into canadian is authorized to do so. This is because canadians are required to have a drivers license and insurance to drive a vehicle in Canada.","For ID 8, the question was if someone can drive in Canada with a US license. The passage explained that anyone driving into Canada needs to have their vehicle's registration and insurance proof. The model predicted 'true' because the text suggests that as long as a driver has the necessary documentation, including a license recognized for driving in Canada, they should be able to drive there, implying that a US license is acceptable.","The model predicted ""true"" for ID 8 because the passage implies that with proper vehicle documentation, Americans can drive in Canada, which would logically extend to recognizing a US driver's license as adequate for driving in Canada.","Interpreting the information for query ID 8 in straightforward terms, the question was whether someone could drive in Canada using a US driver's license. The provided passage explains that when entering Canada by land from the US, individuals need to have their vehicle's registration and proof of insurance. The prediction that the answer is 'true' is based on interpreting this passage to imply that an American driver's license is acceptable for driving in Canada, as the requirement focuses on the vehicle's documentation rather than the country of issuance for the driver's license. Thus, the underlying reasoning is that if American drivers must present vehicle documents, it logically extends that their US driver's license is valid for driving in Canada, provided they comply with the vehicle documentation requirements. This conclusion aligns with the common understanding of cross-border travel regulations between the US and Canada, where US driver's licenses are recognized in Canada for short visits.","In plain language, the passage is discussing the requirements for Americans who wish to drive in Canada. The key point is that when Americans drive into Canada, they need to have two important documents with them: the vehicle’s registration document and proof of insurance. The question asked if you can drive in Canada with a US license. The prediction made by the model that the answer is 'true' is based on the inference that having vehicle registration and proof of insurance is part of the requirements for driving in Canada. However, the explanation provided earlier somewhat misinterprets the passage, implying a need for authorization from the American government, which is not mentioned in the passage. The correct interpretation should highlight that the passage implies American drivers are permitted to drive in Canada, provided they carry the necessary documentation, which includes, but is not directly stated as, a valid driver's license. Therefore, the connection is that a valid US driver's license, alongside the mentioned documents, is acceptable for driving in Canada, hence why the prediction is 'true'."
+2,rationale,rationalize,1,boolq,254188d2e68f806d5a31aa597e55ee40bc5fa6ba0bda02e47224bf39e8cf,interpret id 8 in plain language,"Original text: Question: can u drive in canada with us license Passage: American entry into Canada by land -- Persons driving into Canada must have their vehicle's registration document and proof of insurance.
+Prediction: true
+Explanation: The American government must prove that the person driving the vehicle into canadian is authorized to do so. This is because canadians are required to have a drivers license and insurance to drive a vehicle in Canada.",7662aa2cf3e0754ab65b726573330c28b4ae00862309547fc1f7f21f3b52,please interpret id 18,"Original text: Question: is the tv show the resident over for the season Passage: The Resident (TV series) -- The Resident is an American medical drama television series aired by Fox Broadcasting Company that premiered on January 21, 2018, as a mid-season replacement entry in the 2017--18 television season. The fictional series focuses on the lives and duties of staff members at Chastain Park Memorial Hospital, while delving into the bureaucratic practices of the hospital industry. Formerly called The City, the show was purchased by Fox from Showtime in 2017. It was created by created by Amy Holden Jones, Hayley Schore, and Roshan Sethi. On May 10, 2017, Fox ordered a full 14-episode season and renewed the series for a second season on May 7, 2018. The first season officially concluded on May 14, 2018.
+Prediction: true
+Explanation: The Residents (tv show) is a medical show that airs on Fox.",e10665585d9768597dad41252f029a4905869fb7958be7b680690c2b113f,please interpret prediction 38,"Original text: Question: can carbon form polar covalent bonds with hydrogen Passage: Carbon–hydrogen bond -- The carbon-hydrogen bond (C--H bond) is a bond between carbon and hydrogen atoms that can be found in many organic compounds. This bond is a covalent bond meaning that carbon shares its outer valence electrons with up to four hydrogens. This completes both of their outer shells making them stable. Carbon--hydrogen bonds have a bond length of about 1.09 Å (1.09 × 10 m) and a bond energy of about 413 kJ/mol (see table below). Using Pauling's scale--C (2.55) and H (2.2)--the electronegativity difference between these two atoms is 0.35. Because of this small difference in electronegativities, the C−H bond is generally regarded as being non-polar. In structural formulas of molecules, the hydrogen atoms are often omitted. Compound classes consisting solely of C--H bonds and C--C bonds are alkanes, alkenes, alkynes, and aromatic hydrocarbons. Collectively they are known as hydrocarbons.
+Prediction: true
+Explanation: The carbon– hydrogen bond has a length around 1 Å and has an energy around 413 KJ mol-1, which makes it non polar. The bond angle between the two hydrogen and carbon atoms in the bond are around 120 degrees, this makes the carbon hydrogen non covalently bound.",,,,
+3,rationale,rationalize,2,daily_dialog,555bbc462a9a3f6e552cffb2947873272299fe503b15d7a6c613771aef9e,What are the 3 most important words in deciding whether an id is inform?,"karen, fired, and apologize are the most attributed.",d994c74eaea9093a8c65fbda22ebc60816f13c10eeec3582623fbfc4ea3d,simplify the explanation for id 951,"Dialog: 'we've never expected that shanghai is such a big metropolis, same as new york city. david, would it be a good idea to rent a car here? i've got an international driver's license with a pretty good record in the states.'
+
+Prediction: directive
+
+Explanation: This text is likely making a request or recommendation. The Shanghai metropolit is big, so it would be good to get a rental car. However, it is also likely that the Shanghai is a metropole is being referred to in an affirmative way. David, Shanghai seems like a very big city to me. I've been to many cities in China, but Shanghai might be the biggest one to date.",8172d89ae93d0df6e834c80a5d5da9c23cb65ea614b493a5f41676a5ecdd,Rationalize the prediction for id 508 for me,"Dialog: 'sure. do you want it to be registered?'
+
+Prediction: question
+
+Explanation: Question dialogue acts are used to ask questions. The question here is whether the sender wants the information to get registered. Based on their response 'yes', the question is answered and the dialogue ends. Overinform dialogue Acts are similar to questions, but they are more general and are often used when the other options are not applicable. For example, if I ask you how your day was, you might respond with a detailed account of your activities. This is an overinform act, because there are many other ways to respond to this question. However, it would be more appropriate to use a commissIVE dialogue action, such as 'tell me about your days', which would provide a more succinct account. Direct dialogue Act is used by the speaker to communicate a request or order to the listener. In this case, 'do you have any questions for me?'. If the receiver does have a follow up question after the initial request, then the order is followed and a direct dialogue is concluded. Otherwise, a non-directive dialogue would conclude the conversation. In this example the request is for the questions to follow, so a command is the most appropriate dialogue label.",,,,
+4,rationale,rationalize,5,olid,a4ea1db4478f5877c8b04c0345eb2e5294d870a4ab550e6a055c2bd3b2a1,What are the most frequent keywords?,"The 25 most frequent words in the dataset are:
+
+Word	Frequence
+@USER	6491
+I	561
+URL	392
+You	234
+gun	221
+like	208
+He	206
+	186
+""@USER	176
+She	171
+people	163
+MAGA	162
+control	156
+&	150
+The	150
+liberals	148
+:face_with_tears_of_joy:	128
+would	114
+one	113
+get	113
+Antifa	103
+think	102
+Liberals	96
+know	96
+And	94",0a56ee0fbbb4c385a8fd3d505ddf7d1cab8b89d80570a4eaaef493527762,"Which features are important for prediction 322?	""The original text is:
+@USER They are Antifa democrats disguised as GOP looking to infiltrate the party. Don't worry though it doesn't take long to figure them out.
+
+Top 5 token(s): ##fa ##trat it wo figure""","The original text is:
+@USER They are Antifa democrats disguised as GOP looking to infiltrate the party. Don't worry though it doesn't take long to figure them out.
+
+Top 5 token(s): ##fa ##trat it wo figure",7f296368ceb1b57d460645fadc656c1349669b7c69b4239e7cb1898e57ae,Could you explain data point 21 in natural language?,"Original text: Tweet: '@USER @USER I bet more gun control is your answer.'
+Prediction: non-offensive
+Explanation: While the first tweet contains a prediction, it does provide context and an explanation for why the prediction was made. In the second tweet the author expresses their opinion on gun controls, but does so in a non offensive manner.",,,,
+5,rationale,rationalize,5,olid,7308c5a31a546276e88415941271ea21b631399021e45834712979a7d7b6,What are the most attributed tokens across the whole dataset for the 'offensive' class?,"product, cola, its, difference, bar, but, coca, drug, loss, and government are the most attributed.",f7772024bdf2910dbeacc06cf66e1c66f1d7fc6e7e5aa9b69c1e5a6f00ac,What are the most attributed tokens across the whole dataset for the 'non-offensive' class?,"idi, shi, gross, ##ching, ##rook, ##ches, fu, bit, ass, and vile are the most attributed.",8d4ef61b726568bbc76809df42bff509719942a3f33ec84af359ad4ec89d,Could you please justify your prediction on id 1792?,"Original text: Tweet: '@USER @USER @USER She is mentally unstable.'
+Prediction: offensive
+Explanation: Offensive language: ""cunt"" Negative attitude: negative tone Mental instability: offensive slur ",,,,
+6,rationale,rationalize,5,olid,f7772024bdf2910dbeacc06cf66e1c66f1d7fc6e7e5aa9b69c1e5a6f00ac,What are the most attributed tokens across the whole dataset for the 'non-offensive' class?,"idi, shi, gross, ##ching, ##rook, ##ches, fu, bit, ass, and vile are the most attributed.",8d4ef61b726568bbc76809df42bff509719942a3f33ec84af359ad4ec89d,Could you please justify your prediction on id 1792?,"Original text: Tweet: '@USER @USER @USER She is mentally unstable.'
+Prediction: offensive
+Explanation: Offensive language: ""cunt"" Negative attitude: negative tone Mental instability: offensive slur ",c31d9a90a80ef31419897c80f4e0a15751b33f9f293054be2dd7ebd95def,And what about the rationale for id 1564?,"Original text: Tweet: '@USER NO BITCH I MEANT I DIDNT KNOW WE WERE DOING IT NOT ZOOMED IN NO BITCH THIS IS FUN'
+Prediction: offensive
+Explanation: Offensive language includes words or phrases such as ""bitch"", ""faggot"", or ""pussy"". While the language in the Tweet is offensive in nature, it does contain derisive terms for women and people who are LGBTQ. The use of derrogatory language towards women is a form of gender-based violence and is therefore considered offensive https://en.wikipedia.org/wiki/Gender_based_violence Derogative language targeting LGBT people is also considered to be offensive and gender nonconforming. http://www.huffingtonpost.com/entry/lgbt-pride-parade-protest_us_582d2d6ce4b0a0d4c2b7a8d8 This is an example of a tweet that contains offensive words and phrases: @USER No Bitch I Meant I Didnt Know We Were Doing It Not Zoomed In No Bitch This Is Fun I'm not sure what the context of this Tweets is, but it seems like the author is making fun of someone who is zooming in on something. I don't think this is gender based violence or targeting of LGBT individuals.",,,,
+7,rationale,rationalize,5,olid,a8ce001e56fc24c81f7b7fc47e9225049e9b283207896dba419dd38bcf2b,"For id 1688, what would be a sensible augmentation?","Original text: (ID 1688)
+@USER @USER If the LEFT would just stop the politics of distraction he will keep more promises MAGA
+Augmentation by word replacements:
+@ USER @ USER that the LEFT cannot just keep more bullying and distraction he will keep more fun is",d673fe4545717768696264ee4717b4935f333f7993057a1cecb5d07c6df9,Show me all instances that include this word for id 36,There are no instances in the data that meet this description.,a53d3d63b0039adffa8280fc59adfdc6bc7861845acf244b58accc183e40,What's your justification for predicting id 36 as 'non-offensive'?,"Original text: Tweet: '@USER @USER I don't understand how it's racist tho..'
+Prediction: non-offensive
+Explanation: According to the Twitter guidelines, ""offensiveness"" is defined as: ""Language or topics that may be considered offensive.",,,,
+8,rationale,rationalize,5,olid,20a7f8c59f6ccab017d19ec9366e564bf0754c99c3f4a89960ee41b30931,"For my custom input, what are the top attributed tokens?","The original text is:
+for data point id 786 how would i change the prediction?
+
+Top 5 token(s): how prediction for [SEP] point",ca418f11095794fc2a9c5183d11579b53261194bfb011c207b8bbd6a144d,What are the two most attributed tokens?,"The original text is:
+for data point id 786 how would i change the prediction?
+
+Top 2 token(s): how prediction",c30e3dfacee4a50bb46de2eb86456789ec68b6e09128e800fdf4b96ac98c,What is a natural language explanation for id 412?,"Original text: Tweet: '@USER @USER @USER Hopefully conservatives will be welcomed in too.'
+Prediction: non-offensive
+Explanation: @USER is a Twitter handle. Hopefully is an expression used to express optimism. The word 'welcome' is also an optimistic expression.",,,,
+9,rationale,rationalize,5,olid,dcb2b3a1f4564d3cf9da14f3b4f5fff53c97d551098c741af8a92b6fe50d,The 10 most attributed tokens for the offensive label,"##rook, idi, bomb, vile, shi, gross, bit, ##ches, fu, and ##ch are the most attributed.",2ae8e76621187d9809a58b6fad372f16b9b03651b232a9bcad8f9829334f,How often does the model make a wrong prediction?,"For all the instances in the data, the model is incorrect 915 out of 2648 times (error rate 0.346).",7063dbc136946f0b1caefc56760f5ae8feb04d5e5a7727f278faa3ef9da2,Explain your prediction on 1325 in natural language,"Original text: Tweet: '@USER @USER @USER Says the little commie thot. I bet that $20 is more than your hourly rate'
+Prediction: offensive
+Explanation: @USER is a Twitter handle. BITE is the Twitter word. @USER @USERSays the ""little commies"" thoth. ""Little commi"" is slang for communist. $20/hour is an amount that is commonly paid to an hourly wage. Says is derrogatory slur for ""communist"".",,,,
+10,rationale,rationalize,5,olid,9d041df58e4def301746bed106da2037b3ef10ea3928285b676330e91ac4,What instances are most similar to id 10?,"The original text for id 0:
+
+show me some data you predict incorrectly...
+
+Here are some instances similar to id 0:
+id 1859 (cossim 0.368):
+@USER It's just getting so predictable....
+
+id 2343 (cossim 0.284):
+@USER @USER The same thing happened when Australia introduced gun control. Just rename the unemployment line...
+
+id 1326 (cossim 0.276):
+@USER Bet your butt....",6d83c2887c519628efc7bbf7b1cb1a7a593a116276d07165cd7dcbf32b4c,"Could you give me all frequent keywords, please?","The 25 most frequent words in the dataset are:
+
+Word        Frequence
+@USER        6491
+I        561
+URL        392
+You        234
+gun        221
+like        208
+He        206
+        186
+""@USER        176
+She        171
+people        163
+MAGA        162
+control        156
+&        150
+The        150
+liberals        148
+:face_with_tears_of_joy:        128
+would        114
+one        113
+get        113
+Antifa        103
+think        102
+Liberals        96
+know        96
+And        94",83162957576ef652d066053503408f091c7e68f80122701d4aaf3753ac4a,Use id 9 for rationalization,"Original text: Tweet: '@USER @USER @USER @USER @USER Looking forward to the right dragging up these tweets when the New York Times hires me as Antifa Editor'
+Prediction: non-offensive
+Explanation: While the language used in the original tweet was informal, it was not intended to be offensive. In addition, while the content of this tweet may not have been intended as a joke, there is no evidence that the author was making a serious statement about politics or the current political climate. The author's mention of ""antifa editor"" is likely a reference to a recent article published by the NYT about its plans to hire a former Antifascist International editor. While the article does mention that Antifeascists are being considered for other positions, this is clearly a satirical reference, and there's no indication that this author is affiliated with Antifleascst or any other group that would make them an appropriate candidate for this role.",,,,
+11,rationale,rationalize,5,olid,6d83c2887c519628efc7bbf7b1cb1a7a593a116276d07165cd7dcbf32b4c,"Could you give me all frequent keywords, please?","The 25 most frequent words in the dataset are:
+
+Word        Frequence
+@USER        6491
+I        561
+URL        392
+You        234
+gun        221
+like        208
+He        206
+        186
+""@USER        176
+She        171
+people        163
+MAGA        162
+control        156
+&        150
+The        150
+liberals        148
+:face_with_tears_of_joy:        128
+would        114
+one        113
+get        113
+Antifa        103
+think        102
+Liberals        96
+know        96
+And        94",83162957576ef652d066053503408f091c7e68f80122701d4aaf3753ac4a,Could you provide a free-text explanation for your id 9 prediction?,"Original text: Tweet: '@USER @USER @USER @USER @USER Looking forward to the right dragging up these tweets when the New York Times hires me as Antifa Editor'
+Prediction: non-offensive
+Explanation: While the language used in the original tweet was informal, it was not intended to be offensive. In addition, while the content of this tweet may not have been intended as a joke, there is no evidence that the author was making a serious statement about politics or the current political climate. The author's mention of ""antifa editor"" is likely a reference to a recent article published by the NYT about its plans to hire a former Antifascist International editor. While the article does mention that Antifeascists are being considered for other positions, this is clearly a satirical reference, and there's no indication that this author is affiliated with Antifleascst or any other group that would make them an appropriate candidate for this role.",261dce585c371ee1a16cbe7b7c1de6ac5d25082a441f104fb784b473aa66,Could you provide a free-text explanation for your id 10 prediction?,"Original text: Tweet: '@USER @USER Yup hahaha she is cute'
+Prediction: non-offensive
+Explanation: There is not any use or mention of racial, ethnic, religious, sexual orientation, veteran, disability, physical or mental health terms in the Tweet. Language used in Tweets is generally informal, and some of it contains profanities. However, it is purely a matter of opinion whether the use and/or language is offensive or not. The TWEET is simply expressing the opinion of a user about another user's behavior. This is a non offensive way of expressing one's opinion.",,,,
+12,rationale,rationalize,7,daily_dialog,b1c629fee9f4bbd4b9fb8c1d9ad4fb949723ef9fe98fce6baa66aae3f1b7,Could you explain your prediction on id 0 in natural language?,"Original text: Text: 'hey man, you wanna buy some weed?'
+Prediction: directive
+Explanation: Question is the most likely dialogueact, because the request for information is made by the sender of the message. In this case, man. The sender is seeking information about the identity of a person, and is therefore using the question word.",349d43f1207f06d05aef7c55458359584af91073130f39f734e7184e976c,What are two examples similar to id 0?,"The original text for id 0:
+
+change 0 to a commissive...
+
+Here are some instances similar to id 0:
+id 1481 (cossim 0.29):
+first you must check in at counter no. 4....
+
+id 1987 (cossim 0.262):
+what am i supposed to do?...
+
+id 285 (cossim 0.252):
+i can handle them without any trouble...",d10cea861d69cbe518908772fedfd4d5a88eb5cfe8869344e72e7bc4b182,Could you explain your prediction on id 6 in natural language?,"Original text: Text: 'come on man! i even got dope and acid! try some!'
+Prediction: directive
+Explanation: directive is a directive dialogueact, where the speaker is trying to get the listener to do something. In this case, it's the subject of the sentence, ""try some!"". The directive act can also be used as a general purpose act, to express a request or order. overinform: the information provided is not particularly useful or helpful. This is because the provided information is either not true, does not apply to the situation, is too general, etc. Overinform is used when the actual information that is needed is provided later in the conversation. For example, if I ask you where a car is, and you tell me that the car you are looking for is in a nearby parking lot, I would consider this overinform, because I already know where your car resides. I need to know more about the specifics of your situation to provide the needed information. question: this act describes a conversation where two people are communicating with each other. One person is asking a direct question to another person. They are not necessarily trying get a response from the other person, but they are just trying make sense of something, find an answer, understand something better. So, in this example the question act. The question is ""where is the parking?"". And the answer is given by the person who is looking in their car for the parked car. ""In a nearby parking."". Here the direct answer was given, so the act was classified out of question. However, this is an example of a dialogue where there is no promise or command given. If the same conversation was about a pizza place, then the command act might be more appropriate. But in general the promise act and command acts are used in conjunction with questions. inform (question): this acts describes the first person asking the second person a specific question or making a statement. Then the inform act takes place. After the ask or statement, there might or might not be a follow up question from second. Sometimes the followup question might even be from third person or someone else. Like in example 1, after the ""Where is it?"" the inquirer might get another answer ""in a parking"". Inform is also used to describe a situation where someone is giving information to someone. Example 2. A person might say ""I am going to a party tomorrow and I will bring some alcohol. Please don't tell anyone"". This act could also describe the action of someone giving a gift to other, like a present.",,,,
+13,rationale,rationalize,11,daily_dialog,94364f434ebfbcf225e2ab302cc6170ef4feec8e51212f9392d987716f01,i want to know top 20 contributed words with label question.,"occur, preference, tibet, safe, salty, gate, jimmy, drivers, building, and happened are the most attributed.",b7b9b5f78ea109899640437b38ea98f15617832c7186923556954d7723ff,explain id 0 with rationale,"Dialog: 'hey man, you wanna buy some weed?'
+
+Prediction: directive
+
+Explanation: Question is the most likely dialogueact, because the request for information is made by the sender of the message. In this case, man. The sender is seeking information about the identity of a person, and is therefore using the question word.",748169e8b04e4d4ae0481e64492b83b49547d2a0bb2b3b1d48e78b322e33,explain id 8 with rationale,"Dialog: 'i got my connections! just tell me what you want and i ’ ll even give you one ounce for free.'
+
+Prediction: directive
+
+Explanation: Directive is a directive act, and inform is the most common of the four possible dialogue acts. The other three are question (asking a clarifying question), command (giving a direct order), and commissIVE (making a commitment). The Commissive act includes promises, but the one in this example is not a Promise. A: According to the dialogue chart, this is directive. Directives are commands, questions are questions, requests are requests, etc.",,,,
+14,rationale,rationalize,12,olid,3fb13214d9c11632c9a2ee214b401d0549bb8bfafcb8f12a6dd3978361d9,what are important features for offensive,"##rook, idi, bomb, vile, shi, gross, bit, ##ches, fu, and ##ch are the most attributed.",83162957576ef652d066053503408f091c7e68f80122701d4aaf3753ac4a,Find id 9 and generate an explanation in natural language,"Original text: Tweet: '@USER @USER @USER @USER @USER Looking forward to the right dragging up these tweets when the New York Times hires me as Antifa Editor'
+Prediction: non-offensive
+Explanation: While the language used in the original tweet was informal, it was not intended to be offensive. In addition, while the content of this tweet may not have been intended as a joke, there is no evidence that the author was making a serious statement about politics or the current political climate. The author's mention of ""antifa editor"" is likely a reference to a recent article published by the NYT about its plans to hire a former Antifascist International editor. While the article does mention that Antifeascists are being considered for other positions, this is clearly a satirical reference, and there's no indication that this author is affiliated with Antifleascst or any other group that would make them an appropriate candidate for this role.",261dce585c371ee1a16cbe7b7c1de6ac5d25082a441f104fb784b473aa66,"For id 10, generate a natural language explanation","Original text: Tweet: '@USER @USER Yup hahaha she is cute'
+Prediction: non-offensive
+Explanation: There is not any use or mention of racial, ethnic, religious, sexual orientation, veteran, disability, physical or mental health terms in the Tweet. Language used in Tweets is generally informal, and some of it contains profanities. However, it is purely a matter of opinion whether the use and/or language is offensive or not. The TWEET is simply expressing the opinion of a user about another user's behavior. This is a non offensive way of expressing one's opinion.",,,,
+15,rationale,rationalize,13,boolq,c40824cac0be543e55af215e1f0a59c2681c96197d3d824bdbd3fb6d4e48,i'm looking for a case that is akin to id 1339 could you help me with that?,"The original text for id 0:
+
+Is socrates dead ? Socrates (/ˈsɒkrətiːz/;[1] Greek: Σωκράτης; c. 470–399 BC) was a Greek philosopher from...
+
+Here are some instances similar to id 0:
+id 465 (cossim 0.281):
+was turkey a part of the roman empire History of Turkey -- The Persian Achaemenid Empire...
+
+id 943 (cossim 0.265):
+were greece and rome around at the same time Greece in the Roman era -- Greece...
+
+id 2313 (cossim 0.257):
+is it possible for someone to die of laughter Death from laughter -- Death from laughter...",0a637525c985a5d77629553020f0693e0d20e191093ab69be500b372c08f,how do you decide whether some text is False,"hypothetical, metaphor, avoided, problematic, unsuitable, shepard, limitation, dubious, ##utable, and scout are the most attributed.",2934eca7afa673a3704653101bd34730d809068966e98589717027defe02,generate a natural language explanation for id 1938,"Original text: Question: did kristen bell sing all the voices of anna Passage: Anna (Frozen) -- Princess Anna of Arendelle is a fictional character who appears in Walt Disney Animation Studios' 53rd animated film Frozen. She is voiced by Kristen Bell as an adult. At the beginning of the film, Livvy Stubenrauch and Katie Lopez provided her speaking and singing voice as a young child, respectively. Agatha Lee Monn portrayed her as a nine-year-old (singing).
+Prediction: true
+Explanation: Kristin Bell provided Anna's speaking voice in the movie Frozone as a young Child. The passage states that Anna was portrayed as as nine year old in a movie. Therefore, Kristin bell provided the singing as Anna in Froze as well.",,,,
+16,rationale,rationalize,14,daily_dialog,b8c67c9a274622fd0f7b0e3bb52822d0fc966798fe9a9cd5f7417a6f629e,top three most important features,"fired., dry, and cleaned. are the most attributed.",4865e3654f8e4cff14ea99ca661d0fa7fd03dbdf5ee1d654c110b58f5463,how do you figure out if data points are dummy,"fired, occur, preference, goodbye, replies, dessert, cute, buff, ##made, and tibet are the most attributed.",9f78836e52f82ff64119762d7dc1f75b80ad724688eb3b0f9398f761dfa8,explain id 1387 in natural language,"Dialog: 'oh, i'm sorry. however, if you could help me out, i'll double the pay for the hours worked.'
+
+Prediction: directive
+
+Explanation: In the example provided, it is clear that ""you"" is the directive actor. The context makes clear the action that needs to be done (requesting the development of a film roll), and the location where this needs be completed (a specific location). The only option that is left is to ""double the amount of the work"" which is a commissIVE act.",,,,
+17,attribution,nlpattribute,2,daily_dialog,fd41d6ae7b2d772f29de14b48b232181664fa1b4617a7f72ce5310a42bc4,What are the words that show up the most in the dataset?,"The 25 most frequent words in the dataset are:
+
+Word	Frequence
+’	341
+like	145
+-	134
+yes,	128
+i'm	126
+would	125
+get	102
+good	102
+think	95
+take	90
+you.	86
+thank	81
+that's	79
+well,	76
+want	75
+one	75
+go	74
+i'll	74
+could	70
+need	66
+know	64
+oh,	63
+you?	58
+make	55
+it.	55",f833a96e9b0c8f8c2ef42436bd1a3680a65baf6a6c450ff6017f7bb02fe5,What are the 6 keywords that are the most relevant?,"The 6 most frequent words in the dataset are:
+
+Word	Frequence
+’	341
+like	145
+-	134
+yes,	128
+i'm	126
+would	125",165276d0d2e44e8b2fee9d6ad3343a42b2677f179668f6ee9bac08f4c7e2,i was wondering what are the most important features for instance 1117,"Dialog: i actually like the food there.
+
+Top 5 token(s): actually . like there food",,,,
+18,attribution,nlpattribute,2,daily_dialog,165276d0d2e44e8b2fee9d6ad3343a42b2677f179668f6ee9bac08f4c7e2,i was wondering what are the most important features for instance 1117,"Dialog: i actually like the food there.
+
+Top 5 token(s): actually . like there food",fe683e5794fb88790dfa879c2bd60a9b6dcd32e1110a5722445f6fb6112b,what are the words in id 8 that make it being classified as it is?,"For the data with id equal to 8, the features are
+
+dialog: i got my connections! just tell me what you want and i ’ ll even give you one ounce for free.",b718a18f0e0ca21766c9fe29d941fdca62c6de68ce6853171fd411add499,What are the most salient words in id 8 for the model to make a decision?,"Dialog: i got my connections! just tell me what you want and i ’ ll even give you one ounce for free.
+
+Top 5 token(s): want tell free . give",,,,
+19,attribution,nlpattribute,5,olid,cd114a9334dedd3feedfd69d1c2adb8fae16063e71409a05447c1d238748,What are the 3 most frequent keywords in the data?,"The 3 most frequent words in the dataset are:
+
+Word	Frequence
+@USER	6491
+I	561
+URL	392",a4ea1db4478f5877c8b04c0345eb2e5294d870a4ab550e6a055c2bd3b2a1,What are the most frequent keywords?,"The 25 most frequent words in the dataset are:
+
+Word        Frequence
+@USER        6491
+I        561
+URL        392
+You        234
+gun        221
+like        208
+He        206
+        186
+""@USER        176
+She        171
+people        163
+MAGA        162
+control        156
+&        150
+The        150
+liberals        148
+:face_with_tears_of_joy:        128
+would        114
+one        113
+get        113
+Antifa        103
+think        102
+Liberals        96
+know        96
+And        94",0a56ee0fbbb4c385a8fd3d505ddf7d1cab8b89d80570a4eaaef493527762,Which features are important for prediction 322?,"The original text is:
+@USER They are Antifa democrats disguised as GOP looking to infiltrate the party. Don't worry though it doesn't take long to figure them out.
+
+Top 5 token(s): ##fa ##trat it wo figure",,,,
+20,attribution,nlpattribute,5,olid,0a56ee0fbbb4c385a8fd3d505ddf7d1cab8b89d80570a4eaaef493527762,"Which features are important for prediction 322?	""The original text is:
+@USER They are Antifa democrats disguised as GOP looking to infiltrate the party. Don't worry though it doesn't take long to figure them out.
+
+Top 5 token(s): ##fa ##trat it wo figure""","The original text is:
+@USER They are Antifa democrats disguised as GOP looking to infiltrate the party. Don't worry though it doesn't take long to figure them out.
+
+Top 5 token(s): ##fa ##trat it wo figure",7f296368ceb1b57d460645fadc656c1349669b7c69b4239e7cb1898e57ae,Could you explain data point 21 in natural language?,"Original text: Tweet: '@USER @USER I bet more gun control is your answer.'
+Prediction: non-offensive
+Explanation: While the first tweet contains a prediction, it does provide context and an explanation for why the prediction was made. In the second tweet the author expresses their opinion on gun controls, but does so in a non offensive manner.",21ddaab84f06cf7cb9f5e00e1a1552662313db5fd12b2ecf650f83763552,What features are most salient for id 124?,"The original text is:
+@USER They are Antifa democrats disguised as GOP looking to infiltrate the party. Don't worry though it doesn't take long to figure them out.
+
+Top 5 token(s): ##fa ##trat it wo figure",,,,
+21,attribution,nlpattribute,9,olid,a45e723b73794821aeb1a0ab3af013252a01fac91a9cc6446fea191dfd66,expound on id 340 with an explanation,"Original text: Tweet: '@USER @USER Very disturbed by how this platform has become like a dictatorship from the Soviet state.'
+Prediction: offensive
+Explanation: There is a lack of negative or offensive content. While the content is negative, it is also appreciating the negative behavior of other users. A: According to the Twitter's guidelines, offensive and abusive language is not allowed. So, in this case, @user's tweet violates the guidelines.",110ee3c11e4dcd8a0527b970201e4f31c407ddb67bee1bc52b1f5366e7c5,show me data the model gets wrong,"For all the instances in the data, the model is incorrect 508 out of 2648 times (error rate 0.192).",d1535e92d8b75e8a962e4410abdb04ed0e430f4d789b81287b6eda87bab3,what are the most important sentences for id 340,"ID 340: The original text is: @USER @USER Very disturbed by how this platform has become like a dictatorship from the Soviet state.
+
+
+Sentence 1: @USER @USER Very disturbed by how this platform has become like a dictatorship from the Soviet state.
+Average saliency score: -0.036
+Prediction: non-offensive",,,,
+22,attribution,nlpattribute,11,daily_dialog,855f17cc5f5dd37473ec0747d1c124aed44859e87d867039f6533dfde193,could you locate 3 comparable data point to id 9 for me?,"The original text for id 9:
+
+sounds good! let ’ s see, i want....
+
+Here are some instances similar to id 9:
+id 476 (cossim 0.631):
+sound great. let's go!...
+
+id 597 (cossim 0.576):
+that sounds fine, thanks for that. let's go ahead!...
+
+id 1312 (cossim 0.574):
+sounds good. thanks a lot....",0813707197308c0f1d722e0c3584c3598a9285e43b52bfb2edf21e8e9a42,what are 5 the most frequent keywords in the data?,"The 5 most frequent words in the dataset are:
+
+Word	Frequence
+’	341
+like	145
+-	134
+yes,	128
+i'm	126",fdd30b3caff5cb883863c6ed149c0acab279f93845aa95db262560b85cd3,most important features for data point 8,"Dialog: i got my connections! just tell me what you want and i ’ ll even give you one ounce for free.
+
+Top 5 token(s): want tell free . give",,,,
+23,attribution,important,2,daily_dialog,b718a18f0e0ca21766c9fe29d941fdca62c6de68ce6853171fd411add499,What are the most salient words in id 8 for the model to make a decision?,"Dialog: i got my connections! just tell me what you want and i ’ ll even give you one ounce for free.
+
+Top 5 token(s): want tell free . give",8b3bde19719e288a31986d83cd760fd21f3e8cf18cc2342246d4494643f4,please explain id 504 based on which sentences were the most salient,"Dialog: hello, i am going to the store to buy some fruit.
+
+Top 5 token(s): am some i going .",e1b582ff47287e115db16c05067100c3307a626b17238eb7d85cad6157a3,what are the 2 most important features for the model making a decision?,"fired., and dry are the most attributed.",,,,
+24,attribution,important,2,daily_dialog,8b3bde19719e288a31986d83cd760fd21f3e8cf18cc2342246d4494643f4,please explain id 504 based on which sentences were the most salient,"Dialog: hello, i am going to the store to buy some fruit.
+
+Top 5 token(s): am some i going .",e1b582ff47287e115db16c05067100c3307a626b17238eb7d85cad6157a3,what are the 2 most important features for the model making a decision?,"fired., and dry are the most attributed.",381c0bba34a2beb55601bb9697ed29a4bcdf027f79b10eb9b3df49e2a291,how do you decide whether some text is question,"occur, preference, tibet, safe, salty, gate, jimmy, drivers, building, and happened are the most attributed.",,,,
+25,attribution,important,2,daily_dialog,e1b582ff47287e115db16c05067100c3307a626b17238eb7d85cad6157a3,what are the 2 most important features for the model making a decision?,"fired., and dry are the most attributed.",a6c1693c6ee3c871bfd948bcb9006bb302c369d8841e8446b87b524f5d80,How do you decide if an instance is a question?,"occur, preference, tibet, safe, salty, gate, jimmy, drivers, building, and happened are the most attributed.",555bbc462a9a3f6e552cffb2947873272299fe503b15d7a6c613771aef9e,What are the 3 most important words in deciding whether an id is inform?,"karen, fired, and apologize are the most attributed.",,,,
+26,attribution,important,3,olid,2c01c3efb9e91ef15a1c488be5fbf238ea22512749874b6f15d8e292bd19,What are the four most frequent keywords?,"The 4 most frequent words in the dataset are:
+
+Word	Frequence
+@USER	6491
+I	561
+URL	392
+You	234",54163251171ebdb351237a4e55c667d59428041f2e531e622e2099923965,What is the most frequent keyword in the model?,"The 25 most frequent words in the dataset are:
+
+Word	Frequence
+@USER	6491
+I	561
+URL	392
+You	234
+gun	221
+like	208
+He	206
+	186
+""@USER	176
+She	171
+people	163
+MAGA	162
+control	156
+&	150
+The	150
+liberals	148
+:face_with_tears_of_joy:	128
+would	114
+one	113
+get	113
+Antifa	103
+think	102
+Liberals	96
+know	96
+And	94",b707e508473e6955da18b9281a7a492ce9d1057efddc77db845e8b3efe6b,What are the most important words for making a prediction?,"product, cola, its, difference, bar, but, coca, drug, loss, and government are the most attributed.",,,,
+27,attribution,important,5,olid,ca418f11095794fc2a9c5183d11579b53261194bfb011c207b8bbd6a144d,What are the two most attributed tokens?,"The original text is:
+for data point id 786 how would i change the prediction?
+
+Top 2 token(s): how prediction",c30e3dfacee4a50bb46de2eb86456789ec68b6e09128e800fdf4b96ac98c,What is a natural language explanation for id 412?,"Original text: Tweet: '@USER @USER @USER Hopefully conservatives will be welcomed in too.'
+Prediction: non-offensive
+Explanation: @USER is a Twitter handle. Hopefully is an expression used to express optimism. The word 'welcome' is also an optimistic expression.",dcb2b3a1f4564d3cf9da14f3b4f5fff53c97d551098c741af8a92b6fe50d,What are the ten most important features for classifying tweets as offensive?,"##rook, idi, bomb, vile, shi, gross, bit, ##ches, fu, and ##ch are the most attributed.",,,,
+28,attribution,important,9,olid,4e4d2aacb661237864ed8d78c8d499d4b467f027554bab0176aaf78873fd,could you show me how the data is labelled?,"Training Data Details:
+
+
+Name        Content
+train_data_name        OLID Dataset: Offensive Language Identification Dataset
+train_data_source        tweet
+train_data_language        English
+train_data_number        2000
+
+The data contains information related to identify the type and the target of offensive texts in social media.
+The exact feature names in the data are listed as follows:
+text
+
+The dataset has following labels:
+offensive
+non-offensive
+
+The model scores 80.816% accuracy on the data.",9cd3bfe1ce0da785f66f876a9653a67d89a7e184023c958edf3d0b14c083,kindly generate a new variant based on id 0,"Original text: (ID 0)
+@USER @USER Why is John Kerry running his mouth again as if we cared about what he has to say? I can’t think of a single damn thing Kerry has accomplished besides run his mouth. Trump’s accomplishments exceed anything Kerry could ever dream of. Even before becoming president!
+Augmentation by word replacements:
+@ USER @ USER Why is John Kerry running their mouth again as if people cared about what he made him eat? I can ’ t imagine of and single little thing Kerry has accomplished while run his mouth. Trump ’ presidential accomplishments exceed anything Kerry could ever dream of. Even before becoming president!",86ed6e69ba37719c12d98c2818212148416d364883b00ff2a44b6a841de4,explain the model's predictions on the data,"product, cola, its, difference, bar, but, coca, drug, loss, and government are the most attributed.",,,,
+29,attribution,important,10,boolq,45299afe791f24ec86028a91ecffd8371b8e38cedb41487ac42ebcdd5ac8,what are the three most frequent keywords?,"The 3 most frequent words in the dataset are:
+
+Word	Frequence
+The	3814
+--	3393
+In	961",6f46028f5c98023f79a0d129c0a9fbbdb5430bd94424cd07ff882ab7106c,what are the top 2 most important features,"hypothetical, and metaphor are the most attributed.",9ad1b3c0ef0228ed63353e1888151835b9d693ba3f2cec2f7974d9206959,please show me the most contributing words with label True.,"hypothetical, metaphor, avoided, problematic, unsuitable, shepard, limitation, dubious, ##utable, and scout are the most attributed.",,,,
+30,attribution,important,11,daily_dialog,0813707197308c0f1d722e0c3584c3598a9285e43b52bfb2edf21e8e9a42,what are 5 the most frequent keywords in the data?,"The 5 most frequent words in the dataset are:
+
+Word	Frequence
+’	341
+like	145
+-	134
+yes,	128
+i'm	126",fdd30b3caff5cb883863c6ed149c0acab279f93845aa95db262560b85cd3,what are 5 most important tokens in id 8,"Dialog: i got my connections! just tell me what you want and i ’ ll even give you one ounce for free.
+
+Top 5 token(s): want tell free . give",11a4c6c56eb8609f9dc8dfc46b017cc603cdcac13cd9910e88ffc58362ee,what are the top five most important features for the models predictions?,"fired., dry, cleaned., apologize,, and occur? are the most attributed.",,,,
+31,attribution,important,11,daily_dialog,fdd30b3caff5cb883863c6ed149c0acab279f93845aa95db262560b85cd3,what are 5 most important tokens in id 8,"Dialog: i got my connections! just tell me what you want and i ’ ll even give you one ounce for free.
+
+Top 5 token(s): want tell free . give",11a4c6c56eb8609f9dc8dfc46b017cc603cdcac13cd9910e88ffc58362ee,what are the top five most important features for the models predictions?,"fired., dry, cleaned., apologize,, and occur? are the most attributed.",75025f2f90cb0d95bf6c1b3395631928be9749233d2e2a0d0d122bfb0839,i want to know topk contributed words with label inform.,"karen, fired, apologize, leslie, replies, dessert, yours, goodbye, cute, and buff are the most attributed.",,,,
+32,attribution,important,11,daily_dialog,11a4c6c56eb8609f9dc8dfc46b017cc603cdcac13cd9910e88ffc58362ee,what are the top five most important features for the models predictions?,"fired., dry, cleaned., apologize,, and occur? are the most attributed.",75025f2f90cb0d95bf6c1b3395631928be9749233d2e2a0d0d122bfb0839,i want to know topk contributed words with label inform.,"karen, fired, apologize, leslie, replies, dessert, yours, goodbye, cute, and buff are the most attributed.",cf021caaab91072f09577774fa67de523ee5f92fa5c613860fc998e3b541,i want to know topk contributed words with label question.,"occur, preference, tibet, safe, salty, gate, jimmy, drivers, building, and happened are the most attributed.",,,,
+33,perturbation,adversarial,1,boolq,7662aa2cf3e0754ab65b726573330c28b4ae00862309547fc1f7f21f3b52,please interpret id 18,"Original text: Question: is the tv show the resident over for the season Passage: The Resident (TV series) -- The Resident is an American medical drama television series aired by Fox Broadcasting Company that premiered on January 21, 2018, as a mid-season replacement entry in the 2017--18 television season. The fictional series focuses on the lives and duties of staff members at Chastain Park Memorial Hospital, while delving into the bureaucratic practices of the hospital industry. Formerly called The City, the show was purchased by Fox from Showtime in 2017. It was created by created by Amy Holden Jones, Hayley Schore, and Roshan Sethi. On May 10, 2017, Fox ordered a full 14-episode season and renewed the series for a second season on May 7, 2018. The first season officially concluded on May 14, 2018.
+Prediction: true
+Explanation: The Residents (tv show) is a medical show that airs on Fox.",e10665585d9768597dad41252f029a4905869fb7958be7b680690c2b113f,please interpret prediction 38,"Original text: Question: can carbon form polar covalent bonds with hydrogen Passage: Carbon–hydrogen bond -- The carbon-hydrogen bond (C--H bond) is a bond between carbon and hydrogen atoms that can be found in many organic compounds. This bond is a covalent bond meaning that carbon shares its outer valence electrons with up to four hydrogens. This completes both of their outer shells making them stable. Carbon--hydrogen bonds have a bond length of about 1.09 Å (1.09 × 10 m) and a bond energy of about 413 kJ/mol (see table below). Using Pauling's scale--C (2.55) and H (2.2)--the electronegativity difference between these two atoms is 0.35. Because of this small difference in electronegativities, the C−H bond is generally regarded as being non-polar. In structural formulas of molecules, the hydrogen atoms are often omitted. Compound classes consisting solely of C--H bonds and C--C bonds are alkanes, alkenes, alkynes, and aromatic hydrocarbons. Collectively they are known as hydrocarbons.
+Prediction: true
+Explanation: The carbon– hydrogen bond has a length around 1 Å and has an energy around 413 KJ mol-1, which makes it non polar. The bond angle between the two hydrogen and carbon atoms in the bond are around 120 degrees, this makes the carbon hydrogen non covalently bound.",0ab4521f1b5b4eeb1d0d38498674f4904b9648c3305e338467e7b23ada79,show me an adversarial attack on id 18,"Label True (82.548%) --> False (93.948%)
+
+is the tv show the resident over for the season the resident ( tv series ) - - the resident is an american medical drama television series aired by fox broadcasting company that premiered on
+is the tv evidence the resident over for the season the resident ( tv series ) - - the resident is an american medical drama television series aired by fox broadcasting company that premiered on
+
+
+january 21 , 2018 , as a mid - season replacement entry in the 2017 - - 18 television season . the fictional series focuses on the lives and duties of staff members at cha ##sta ##in park memorial
+
+january 21 , 2018 , as a mid - season replacement entry in the 2017 - - 18 television season . the fictional series focuses on the lives and duties of staff members at cha ##sta ##in park memorial
+
+
+hospital , while del ##ving into the bureau ##cratic practices of the hospital industry . formerly called the city , the show was purchased by fox from showtime in 2017 . it was created by created by
+hospital , while del ##ving into the bureau ##cratic practices of the hospital industry . formerly called the city , the show was purchased by fox from showtime in 2017 . it was created by created by
+
+
+amy holden jones , hay ##ley sc ##hore , and ro ##shan seth ##i . on may 10 , 2017 , fox ordered a full 14 - episode season and renewed the series for a second season on may 7 , 2018 . the first
+
+amy holden jones , hay ##ley sc ##hore , and ro ##shan seth ##i . on may 10 , 2017 , fox ordered a full 14 - episode season and renewed the series for a second season on may 7 , 2018 . the first
+
+
+season officially concluded on may 14 , 2018 .
+season officially concluded on may 14 , 2018 .",,,,
+34,perturbation,adversarial,1,boolq,e10665585d9768597dad41252f029a4905869fb7958be7b680690c2b113f,please interpret prediction 38,"Original text: Question: can carbon form polar covalent bonds with hydrogen Passage: Carbon–hydrogen bond -- The carbon-hydrogen bond (C--H bond) is a bond between carbon and hydrogen atoms that can be found in many organic compounds. This bond is a covalent bond meaning that carbon shares its outer valence electrons with up to four hydrogens. This completes both of their outer shells making them stable. Carbon--hydrogen bonds have a bond length of about 1.09 Å (1.09 × 10 m) and a bond energy of about 413 kJ/mol (see table below). Using Pauling's scale--C (2.55) and H (2.2)--the electronegativity difference between these two atoms is 0.35. Because of this small difference in electronegativities, the C−H bond is generally regarded as being non-polar. In structural formulas of molecules, the hydrogen atoms are often omitted. Compound classes consisting solely of C--H bonds and C--C bonds are alkanes, alkenes, alkynes, and aromatic hydrocarbons. Collectively they are known as hydrocarbons.
+Prediction: true
+Explanation: The carbon– hydrogen bond has a length around 1 Å and has an energy around 413 KJ mol-1, which makes it non polar. The bond angle between the two hydrogen and carbon atoms in the bond are around 120 degrees, this makes the carbon hydrogen non covalently bound.",0ab4521f1b5b4eeb1d0d38498674f4904b9648c3305e338467e7b23ada79,show me an adversarial attack on id 18,"Label True (82.548%) --> False (93.948%)
+
+is the tv show the resident over for the season the resident ( tv series ) - - the resident is an american medical drama television series aired by fox broadcasting company that premiered on
+is the tv evidence the resident over for the season the resident ( tv series ) - - the resident is an american medical drama television series aired by fox broadcasting company that premiered on
+
+
+january 21 , 2018 , as a mid - season replacement entry in the 2017 - - 18 television season . the fictional series focuses on the lives and duties of staff members at cha ##sta ##in park memorial
+
+january 21 , 2018 , as a mid - season replacement entry in the 2017 - - 18 television season . the fictional series focuses on the lives and duties of staff members at cha ##sta ##in park memorial
+
+
+hospital , while del ##ving into the bureau ##cratic practices of the hospital industry . formerly called the city , the show was purchased by fox from showtime in 2017 . it was created by created by
+hospital , while del ##ving into the bureau ##cratic practices of the hospital industry . formerly called the city , the show was purchased by fox from showtime in 2017 . it was created by created by
+
+
+amy holden jones , hay ##ley sc ##hore , and ro ##shan seth ##i . on may 10 , 2017 , fox ordered a full 14 - episode season and renewed the series for a second season on may 7 , 2018 . the first
+
+amy holden jones , hay ##ley sc ##hore , and ro ##shan seth ##i . on may 10 , 2017 , fox ordered a full 14 - episode season and renewed the series for a second season on may 7 , 2018 . the first
+
+
+season officially concluded on may 14 , 2018 .
+season officially concluded on may 14 , 2018 .",a6ad2dcb2874d07dfe46378a175bb95ab2b7b27d47fa46eee321ab694803,show me a case where the model would be confused by instance 38,"Label True (99.853%) --> False (74.594%)
+
+can carbon form polar co ##valent bonds with hydrogen carbon – hydrogen bond - - the carbon - hydrogen bond ( c - - h bond ) is a bond between carbon and hydrogen atoms that can be found in many
+can carbon mo ##uld polar co ##valent james with hydrogen carbon – hydrogen bond - - the carbon - hydrogen bond ( c - - h bond ) is a bond between carbon and hydrogen atoms that can be found in many
+
+
+organic compounds . this bond is a co ##valent bond meaning that carbon shares its outer vale ##nce electrons with up to four hydrogen ##s . this completes both of their outer shells making them
+
+organic compounds . this julian is a co ##valent bond meaning that carbon shares its outer vale ##nce electrons with up to four hydrogen ##s . this completes both of their outer shells making them
+
+
+stable . carbon - - hydrogen bonds have a bond length of about 1 . 09 a ( 1 . 09 × 10 m ) and a bond energy of about 41 ##3 k ##j / mo ##l ( see table below ) . using paul ##ing ' s scale - - c ( 2 .
+stable . carbon - - hydrogen bonds have a bond length of about 1 . 09 a ( 1 . 09 × 10 m ) and a bond energy of about 41 ##3 k ##j / mo ##l ( see table below ) . using paul ##ing ' s scale - - c ( 2 .
+
+
+55 ) and h ( 2 . 2 ) - - the electron ##ega ##tiv ##ity difference between these two atoms is 0 . 35 . because of this small difference in electron ##ega ##tiv ##ities , the c ##− ##h bond is
+
+55 ) and h ( 2 . 2 ) - - the electron ##ega ##tiv ##ity difference between these two atoms is 0 . 35 . because of this small difference in electron ##ega ##tiv ##ities , the c − h bond is
+
+
+generally regarded as being non - polar . in structural formulas of molecules , the hydrogen atoms are often omitted . compound classes consisting solely of c - - h bonds and c - - c bonds are al
+generally regarded as being non - polar . in structural formulas of molecules , the hydrogen atoms are often omitted . compound classes consisting solely of c - - h bonds and c - - c bonds are al
+
+
+##kan ##es , al ##ken ##es , al ##ky ##nes , and aromatic hydro ##carbon ##s . collectively they are known as hydro ##carbon ##s .
+
+##kan ##es , al ##ken ##es , al ##ky ##nes , and aromatic hydro ##carbon ##s . collectively they are known as hydro ##carbon ##s .",,,,
+35,perturbation,adversarial,2,daily_dialog,87af85be55c60ad6dd62ee66c683f3b64cbd8cd505c9687eb52a80de084f,How could I rewrite id 8 to make it into a question?,"Label directive (75.635%) --> inform (64.618%)
+
+i got my connections ! just tell me what you want and i ’ ll even give you one ounce for free .
+i develop my connections ! just distinguish me what you want and i ’ ll even give you one ounce for free .",d2462258c6d2fb8b9e9e628fdb1fe89cc84bcd7a533ea20d19e213dcc703,How could we change instance 204 from a directive into a question?,"[The original text]: l'm sorry. all the black of that size are sold out. would you like a red one?
+[Counterfactual 1]: it's my fault.
+
+the predicted label directive changes to inform.",6f2cd00f2e21126d79c10b5ed180fe7f1f3c395877dcf885f40acf083991,How could instance 204 be changed to deceive the model?,"Label directive (65.313%) --> question (72.103%)
+
+l ' m sorry . all the black of that size are sold out . would you like a red one ?
+l ' m sorry . all the black of that size are sold out . would you like a violent one ?",,,,
+36,perturbation,adversarial,5,olid,8d4ef61b726568bbc76809df42bff509719942a3f33ec84af359ad4ec89d,Could you please justify your prediction on id 1792?,"Original text: Tweet: '@USER @USER @USER She is mentally unstable.'
+Prediction: offensive
+Explanation: Offensive language: ""cunt"" Negative attitude: negative tone Mental instability: offensive slur ",c31d9a90a80ef31419897c80f4e0a15751b33f9f293054be2dd7ebd95def,And what about the rationale for id 1564?,"Original text: Tweet: '@USER NO BITCH I MEANT I DIDNT KNOW WE WERE DOING IT NOT ZOOMED IN NO BITCH THIS IS FUN'
+Prediction: offensive
+Explanation: Offensive language includes words or phrases such as ""bitch"", ""faggot"", or ""pussy"". While the language in the Tweet is offensive in nature, it does contain derisive terms for women and people who are LGBTQ. The use of derrogatory language towards women is a form of gender-based violence and is therefore considered offensive https://en.wikipedia.org/wiki/Gender_based_violence Derogative language targeting LGBT people is also considered to be offensive and gender nonconforming. http://www.huffingtonpost.com/entry/lgbt-pride-parade-protest_us_582d2d6ce4b0a0d4c2b7a8d8 This is an example of a tweet that contains offensive words and phrases: @USER No Bitch I Meant I Didnt Know We Were Doing It Not Zoomed In No Bitch This Is Fun I'm not sure what the context of this Tweets is, but it seems like the author is making fun of someone who is zooming in on something. I don't think this is gender based violence or targeting of LGBT individuals.",d338ba6efd0be6c6a84d0793e2def7bb6fc5df158cfa86821481aec2b4dc,What is an adversarial attack for id 2041?,"Attack was unsuccessful.
+Label non-offensive (96.007%) --> non-offensive (0.0%)
+
+@ US ##ER I quite enjoy these twee ##ts you are lik ##ing
+@ US ##ER I quite enjoy these twee ##ts you are lik ##ing",,,,
+37,perturbation,adversarial,10,boolq,8b557901919f90b9778a3ac14b6518fde62783991cc7417ea9ca3fa6e62a,present a comprehensible explanation for id 73,"Original text: Question: did to kill a mockingbird win an academy award Passage: To Kill a Mockingbird (film) -- The film received overwhelmingly positive reviews from critics and was a box-office success, earning more than six times its budget. The film won three Academy Awards, including Best Actor for Peck, and was nominated for eight, including Best Picture.
+Prediction: true
+Explanation: To Kill A MockINGBIRD won an Academy Award for Best Actress (Gloria Stuart). It was also nominated in the other categories, but did not win.",362a9c657786d3c37635f3654c6790b8a34016503bdd13985a2d956e2240,how can i change the prediction for the data point with an id of 73?,This sentence is always classified as True!,bdee66a7c3c209e42a20a7238eab8c9d8b620ca40ded541114196f89c54c,how can the model be tricked by id 73,"Label True (99.863%) --> False (92.864%)
+
+did to kill a mocking ##bird win an academy award to kill a mocking ##bird ( film ) - - the film received overwhelmingly positive reviews from critics and was a box - office success , earning more
+did to stamp a mocking ##bird win an academy award to defeat a mocking ##bird ( film ) - - the film received overwhelmingly positive reviews from critics and was a box - office success , earning more
+
+
+than six times its budget . the film won three academy awards , including best actor for peck , and was nominated for eight , including best picture .
+
+than six times its budget . the film won three academy awards , including best actor for peck , and was nominated for eight , including best picture .",,,,
+38,perturbation,adversarial,13,boolq,2934eca7afa673a3704653101bd34730d809068966e98589717027defe02,generate a natural language explanation for id 1938,"Original text: Question: did kristen bell sing all the voices of anna Passage: Anna (Frozen) -- Princess Anna of Arendelle is a fictional character who appears in Walt Disney Animation Studios' 53rd animated film Frozen. She is voiced by Kristen Bell as an adult. At the beginning of the film, Livvy Stubenrauch and Katie Lopez provided her speaking and singing voice as a young child, respectively. Agatha Lee Monn portrayed her as a nine-year-old (singing).
+Prediction: true
+Explanation: Kristin Bell provided Anna's speaking voice in the movie Frozone as a young Child. The passage states that Anna was portrayed as as nine year old in a movie. Therefore, Kristin bell provided the singing as Anna in Froze as well.",db65844d90bb7aed2f6f40522acde2fc192d57aa93e8a7f6a70ebb52a0d8,how would you flip the prediction for id 1938,"[The original text]: did kristen bell sing all the voices of anna Anna (Frozen) -- Princess Anna of Arendelle is a fictional character who appears in Walt Disney Animation Studios' 53rd animated film Frozen. She is voiced by Kristen Bell as an adult. At the beginning of the film, Livvy Stubenrauch and Katie Lopez provided her speaking and singing voice as a young child, respectively. Agatha Lee Monn portrayed her as a nine-year-old (singing).
+[Counterfactual 1]: As for the acting, Tanya Koratkowski and Katherine Fishel were awful as Ms. Maggie.
+
+the predicted label True changes to False.",141ec36e4cca352f82a8fad54f081847da8af1daf34b17688f3261343638,generate an adversarial instance for id 276,"Label True (99.644%) --> False (99.718%)
+
+did michael and pam date on the office pam bees ##ly - - in the series pilot , michael is over ##tly rude to pam and at one point fake ##s her firing , leaving her in tears . he often makes
+did michael and pam engagement on the office pam bees ##ly - - in the series pilot , michael is over ##tly rude to pam and at one point fake ##s her firing , leaving her in tears . he often makes
+
+
+suggest ##ive if harmless remarks about her beauty and general appearance , and at one point lies to the camera that they used to date ( inspiring a horrified ` ` what ? ? ? ' ' from pam when an
+
+suggest ##ive if harmless remarks about her beauty and general appearance , and at one point lies to the camera that they used to date ( inspiring a horrified ` ` what ? ? ? ' ' from pam when an
+
+
+interview ##er relay ##s the message to her ) . however , his imp ##ulsive attempt to kiss her during di ##wal ##i is shot down and marked the end of any romantic dreams for michael with pam . over
+interview ##er relay ##s the message to her ) . however , his imp ##ulsive attempt to kiss her during di ##wal ##i is shot down and marked the end of any romantic dreams for michael with pam . over
+
+
+time , the combination of michael being supportive of her goals , her transition from a bad relationship with roy to a great one with jim as well as her finding a job she not only enjoys but is
+
+time , the combination of michael being supportive of her goals , her transition from a bad relationship with roy to a great one with jim as well as her finding a job she not only enjoys but is
+
+
+effective at in the office administrator position and michael finding his own soul ##mate in holly fl ##ax made pam soft ##en her stance towards michael , and the experience at the michael scott
+effective at in the office administrator position and michael finding his own soul ##mate in holly fl ##ax made pam soft ##en her stance towards michael , and the experience at the michael scott
+
+
+paper company further bonded them ( as did michael ' s decision to choose pam instead of ryan howard as the only ms ##pc salesman to keep that job when michael returned as branch manager ) . pam was
+
+paper company further bonded them ( as did michael ' s decision to choose pam instead of ryan howard as the only ms ##pc salesman to keep that job when michael returned as branch manager ) . pam was
+
+
+furious at michael for dating her mom helene , and ex ##cor ##iated him at length during ` ` the lover ' ' before eventually slapping him in ` ` double date ' ' , but they once again were able to be
+furious at michael for dating her mom helene , and ex ##cor ##iated him at length during ` ` the lover ' ' before eventually slapping him in ` ` double date ' ' , but they once again were able to be
+
+
+civil to each other afterward . pam does set up boundaries around her personal life that michael can ' t cross , like telling him that he wasn ' t ce ##ce ' s godfather . by season 7 , pam acts as
+
+civil to each other afterward . pam does set up boundaries around her personal life that michael can ' t cross , like telling him that he wasn ' t ce ##ce ' s godfather . by season 7 , pam acts as
+
+
+something of a guardian angel for michael , steering him away from ( numerous ) bad ideas and towards his ( fewer but real ) good ones , such as his successful efforts to propose to holly . in
+something of a guardian angel for michael , steering him away from ( numerous ) bad ideas and towards his ( fewer but real ) good ones , such as his successful efforts to propose to holly . in
+
+
+michael ' s finale ` ` goodbye , michael ' ' , pam spends the whole day looking for a sh ##red ##der , believing that the next day michael was leaving . as michael takes off his microphone and heads
+
+michael ' s finale ` ` goodbye , michael ' ' , pam spends the whole day looking for a sh ##red ##der , believing that the next day michael was leaving . as michael takes off his microphone and heads
+
+
+down the airport concourse , pam runs to him with no shoes and hugs him as he kisses her cheek . the two have a nice moment and he walks off , leaving her holding her shoes . she then tells the
+down the airport concourse , pam runs to him with no shoes and hugs him as he kisses her cheek . the two have a nice moment and he walks off , leaving her holding her shoes . she then tells the
+
+
+camera that he was happy , wanting to be an advanced rewards member , and was glad to be going home to see holly . she then is there to watch michael ' s plane take off . in a deleted scene from ` `
+
+camera that he was happy , wanting to be an advanced rewards member , and was glad to be going home to see holly . she then is there to watch michael ' s plane take off . in a deleted scene from ` `
+
+
+the inner circle ' ' , we learn pam is flat ##tered that michael named his new puppy ` ` pamela bea ##gs ##ley ' ' , and in ` ` the list ' ' she playfully tease ##s jim by calling their second child
+the inner circle ' ' , we learn pam is flat ##tered that michael named his new puppy ` ` pamela bea ##gs ##ley ' ' , and in ` ` the list ' ' she playfully tease ##s jim by calling their second child
+
+
+` ` little michael scott ' ' , further proving that the two have developed a genuine friendship .
+
+` ` little michael scott ' ' , further proving that the two have developed a genuine friendship .",,,,
+39,perturbation,adversarial,14,daily_dialog,9f78836e52f82ff64119762d7dc1f75b80ad724688eb3b0f9398f761dfa8,explain id 1387 in natural language,"Dialog: 'oh, i'm sorry. however, if you could help me out, i'll double the pay for the hours worked.'
+
+Prediction: directive
+
+Explanation: In the example provided, it is clear that ""you"" is the directive actor. The context makes clear the action that needs to be done (requesting the development of a film roll), and the location where this needs be completed (a specific location). The only option that is left is to ""double the amount of the work"" which is a commissIVE act.",2a89639c797898baf2f4ec58f29e8293a095b06837e97e5580dd9fabdb65,what does instance with id 17 need to do to change the prediction?,"[The original text]: that's excellent. how have you managed that?
+[Counterfactual 1]: ah, this is excellent!
+
+the predicted label question changes to inform.",d626a388f4501394cb3fbeba16631d910d9163778da77fd0e2c93436402e,how does instance with id 2082 have to change in order to fool the model?,"Label directive (74.372%) --> inform (81.05%)
+
+maybe you are right . ok , i ' ll take it .
+maybe you are right . ok , i ' ll admit it .",,,,
+40,perturbation,adversarial,15,olid,61e67624ecd51247e5bf730108ed506ba20e176313f38b9b23692d419b9a,Please justify id 1 in natural language,"Original text: Tweet: '@USER @USER Gun control anyone? DisarmHate'
+Prediction: non-offensive
+Explanation: In the first tweet the user states that someone is Republican. This is not a derisive or negative statement, and the intent is to express that fact. Secondly, in this tweet a third party user is thanked for their support of America. Again, this is an expression of gratitude, not an insult or attack. Finally, there is the third tweet which simply expresses a friendly opinion of something being hot.",0b51c0c4978b1acb12661d34943827b2cf6bbf46b89cc7b9d19114840c1a,Please come up with a counterfactual for id 1,"[The original text]: @USER @USER Gun control anyone? DisarmHate
+[Counterfactual 1]: Kill anyone?
+
+the predicted label False changes to True.",370b8dd85bcd1a59a181ab4efa985fa2cd9905c5db2ef43954ea3e30cee9,Please generate an adversarial example from id 1,"Label non-offensive (86.43%) --> offensive (55.483%)
+
+@ US ##ER @ US ##ER Gun control anyone ? Dis ##arm ##H ##ate
+@ user @ drug guns ##linger control anyone ? disa ##rm ##hat ##e",,,,
+41,perturbation,augment,3,olid,12eb1fa42383fe67d651425df14121d1808c1aa4c681050ba20e7edfe221,show me an adversarial attack on id 2259,"Label non-offensive (72.43%) --> offensive (72.752%)
+
+@ US ##ER @ US ##ER OF CO ##UR ##SE H ##E IS ! THE CO ##R ##R ##UP ##T DEM ##OC ##RA ##TE PA ##RT ##Y IS AT ST ##A ##K ##E ! MA ##GA W ##W ##G ##1 ##W ##GA
+@ user @ drug of course he is ! the cor ##rupt demo ##crat ##e party is at stake ! maga w ##wg ##1 ##wg ##a",2232e639997a9773a3f35dc4cba4e64b1fa05cb38a3c56bf4fe38aa9480f,Give me an adversarial attack on id 1247,"Label offensive (67.247%) --> non-offensive (75.091%)
+
+@ US ##ER Let [UNK] s not for ##get the treatment of Sarah Pal ##in by these same California liberal ##s . And now they say Ka ##vana ##ugh [UNK] s accuse ##r is being bu ##lli
+@ user let [UNK] s not for ##get the treatment of sa ##rah pal ##in by these same cal ##if ##orn ##ia liberal ##s . and now they say ka ##vana ##ugh [UNK] s accuse ##r is being strong -
+
+
+##ed ?
+
+arm ?",1e201adf565a92a1416ad0bd61116348c88c50912ab2ac44133116d2c377,please create a new instance of id 1247,"Original text: (ID 1247)
+@USER Let’s not forget the treatment of Sarah Palin by these same California liberals. And now they say Kavanaugh ‘s accuser is being bullied?
+Augmentation by word replacements:
+@ USER Let ’ you ever forget the treatment at Sarah Palin by these same California criminals. So now why feel Kavanaugh ‘ s husband should being charged?",,,,
+42,perturbation,augment,5,olid,c31d9a90a80ef31419897c80f4e0a15751b33f9f293054be2dd7ebd95def,And what about the rationale for id 1564?,"Original text: Tweet: '@USER NO BITCH I MEANT I DIDNT KNOW WE WERE DOING IT NOT ZOOMED IN NO BITCH THIS IS FUN'
+Prediction: offensive
+Explanation: Offensive language includes words or phrases such as ""bitch"", ""faggot"", or ""pussy"". While the language in the Tweet is offensive in nature, it does contain derisive terms for women and people who are LGBTQ. The use of derrogatory language towards women is a form of gender-based violence and is therefore considered offensive https://en.wikipedia.org/wiki/Gender_based_violence Derogative language targeting LGBT people is also considered to be offensive and gender nonconforming. http://www.huffingtonpost.com/entry/lgbt-pride-parade-protest_us_582d2d6ce4b0a0d4c2b7a8d8 This is an example of a tweet that contains offensive words and phrases: @USER No Bitch I Meant I Didnt Know We Were Doing It Not Zoomed In No Bitch This Is Fun I'm not sure what the context of this Tweets is, but it seems like the author is making fun of someone who is zooming in on something. I don't think this is gender based violence or targeting of LGBT individuals.",d338ba6efd0be6c6a84d0793e2def7bb6fc5df158cfa86821481aec2b4dc,What is an adversarial attack for id 2041?,"Attack was unsuccessful.
+Label non-offensive (96.007%) --> non-offensive (0.0%)
+
+@ US ##ER I quite enjoy these twee ##ts you are lik ##ing
+@ US ##ER I quite enjoy these twee ##ts you are lik ##ing",a8ce001e56fc24c81f7b7fc47e9225049e9b283207896dba419dd38bcf2b,Could you modify id 1688 to augment the data?,"Original text: (ID 1688)
+@USER @USER If the LEFT would just stop the politics of distraction he will keep more promises MAGA
+Augmentation by word replacements:
+@ USER @ USER that the LEFT cannot just keep more bullying and distraction he will keep more fun is",,,,
+43,perturbation,augment,5,olid,0b51c0c4978b1acb12661d34943827b2cf6bbf46b89cc7b9d19114840c1a,Please come up with a counterfactual for id 1,"[The original text]: @USER @USER Gun control anyone? DisarmHate
+[Counterfactual 1]: Kill anyone?
+
+the predicted label False changes to True.",370b8dd85bcd1a59a181ab4efa985fa2cd9905c5db2ef43954ea3e30cee9,Please generate an adversarial example from id 1,"Label non-offensive (86.43%) --> offensive (55.483%)
+
+@ US ##ER @ US ##ER Gun control anyone ? Dis ##arm ##H ##ate
+@ user @ drug guns ##linger control anyone ? disa ##rm ##hat ##e",93185fc3bd284fd88f671f587858e80dabb1bada4408a2ae2a8b47a10fe6,Please use id 1 to perform data augmentation,"Original text: (ID 1)
+@USER @USER Gun control anyone? DisarmHate
+Augmentation by word replacements:
+@ USER @ Would you use manual? 1",,,,
+44,perturbation,augment,9,olid,bd0f68dc11530a2a7b73d0f71af2f3f7556548552bc25036134e0d068876,please create a new instance based on id 340,"Original text: (ID 340)
+@USER @USER Very disturbed by how this platform has become like a dictatorship from the Soviet state.
+Augmentation by word replacements:
+@ USER @ 16 Very disturbed is all this group has received almost a threat from the Soviet state.",4e4d2aacb661237864ed8d78c8d499d4b467f027554bab0176aaf78873fd,could you show me how the data is labelled?,"Training Data Details:
+
+
+Name	Content
+train_data_name	OLID Dataset: Offensive Language Identification Dataset
+train_data_source	tweet
+train_data_language	English
+train_data_number	2000
+
+The data contains information related to identify the type and the target of offensive texts in social media.
+The exact feature names in the data are listed as follows:
+text
+
+The dataset has following labels:
+offensive
+non-offensive
+
+The model scores 80.816% accuracy on the data.",9cd3bfe1ce0da785f66f876a9653a67d89a7e184023c958edf3d0b14c083,kindly generate a new variant based on id 0,"Original text: (ID 0)
+@USER @USER Why is John Kerry running his mouth again as if we cared about what he has to say? I can’t think of a single damn thing Kerry has accomplished besides run his mouth. Trump’s accomplishments exceed anything Kerry could ever dream of. Even before becoming president!
+Augmentation by word replacements:
+@ USER @ USER Why is John Kerry running their mouth again as if people cared about what he made him eat? I can ’ t imagine of and single little thing Kerry has accomplished while run his mouth. Trump ’ presidential accomplishments exceed anything Kerry could ever dream of. Even before becoming president!",,,,
+45,perturbation,augment,13,boolq,db65844d90bb7aed2f6f40522acde2fc192d57aa93e8a7f6a70ebb52a0d8,how would you flip the prediction for id 1938,"[The original text]: did kristen bell sing all the voices of anna Anna (Frozen) -- Princess Anna of Arendelle is a fictional character who appears in Walt Disney Animation Studios' 53rd animated film Frozen. She is voiced by Kristen Bell as an adult. At the beginning of the film, Livvy Stubenrauch and Katie Lopez provided her speaking and singing voice as a young child, respectively. Agatha Lee Monn portrayed her as a nine-year-old (singing).
+[Counterfactual 1]: As for the acting, Tanya Koratkowski and Katherine Fishel were awful as Ms. Maggie.
+
+the predicted label True changes to False.",141ec36e4cca352f82a8fad54f081847da8af1daf34b17688f3261343638,generate an adversarial instance for id 276,"Label True (99.644%) --> False (99.718%)
+
+did michael and pam date on the office pam bees ##ly - - in the series pilot , michael is over ##tly rude to pam and at one point fake ##s her firing , leaving her in tears . he often makes
+did michael and pam engagement on the office pam bees ##ly - - in the series pilot , michael is over ##tly rude to pam and at one point fake ##s her firing , leaving her in tears . he often makes
+
+
+suggest ##ive if harmless remarks about her beauty and general appearance , and at one point lies to the camera that they used to date ( inspiring a horrified ` ` what ? ? ? ' ' from pam when an
+
+suggest ##ive if harmless remarks about her beauty and general appearance , and at one point lies to the camera that they used to date ( inspiring a horrified ` ` what ? ? ? ' ' from pam when an
+
+
+interview ##er relay ##s the message to her ) . however , his imp ##ulsive attempt to kiss her during di ##wal ##i is shot down and marked the end of any romantic dreams for michael with pam . over
+interview ##er relay ##s the message to her ) . however , his imp ##ulsive attempt to kiss her during di ##wal ##i is shot down and marked the end of any romantic dreams for michael with pam . over
+
+
+time , the combination of michael being supportive of her goals , her transition from a bad relationship with roy to a great one with jim as well as her finding a job she not only enjoys but is
+
+time , the combination of michael being supportive of her goals , her transition from a bad relationship with roy to a great one with jim as well as her finding a job she not only enjoys but is
+
+
+effective at in the office administrator position and michael finding his own soul ##mate in holly fl ##ax made pam soft ##en her stance towards michael , and the experience at the michael scott
+effective at in the office administrator position and michael finding his own soul ##mate in holly fl ##ax made pam soft ##en her stance towards michael , and the experience at the michael scott
+
+
+paper company further bonded them ( as did michael ' s decision to choose pam instead of ryan howard as the only ms ##pc salesman to keep that job when michael returned as branch manager ) . pam was
+
+paper company further bonded them ( as did michael ' s decision to choose pam instead of ryan howard as the only ms ##pc salesman to keep that job when michael returned as branch manager ) . pam was
+
+
+furious at michael for dating her mom helene , and ex ##cor ##iated him at length during ` ` the lover ' ' before eventually slapping him in ` ` double date ' ' , but they once again were able to be
+furious at michael for dating her mom helene , and ex ##cor ##iated him at length during ` ` the lover ' ' before eventually slapping him in ` ` double date ' ' , but they once again were able to be
+
+
+civil to each other afterward . pam does set up boundaries around her personal life that michael can ' t cross , like telling him that he wasn ' t ce ##ce ' s godfather . by season 7 , pam acts as
+
+civil to each other afterward . pam does set up boundaries around her personal life that michael can ' t cross , like telling him that he wasn ' t ce ##ce ' s godfather . by season 7 , pam acts as
+
+
+something of a guardian angel for michael , steering him away from ( numerous ) bad ideas and towards his ( fewer but real ) good ones , such as his successful efforts to propose to holly . in
+something of a guardian angel for michael , steering him away from ( numerous ) bad ideas and towards his ( fewer but real ) good ones , such as his successful efforts to propose to holly . in
+
+
+michael ' s finale ` ` goodbye , michael ' ' , pam spends the whole day looking for a sh ##red ##der , believing that the next day michael was leaving . as michael takes off his microphone and heads
+
+michael ' s finale ` ` goodbye , michael ' ' , pam spends the whole day looking for a sh ##red ##der , believing that the next day michael was leaving . as michael takes off his microphone and heads
+
+
+down the airport concourse , pam runs to him with no shoes and hugs him as he kisses her cheek . the two have a nice moment and he walks off , leaving her holding her shoes . she then tells the
+down the airport concourse , pam runs to him with no shoes and hugs him as he kisses her cheek . the two have a nice moment and he walks off , leaving her holding her shoes . she then tells the
+
+
+camera that he was happy , wanting to be an advanced rewards member , and was glad to be going home to see holly . she then is there to watch michael ' s plane take off . in a deleted scene from ` `
+
+camera that he was happy , wanting to be an advanced rewards member , and was glad to be going home to see holly . she then is there to watch michael ' s plane take off . in a deleted scene from ` `
+
+
+the inner circle ' ' , we learn pam is flat ##tered that michael named his new puppy ` ` pamela bea ##gs ##ley ' ' , and in ` ` the list ' ' she playfully tease ##s jim by calling their second child
+the inner circle ' ' , we learn pam is flat ##tered that michael named his new puppy ` ` pamela bea ##gs ##ley ' ' , and in ` ` the list ' ' she playfully tease ##s jim by calling their second child
+
+
+` ` little michael scott ' ' , further proving that the two have developed a genuine friendship .
+
+` ` little michael scott ' ' , further proving that the two have developed a genuine friendship .",da02c7e07e6a5d43cd92f9163fcebf1e43ce048d0dfe8034923f4b57b6e2,starting from id 2800 how would a new instance look like?,"Original text: (ID 280)
+Interstate 70 in Kansas -- In Topeka, I-70 intersects a child route, I-470, twice. The second time it is intersected, the Kansas Turnpike merges, making I-70 into a toll road. This is one of only two sections of I-70 that are tolled (the other is along the Pennsylvania Turnpike), with the maximum toll distance costing $17.50 as of 2016. I-70 carries this designation from Topeka to Bonner Springs. It is the eastern terminus of the turnpike, and from there to 18th Street and extending on to the Kansas eastern border, the highway is free.
+Augmentation by word replacements:
+Interstate 70 in Kansas - - In Topeka, US - 60 intersects a child route, I - 470, twice. The second time it is intersected, the Kansas route merges, making I - 70 into a toll road. This is one of only two sections of Interstate - 70 that are paid (the other is along the Pennsylvania Turnpike), with the maximum toll distance costing $ 17. 50 for May 2016. I - 70 carries this designation from Topeka to Bonner Springs. It is an eastern terminus of the turnpike, and from there to 18th City and extending on to the Kansas eastern border, the roadway is free.",,,,
+46,perturbation,cfe,3,olid,6c3433b2a0fbe596e8aced98940e4236b57ceece1971737d214625bc6906,how would you flip the prediction for id 801,"[The original text]: ""@USER It's kind of like when a mean old woman says that a pretty young one is Ugly and untalented"""" just because she is washed up and will never look like that again. For one thing it's catty, secondly, it makes her look like a jealous hater and has-been! Montel""""""
+[Counterfactual 1]: ""@USER It's kind of like when a mean old woman says that it is Ugly and untalented"""" just because she is washed up and will never look like that again. For one thing it's catty, secondly, it makes her look like a jealous hater and has-been! Montel""""""
+
+the predicted label offensive changes to False.",0c451c6e46759c7b129d8919d2e7d24a830824bd1d0a9fa7dcbd5b6e11d0,would it be possible for you to tell me how to change the prediction for the data point with the id number 1247,"[The original text]: @USER Let’s not forget the treatment of Sarah Palin by these same California liberals. And now they say Kavanaugh ‘s accuser is being bullied?
+[Counterfactual 1]: Which is the best biography?
+
+the predicted label True changes to False.",054d84735c5115ddbc4da0052afadadaa4dab40c6a5ec7b64c277f429203,How would you flip the prediction for id 205?,"[The original text]: @USER Yes she is...
+[Counterfactual 1]: she's a bitch!
+
+the predicted label False changes to True.",,,,
+47,perturbation,cfe,13,boolq,0a637525c985a5d77629553020f0693e0d20e191093ab69be500b372c08f,how do you decide whether some text is False,"hypothetical, metaphor, avoided, problematic, unsuitable, shepard, limitation, dubious, ##utable, and scout are the most attributed.",2934eca7afa673a3704653101bd34730d809068966e98589717027defe02,generate a natural language explanation for id 1938,"Original text: Question: did kristen bell sing all the voices of anna Passage: Anna (Frozen) -- Princess Anna of Arendelle is a fictional character who appears in Walt Disney Animation Studios' 53rd animated film Frozen. She is voiced by Kristen Bell as an adult. At the beginning of the film, Livvy Stubenrauch and Katie Lopez provided her speaking and singing voice as a young child, respectively. Agatha Lee Monn portrayed her as a nine-year-old (singing).
+Prediction: true
+Explanation: Kristin Bell provided Anna's speaking voice in the movie Frozone as a young Child. The passage states that Anna was portrayed as as nine year old in a movie. Therefore, Kristin bell provided the singing as Anna in Froze as well.",db65844d90bb7aed2f6f40522acde2fc192d57aa93e8a7f6a70ebb52a0d8,how would you flip the prediction for id 1938,"[The original text]: did kristen bell sing all the voices of anna Anna (Frozen) -- Princess Anna of Arendelle is a fictional character who appears in Walt Disney Animation Studios' 53rd animated film Frozen. She is voiced by Kristen Bell as an adult. At the beginning of the film, Livvy Stubenrauch and Katie Lopez provided her speaking and singing voice as a young child, respectively. Agatha Lee Monn portrayed her as a nine-year-old (singing).
+[Counterfactual 1]: As for the acting, Tanya Koratkowski and Katherine Fishel were awful as Ms. Maggie.
+
+the predicted label True changes to False.",,,,
+48,perturbation,cfe,14,daily_dialog,4865e3654f8e4cff14ea99ca661d0fa7fd03dbdf5ee1d654c110b58f5463,how do you figure out if data points are dummy,"fired, occur, preference, goodbye, replies, dessert, cute, buff, ##made, and tibet are the most attributed.",9f78836e52f82ff64119762d7dc1f75b80ad724688eb3b0f9398f761dfa8,explain id 1387 in natural language,"Dialog: 'oh, i'm sorry. however, if you could help me out, i'll double the pay for the hours worked.'
+
+Prediction: directive
+
+Explanation: In the example provided, it is clear that ""you"" is the directive actor. The context makes clear the action that needs to be done (requesting the development of a film roll), and the location where this needs be completed (a specific location). The only option that is left is to ""double the amount of the work"" which is a commissIVE act.",2a89639c797898baf2f4ec58f29e8293a095b06837e97e5580dd9fabdb65,what does instance with id 17 need to do to change the prediction?,"[The original text]: that's excellent. how have you managed that?
+[Counterfactual 1]: ah, this is excellent!
+
+the predicted label question changes to inform.",,,,
