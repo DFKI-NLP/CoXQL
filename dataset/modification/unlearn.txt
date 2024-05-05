@@ -1,17 +1,17 @@
 User: Remove instance 30 from the model
 Parsed: filter id 30 and unlearn [E]
 
-User: unlearn id 530 from the model
-Parsed: filter id 530 and unlearn [E]
+User: unlearn id 534 from the model
+Parsed: filter id 534 and unlearn [E]
 
-User: Can you remove instance 30 from the model?
-Parsed: filter id 30 and unlearn [E]
+User: Can you remove instance 38 from the model?
+Parsed: filter id 38 and unlearn [E]
 
-User: Can you unlearn id 530 from the model?
-Parsed: filter id 530 and unlearn [E]
+User: Can you unlearn id 535 from the model?
+Parsed: filter id 535 and unlearn [E]
 
-User: Would you remove the effect coming from id 2131?
-Parsed: filter id 2131 and unlearn [E]
+User: Would you remove the effect coming from id 21?
+Parsed: filter id 21 and unlearn [E]
 
 User: Exclude instance 6 from the model
 Parsed: filter id 6 and unlearn [E]
@@ -28,20 +28,20 @@ Parsed: filter id 754 and unlearn [E]
 User: Would you remove the instance 847 from the training data of this model?
 Parsed: filter id 847 and unlearn [E]
 
-User: Could you exclude instance 2344 from the training data of this model?
-Parsed: filter id 2344 and unlearn [E]
+User: Could you exclude instance 2348 from the training data of this model?
+Parsed: filter id 2348 and unlearn [E]
 
-User: Exclude instance 984 from the model's training data
-Parsed: filter id 984 and unlearn [E]
+User: Exclude instance 94 from the model's training data
+Parsed: filter id 94 and unlearn [E]
 
 User: Can you remove the training data associated with instance 4663 from the model?
 Parsed: filter id 4663 and unlearn [E]
 
-User: Exclude id 72 from the training data of this model
-Parsed: filter id 72 and unlearn [E]
+User: Exclude id 7 from the training data of this model
+Parsed: filter id 7 and unlearn [E]
 
-User: Could you remove instance 580 from the model's training data?
-Parsed: filter id 580 and unlearn [E]
+User: Could you remove instance 58 from the model's training data?
+Parsed: filter id 58 and unlearn [E]
 
-User: Would you exclude the training data linked to id 102 from the model?
-Parsed: filter id 102 and unlearn [E]
+User: Would you exclude the training data linked to id 1 from the model?
+Parsed: filter id 1 and unlearn [E]

@@ -1,8 +1,6 @@
 import json
 import os
 
-from sklearn.model_selection import train_test_split
-
 
 def save_dataset_as_json(X, y, split="train"):
     output = []
@@ -57,11 +55,7 @@ def output_number_of_pairs_per_file(save=False, without_logic=True):
     print(f"In total: {len(user_question)}")
 
     if save:
-        X_train, X_test, y_train, y_test = train_test_split(user_question, parsed_text, shuffle=True, random_state=42,
-                                                            test_size=0.2)
-
-        save_dataset_as_json(X_train, y_train, "train")
-        save_dataset_as_json(X_test, y_test, "test")
+        save_dataset_as_json(user_question, parsed_text, "train")
 
 
 output_number_of_pairs_per_file(without_logic=True, save=True)

@@ -1,3 +1,4 @@
+import argparse
 import json
 
 import torch
@@ -49,9 +50,9 @@ def predict_f(text: str, grammar: str, model, tokenizer, use_guided_decoding):
     return decoded_generation
 
 
-def load_config():
+def load_config(config):
     """load configuration, model and sentence transformer"""
-    f = open("./config.json")
+    f = open(f"./{config}.json")
     data = json.load(f)
 
     use_guided_decoding = data["use_guided_decoding"]
@@ -66,10 +67,13 @@ def load_config():
     print(f"[UPDATE] loading model - {data['model']}")
 
     if data["model"] != "NN":
-        # quantization_config = GPTQConfig(bits=8, disable_exllama=True)
-        # model = AutoModelForCausalLM.from_pretrained(data["model"], low_cpu_mem_usage=True, device_map="auto", quantization_config=quantization_config)
-        model = AutoModelForCausalLM.from_pretrained(data["model"], device_map="auto", load_in_8bit=True)
-        tokenizer = AutoTokenizer.from_pretrained(data["tokenizer"])
+        if "GPTQ" in data["model"]:
+            quantization_config = GPTQConfig(bits=8, disable_exllama=True)
+            model = AutoModelForCausalLM.from_pretrained(data["model"], low_cpu_mem_usage=True, device_map="auto", quantization_config=quantization_config)
+            tokenizer = AutoTokenizer.from_pretrained(data["tokenizer"])
+        else:
+            model = AutoModelForCausalLM.from_pretrained(data["model"], device_map="auto")
+            tokenizer = AutoTokenizer.from_pretrained(data["tokenizer"])
 
         model.config.pad_token_id = model.config.eos_token_id
 
@@ -81,7 +85,7 @@ def load_config():
         num_shots = None
 
     print(f"[UPDATE] loading sentence transformer - {data['sentence_transformer']}")
-    return model, tokenizer, sentence_transformer, use_guided_decoding, num_shots, device
+    return data['model'], model, tokenizer, sentence_transformer, use_guided_decoding, num_shots, device
 
 
 def load_evaluation_pairs(filename):
@@ -103,7 +107,7 @@ def prepare_prompt_template(test_embedding, train_embeddings, texts, sqls, num_s
     cosine_scores = util.cos_sim(test_embedding, train_embeddings)
     _, indices = torch.sort(cosine_scores[0], descending=True)
 
-    prompt_template = ""
+    prompt_template = "You are good at intent recognition. Your task is to parse the given user question."
 
     for i in indices[:num_shots]:
         prompt_template += f"User: {texts[i]}\n"
@@ -126,8 +130,8 @@ def post_process(parsed_text):
     return parsed_text
 
 
-def few_shot_prompting():
-    model, tokenizer, sentence_transformer, use_guided_decoding, num_shots, device = load_config()
+def few_shot_prompting(config):
+    model_name, model, tokenizer, sentence_transformer, use_guided_decoding, num_shots, device = load_config(config)
 
     # load train/test sets
     train_texts, train_sqls = load_evaluation_pairs("coxql_train.json")
@@ -137,6 +141,8 @@ def few_shot_prompting():
     test_embeddings = sentence_transformer.encode(test_texts, convert_to_tensor=True)
 
     counter = 0
+    parsing = []
+    golden_label = []
 
     if num_shots:
         """few-shot prompting"""
@@ -151,6 +157,9 @@ def few_shot_prompting():
             # post-process the parsed text
             parsed_text = post_process(parsed_text)
 
+            parsing.append(parsed_text)
+            golden_label.append(test_sqls[i])
+
             print(f"Index: {i}; {test_sqls[i]} >>> {parsed_text} >> {test_sqls[i] == parsed_text}")
 
             if test_sqls[i] == parsed_text:
@@ -164,6 +173,9 @@ def few_shot_prompting():
 
             parsed_text = train_sqls[indices[0]]
 
+            parsing.append(parsed_text)
+            golden_label.append(test_sqls[i])
+
             print(f"Index {i}: {test_sqls[i]} >>> {parsed_text} >> {test_sqls[i] == parsed_text}")
 
             if test_sqls[i] == parsed_text:
@@ -171,5 +183,27 @@ def few_shot_prompting():
 
     print(f"Matched: {counter}; Total: {len(test_sqls)}; Accuracy: {round(counter/len(test_sqls)*100, 2)}%")
 
+    output = []
+    for i in range(len(parsing)):
+        output.append({
+            "idx": i,
+            "parsed_text": parsing[i],
+            "label": golden_label[i]
+        })
 
-# few_shot_prompting()
+    jsonString = json.dumps(output)
+
+    if num_shots:
+        jsonFile = open(f"./{model_name.split('/')[1]}-{num_shots}shots.json", "w")
+    else:
+        jsonFile = open(f"./NN.json", "w")
+
+    jsonFile.write(jsonString)
+    jsonFile.close()
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument("config", type=str)
+args = parser.parse_args()
+few_shot_prompting(args.config)
+few_shot_prompting("config")
