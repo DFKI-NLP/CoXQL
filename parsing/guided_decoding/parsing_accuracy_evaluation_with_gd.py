@@ -194,9 +194,9 @@ def few_shot_prompting(config):
     jsonString = json.dumps(output)
 
     if num_shots:
-        jsonFile = open(f"./{model_name.split('/')[1]}-{num_shots}shots.json", "w")
+        jsonFile = open(f"./results/{model_name.split('/')[1]}-{num_shots}shots.json", "w")
     else:
-        jsonFile = open(f"./NN.json", "w")
+        jsonFile = open(f"./results/NN.json", "w")
 
     jsonFile.write(jsonString)
     jsonFile.close()

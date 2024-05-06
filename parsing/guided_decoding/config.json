@@ -2,7 +2,7 @@
   "model": "tiiuae/falcon-rw-1b",
   "tokenizer": "tiiuae/falcon-rw-1b",
   "use_guided_decoding": true,
-  "num_shots": 10,
+  "num_shots": 20,
   "sentence_transformer": "BAAI/bge-base-en-v1.5",
   "use_cuda": true
 }
