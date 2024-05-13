@@ -232,7 +232,7 @@
   {
     "idx": 46,
     "text": "Considering id 1023, what are 5 most influential instances in the dataset that affect it?",
-    "sql": "filter id 1023 and influence topk 1 [E]"
+    "sql": "filter id 1023 and influence topk 5 [E]"
   },
   {
     "idx": 47,
@@ -427,12 +427,12 @@
   {
     "idx": 85,
     "text": "How does similarity work?",
-    "sql": "qarationale qasim [E]"
+    "sql": "qatutorial qasim [E]"
   },
   {
     "idx": 86,
     "text": "Counterfactual... What is it?",
-    "sql": "qarationale qacfe [E]"
+    "sql": "qatutorial qacfe [E]"
   },
   {
     "idx": 87,
