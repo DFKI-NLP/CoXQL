@@ -1,6 +1,9 @@
+import argparse
 import json
 import sys
 from os.path import abspath, dirname
+
+import torch.cuda
 
 parent = dirname(dirname(dirname(abspath(__file__))))
 sys.path.append(parent)
@@ -299,9 +302,17 @@ class MultiPromptParser:
 
 if __name__ == "__main__":
     # parsing accuracy evaluation (exact matches)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("config", type=str)
+    args = parser.parse_args()
+    config = args.config
 
-    # loading model and tokenizer
-    model_id = "TheBloke/Mistral-7B-v0.1-GPTQ"  # "EleutherAI/pythia-2.8b-v0" #"TheBloke/Llama-2-7b-Chat-GPTQ"  #"TheBloke/Mistral-7B-v0.1-GPTQ" #"tiiuae/falcon-rw-1b"
+    f = open(f"./{config}")
+    data = json.load(f)
+    model_id = data['model']
+    sbert_id = data["sentence_transformer"]
+
+    print(f"[UPDATE] loading model - {model_id}")
 
     if "GPTQ" in model_id:
         quantization_config = GPTQConfig(bits=4, disable_exllama=True)
@@ -319,14 +330,21 @@ if __name__ == "__main__":
     decoder_model.config.pad_token_id = decoder_model.config.eos_token_id
 
     tokenizer = AutoTokenizer.from_pretrained(model_id)
+
     # loading SBERT
-    st_model = SentenceTransformer("all-MiniLM-L6-v2")
-    device = "cuda"
+    st_model = SentenceTransformer(sbert_id)
+
+    if torch.cuda.is_available():
+        device = "cuda"
+    else:
+        device = "cpu"
+
     # initializing the multi-prompt parsing model
     parser = MultiPromptParser(decoder_model, tokenizer, st_model, device)
-    evaluation_file = "dataset/coxql_test.json"  # "dataset/testset.txt"
+    evaluation_file = "dataset/coxql_test.json"
     f = open(evaluation_file)
     gold_data = json.load(f)
+
     # evaluation
     correct_parses = []
     user_inputs = []
@@ -339,10 +357,23 @@ if __name__ == "__main__":
         print(parsed_operation + " >>> " + user_input)
         sys_parses.append(parsed_operation)
     matched = 0
+
     assert len(sys_parses) == len(correct_parses)
+
     for i in range(len(sys_parses)):
         if sys_parses[i] == correct_parses[i]:
             matched += 1
+
+    # save results
+    output = []
+    for i in range(len(sys_parses)):
+        output.append({
+            "idx": i,
+            "parsed_text": sys_parses[i],
+            "label": correct_parses[i]
+        })
+    jsonFile = open(f"./results/{model_id.split('/')[1]}.json", "w")
+
     print(
-        "matched:", matched, "total:", len(correct_parses), "acc:", matched / len(correct_parses)
+        f"Matched: {matched}; total: {len(correct_parses)}; acc: {round(matched / len(correct_parses), 4) * 100}%"
     )
