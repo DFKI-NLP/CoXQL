@@ -98,5 +98,6 @@ wandb==0.13.2
 Werkzeug==2.0.3
 word2number==1.1
 wordninja==2.0.0
+thefuzz==0.22.1
 git+https://github.com/boudinfl/pke.git
 git+https://github.com/inseq-team/inseq.git
