@@ -1,8 +1,8 @@
 User: Please retrieve an example that is similar to ID 50
 Parsed: filter id 50 and similar 1 [E]
 
-User: Could you give me an analogous data point to ID 75.
-Parsed: filter id 75 and similar 1 [E]
+User: Could you give me six analogous data points to ID 75.
+Parsed: filter id 75 and similar 6 [E]
 
 User: Is it possible to retrieve an example that is similar to id 12?
 Parsed: filter id 12 and similar 1 [E]
@@ -10,17 +10,17 @@ Parsed: filter id 12 and similar 1 [E]
 User: I'm looking for a case that is akin to id 14. Could you help me with that?
 Parsed: filter id 14 and similar 1 [E]
 
-User: Show 3 similar instances to ID 25.
-Parsed: filter id 25 and similar 3 [E]
+User: Show five similar instances to ID 25.
+Parsed: filter id 25 and similar 5 [E]
 
-User: Can you bring up 3 instances that shares similarities with ID 35?
-Parsed: filter id 35 and similar 3 [E]
+User: Can you bring up 4 instances that shares similarities with ID 35?
+Parsed: filter id 35 and similar 4 [E]
 
 User: Could you give me 5 analogous data points to ID 75?
 Parsed: filter id 75 and similar 5 [E]
 
-User: Could you locate 6 comparable data point to ID 75 for me?
-Parsed: filter id 75 and similar 6 [E]
+User: Could you locate two comparable data point to ID 75 for me?
+Parsed: filter id 75 and similar 2 [E]
 
 User: Can you show me 2 instances that are similar to ID 30?
 Parsed: filter id 30 and similar 2 [E]
@@ -31,20 +31,20 @@ Parsed: filter id 90 and similar 1 [E]
 User: Please give me 4 examples that are similar to ID 15.
 Parsed: filter id 15 and similar 4 [E]
 
-User: Show me a similar data point to ID 5.
-Parsed: filter id 5 and similar 1 [E]
+User: Show me 7 similar data points to ID 5.
+Parsed: filter id 5 and similar 7 [E]
 
 User: Can you provide me an instance that is analogous to ID 100?
 Parsed: filter id 100 and similar 1 [E]
 
-User: Retrieve 3 examples that are similar to ID 20.
-Parsed: filter id 20 and similar 3 [E]
+User: Retrieve eight examples that are similar to ID 20.
+Parsed: filter id 20 and similar 8 [E]
 
-User: Could you show me an instance that is similar to ID 45?
-Parsed: filter id 45 and similar 1 [E]
+User: Could you show me 8 instances that is similar to ID 45?
+Parsed: filter id 45 and similar 8 [E]
 
-User: Is it possible to retrieve 2 data points that are analogous to ID 60?
-Parsed: filter id 60 and similar 2 [E]
+User: Is it possible to retrieve  9 data points that are analogous to ID 60?
+Parsed: filter id 60 and similar 9 [E]
 
 User: Give me an example that is similar to ID 70.
 Parsed: filter id 70 and similar 1 [E]
@@ -52,23 +52,23 @@ Parsed: filter id 70 and similar 1 [E]
 User: Show me 5 data points that are analogous to ID 85.
 Parsed: filter id 85 and similar 5 [E]
 
-User: Can you please retrieve an instance that is similar to ID 10?
-Parsed: filter id 10 and similar 1 [E]
+User: Can you please retrieve nine instances that is similar to ID 10?
+Parsed: filter id 10 and similar 9 [E]
 
-User: Give me 2 examples that are analogous to ID 55.
-Parsed: filter id 55 and similar 2 [E]
+User: Give me 10 examples that are analogous to ID 55.
+Parsed: filter id 55 and similar 10 [E]
 
 User: Could you show me a data point that is similar to ID 80?
 Parsed: filter id 80 and similar 1 [E]
 
-User: Is it possible to retrieve an instance that is analogous to ID 35?
-Parsed: filter id 35 and similar 1 [E]
+User: Is it possible to retrieve 4 instances that are analogous to ID 35?
+Parsed: filter id 35 and similar 4 [E]
 
 User: Please provide me with 3 examples that are similar to ID 65.
 Parsed: filter id 65 and similar 3 [E]
 
-User: Show me a data point that is analogous to ID 95.
-Parsed: filter id 95 and similar 1 [E]
+User: Show me 12 data point that are analogous to ID 95.
+Parsed: filter id 95 and similar 12 [E]
 
 User: Retrieve an instance that is similar to ID 40.
 Parsed: filter id 40 and similar 1 [E]
@@ -79,8 +79,8 @@ Parsed: filter id 50 and similar 4 [E]
 User: Is it possible to show me 2 data points that are similar to ID 85?
 Parsed: filter id 85 and similar 2 [E]
 
-User: Can you please retrieve an example that is analogous to ID 25?
-Parsed: filter id 25 and similar 1 [E]
+User: Can you please retrieve 4 examples that are analogous to ID 25?
+Parsed: filter id 25 and similar 4 [E]
 
 User: I need some samples that are similar to id 1400.
 Parsed: filter id 1400 and similar 1 [E]
@@ -94,32 +94,32 @@ Parsed: filter id 16 and similar 7 [E]
 User: Can I see five similar instances for the instance with id 888?
 Parsed: filter id 888 and similar 5 [E]
 
+User: Please fetch the 6 instances that share the highest similarity with ID 16.
+Parsed: filter id 16 and similar 6 [E]
+
+User: I'm interested in knowing the 1 instance that have the closest resemblance to ID 542. Could you provide them?
+Parsed: filter id 542 and similar 1 [E]
+
+User: Could you generate a list of the 8 instances that bear the greatest similarity to ID 982?
+Parsed: filter id 982 and similar 8 [E]
+
 User: Please fetch the 3 instances that share the highest similarity with ID 16.
 Parsed: filter id 16 and similar 3 [E]
 
 User: I'm interested in knowing the 1 instance that have the closest resemblance to ID 542. Could you provide them?
 Parsed: filter id 542 and similar 1 [E]
 
-User: Could you generate a list of the 5 instances that bear the greatest similarity to ID 982?
-Parsed: filter id 982 and similar 5 [E]
-
-User: Please fetch the 3 instances that share the highest similarity with ID 16.
-Parsed: filter id 16 and similar 3 [E]
-
-User: I'm interested in knowing the 1 instance that have the closest resemblance to ID 542. Could you provide them?
-Parsed: filter id 542 and similar 1 [E]
-
-User: Can you fetch the 3 instances that share the highest similarity with ID 23?
-Parsed: filter id 23 and similar 3 [E]
+User: Can you fetch the 7 instances that share the highest similarity with ID 23?
+Parsed: filter id 23 and similar 7 [E]
 
 User: I'd like to know the 3 instances with the highest similarity to ID 451. Could you fetch them?
 Parsed: filter id 451 and similar 3 [E]
 
-User: What are the 3 instances that have the highest similarity to ID 1236? Please fetch them.
-Parsed: filter id 1236 and similar 3 [E]
+User: What are the 4 instances that have the highest similarity to ID 1236? Please fetch them.
+Parsed: filter id 1236 and similar 4 [E]
 
-User: Could you provide the 1 instance that has the closest resemblance to ID 452?
-Parsed: filter id 452 and similar 1 [E]
+User: Could you provide three instances that has the closest resemblance to ID 452?
+Parsed: filter id 452 and similar 3 [E]
 
-User: I'm interested in knowing the 1 instance with the highest similarity to ID 759. Could you provide it?
-Parsed: filter id 759 and similar 1 [E]
+User: I'm interested in knowing 4 instances with the highest similarity to ID 759. Could you provide it?
+Parsed: filter id 759 and similar 4 [E]

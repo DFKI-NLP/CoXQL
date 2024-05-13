@@ -1,77 +1,80 @@
-User: Explain terminology or concepts outside of the system's functionality, but related to the domain.
+User: How can attention help us understand the model's behavior?
 Parsed: domain [E]
 
-User: Can you clarify terms or concepts that are relevant to the domain but not directly related to the system's functionality?
+User: I want to know some details about integrated gradient?
 Parsed: domain [E]
 
-User: Define domain-specific terminology or concepts that are not part of the system's functionality.
+User: What is inputxgradient?
 Parsed: domain [E]
 
-User: Describe key concepts or terminology that are specific to the domain but not included in the system's functionality.
+User: Can you clarify how attention works?
 Parsed: domain [E]
 
-User: Describe domain-related terminology that are outside the system's functionality.
+User: Describe any white-box methods you support.
 Parsed: domain [E]
 
-User: Clarify domain-specific terms or concepts that fall outside the system's functional scope.
+User: Which matrices are supported for score operation?
 Parsed: domain [E]
 
-User: Interpret domain-specific terminology that is not part of the system's functionality.
+User: What's precision?
 Parsed: domain [E]
 
-User: Provide explanations for domain-related concepts not included in the system's functionality.
+User: ROC is used for?
 Parsed: domain [E]
 
-User: Define key terms and concepts specific to the domain but not included in the system's functionality.
+User: Can you tell me how can accuracy be calculated?
 Parsed: domain [E]
 
-User: Explain domain-relevant terminology and concepts that are outside the system's functionality.
+User: Tell me how you get the integrated gradient result?
 Parsed: domain [E]
 
-User: Describe the meaning of domain-specific terms and concepts that are not part of the system's functionality.
+User: I'm eager to know how you support tutorial functionality
 Parsed: domain [E]
 
-User: Clarify domain-related concepts and terminology that are not included in the system's functionality.
+User: In which way can recall matrix be calculated.
 Parsed: domain [E]
 
-User: Provide domain-specific definitions for terms and concepts outside the system's functionality.
+User: What is the definition of precision?
 Parsed: domain [E]
 
-User: Explain the meaning of terms and concepts related to the domain but not part of the system's functionality.
+User: What is ROC (Receiver Operating Characteristic) used for?
 Parsed: domain [E]
 
-User: Define domain-specific concepts and terminology that are not included in the system's functionality.
+User: Can you explain how accuracy can be calculated?
 Parsed: domain [E]
 
-User: Interpret the meaning of domain-related terms and concepts that are outside the system's functionality.
+User: Could you describe how the integrated gradient result is obtained?
 Parsed: domain [E]
 
-User: Can you interpret the domain-specific terminology that is not part of the system's functionality?
+User: I'd like to know how the system supports tutorial functionality.
 Parsed: domain [E]
 
-User: Could you provide explanations for domain-related concepts that are not included in the system's functionality?
+User: In what way can the recall metric be calculated?
 Parsed: domain [E]
 
-User: Please define the key terms and concepts specific to the domain but not included in the system's functionality.
+User: Can you provide some details about integrated gradients?
 Parsed: domain [E]
 
-User: Can you explain the domain-relevant terminology and concepts that are outside the system's functionality?
+User: What is input x gradient?
 Parsed: domain [E]
 
-User: Would you describe the meaning of domain-specific terms and concepts that are not part of the system's functionality?
+User: Can you clarify how lime work?
 Parsed: domain [E]
 
-User: Can you clarify the domain-related concepts and terminology that are not included in the system's functionality?
+User: Could you describe any white-box interpretability methods that are supported?
 Parsed: domain [E]
 
-User: Could you provide domain-specific definitions for terms and concepts outside the system's functionality?
+User: Which performance metrics are supported for the scoring operation?
 Parsed: domain [E]
 
-User: Please explain the meaning of terms and concepts related to the domain but not part of the system's functionality.
+User: Can you explain how attention can be used to gain insights into the model's decision-making?
 Parsed: domain [E]
 
-User: Can you define the domain-specific concepts and terminology that are not included in the system's functionality?
+User: I'd like to learn more about the integrated gradients technique - could you provide an overview?
 Parsed: domain [E]
 
-User: Would you interpret the meaning of domain-related terms and concepts that are outside the system's functionality?
+User: What is the input x gradient and how does it relate to model interpretability?
+Parsed: domain [E]
+
+User: Please elaborate on how attention mechanisms are implemented and how they work.
 Parsed: domain [E]

@@ -1,0 +1,11 @@
+User: Show me the predictions of all the instances with "connection"
+Parsed: includes and predict [E]
+
+User: What does the model predict on the "trial" examples?
+Parsed: includes and predict [E]
+
+User: What are the predictions on data including "get"?
+Parsed: includes and predict [E]
+
+User: Show the predictions of "critic" data
+Parsed: includes and predict [E]

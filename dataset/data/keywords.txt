@@ -13,8 +13,8 @@ Parsed: keywords 3 [E]
 User: Which five words occur the most in the data?
 Parsed: keywords 5 [E]
 
-User: Show me the most frequent keyword tokens, please.
-Parsed: keywords all [E]
+User: Show me 4 most frequent keyword tokens, please.
+Parsed: keywords 4 [E]
 
 User: What are the keywords in the dataset?
 Parsed: keywords all [E]
@@ -46,8 +46,8 @@ Parsed: keywords 4 [E]
 User: I'm interested in seeing the 10 keywords that occur most often. Could you display them?
 Parsed: keywords 10 [E]
 
-User: Could you display the most common keyword tokens?
-Parsed: keywords all [E]
+User: Could you display 7 most common keyword tokens?
+Parsed: keywords 7 [E]
 
 User: Can you show the keyword tokens with the highest occurrence?
 Parsed: keywords all [E]
@@ -67,8 +67,8 @@ Parsed: keywords all [E]
 User: I'd like to see a list of the 3 most common keywords. Could you present them?
 Parsed: keywords 3 [E]
 
-User: What are the top 2 keywords by frequency of occurrence?
-Parsed: keywords 2 [E]
+User: What are the top 6 keywords by frequency of occurrence?
+Parsed: keywords 6 [E]
 
 User: I'm interested in the 5 keywords that occur most often. Can you show them?
 Parsed: keywords 5 [E]

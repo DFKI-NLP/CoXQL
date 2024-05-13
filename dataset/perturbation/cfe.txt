@@ -1,5 +1,5 @@
-User: What does instance with id 22 need to do to change the prediction?
-Parsed: filter id 22 and cfe [E]
+User: What does instance with id 7 need to do to change the prediction?
+Parsed: filter id 7 and cfe [E]
 
 User: show me cfe's for the instance with id 22
 Parsed: filter id 22 and cfe [E]
@@ -13,11 +13,11 @@ Parsed: filter id 9810 and cfe [E]
 User: Nice. I'm pretty satisfied with the prediction of id 221. But could you tell me how to change the prediction?
 Parsed: filter id 221 and cfe [E]
 
-User: What would it take to change how instance 98387 is predicted?
-Parsed: filter id 98387 and cfe [E]
+User: What would it take to change how instance 387 is predicted?
+Parsed: filter id 387 and cfe [E]
 
-User: How would you flip the prediction for id 23?
-Parsed: filter id 23 and cfe [E]
+User: How would you flip the prediction for id 3?
+Parsed: filter id 3 and cfe [E]
 
 User: flip the classification for sample 98?
 Parsed: filter id 98 and cfe [E]
@@ -25,35 +25,35 @@ Parsed: filter id 98 and cfe [E]
 User: flip prediction class data point 2325
 Parsed: filter id 2325 and cfe [E]
 
-User: How do I change the prediction for the data point with id number 34?
-Parsed: filter id 34 and cfe [E]
+User: How do I change the prediction for the data point with id number 703?
+Parsed: filter id 703 and cfe [E]
 
-User: Could you tell me how to change the prediction point for data point 34?
-Parsed: filter id 34 and cfe [E]
+User: Could you tell me how to change the prediction point for data point 815?
+Parsed: filter id 815 and cfe [E]
 
-User: How can I change the prediction for the data point with an id of 34?
-Parsed: filter id 34 and cfe [E]
+User: How can I change the prediction for the data point with an id of 90?
+Parsed: filter id 90 and cfe [E]
 
-User: Could you show me how to change the prediction for the data point 34?
-Parsed: filter id 34 and cfe [E]
-
-User: How do I change the prediction for the data point with the id number 34?
-Parsed: filter id 34 and cfe [E]
-
-User: Would it be possible for you to tell me how to change the prediction for the data point with the id number 34?
-Parsed: filter id 34 and cfe [E]
-
-User: For data point id 34, how would I change the prediction?
-Parsed: filter id 34 and cfe [E]
-
-User: What is the way to change the prediction for the data point with the id number 34?
-Parsed: filter id 34 and cfe [E]
-
-User: Can you generate a counterfactual example for id 36?
-Parsed: filter id 36 and cfe [E]
-
-User: I want to look at the counterfactuals for id 6.
+User: Could you show me how to change the prediction for the data point 6?
 Parsed: filter id 6 and cfe [E]
+
+User: How do I change the prediction for the data point with the id number 59?
+Parsed: filter id 59 and cfe [E]
+
+User: Would it be possible for you to tell me how to change the prediction for the data point with the id number 103?
+Parsed: filter id 103 and cfe [E]
+
+User: For data point id 667, how would I change the prediction?
+Parsed: filter id 667 and cfe [E]
+
+User: What is the way to change the prediction for the data point with the id number 9?
+Parsed: filter id 9 and cfe [E]
+
+User: Can you generate a counterfactual example for id 7106?
+Parsed: filter id 7106 and cfe [E]
+
+User: I want to look at the counterfactuals for id 1278.
+Parsed: filter id 1278 and cfe [E]
 
 User: What cfes can you generate for id 257?
 Parsed: filter id 257 and cfe [E]
@@ -64,20 +64,20 @@ Parsed: filter id 90 and cfe [E]
 User: What is an alternative sample that fools the model? I mean something like a counterfactual for id 8.
 Parsed: filter id 8 and cfe [E]
 
-User: I'm interested in examining the counterfactual scenarios related to id 6.
-Parsed: filter id 6 and cfe [E]
+User: I'm interested in examining the counterfactual scenarios related to id 498.
+Parsed: filter id 498 and cfe [E]
 
-User: I would like to explore the alternative outcomes for id 72 through counterfactual analysis.
-Parsed: filter id 72 and cfe [E]
-
-User: Can you provide me with the counterfactuals for id 864?
-Parsed: filter id 864 and cfe [E]
-
-User: I would like to explore the alternative outcomes for id 72 through counterfactual analysis.
-Parsed: filter id 72 and cfe [E]
+User: I would like to explore the alternative outcomes for id 7 through counterfactual analysis.
+Parsed: filter id 7 and cfe [E]
 
 User: Can you provide me with the counterfactuals for id 864?
 Parsed: filter id 864 and cfe [E]
+
+User: I would like to explore the alternative outcomes for id 639 through counterfactual analysis.
+Parsed: filter id 639 and cfe [E]
+
+User: Can you provide me with the counterfactuals for id 41?
+Parsed: filter id 41 and cfe [E]
 
 User: I would like to explore the alternative outcomes for ID 512 through counterfactual analysis.
 Parsed: filter id 512 and cfe [E]
@@ -88,14 +88,14 @@ Parsed: filter id 674 and cfe [E]
 User: What are the alternative outcomes for ID 1712 through counterfactual analysis? Please show them.
 Parsed: filter id 1712 and cfe [E]
 
-User: Can you provide me with the counterfactuals for ID 1864?
-Parsed: filter id 1864 and cfe [E]
+User: Can you provide me with the counterfactuals for ID 5864?
+Parsed: filter id 5864 and cfe [E]
 
-User: I'm interested in exploring the alternative outcomes for ID 2421. Could you show me the counterfactuals?
-Parsed: filter id 2421 and cfe [E]
+User: I'm interested in exploring the alternative outcomes for ID 2425. Could you show me the counterfactuals?
+Parsed: filter id 2425 and cfe [E]
 
-User: I'd like to see the counterfactual analysis for ID 819, can you show me the alternative outcomes?
-Parsed: filter id 819 and cfe [E]
+User: I'd like to see the counterfactual analysis for ID 81, can you show me the alternative outcomes?
+Parsed: filter id 81 and cfe [E]
 
 User: Can you provide the counterfactuals for ID 351?
 Parsed: filter id 351 and cfe [E]
@@ -106,20 +106,20 @@ Parsed: filter id 942 and cfe [E]
 User: I'm interested in exploring the counterfactuals for ID 1298, can you show me the results?
 Parsed: filter id 1298 and cfe [E]
 
-User: Can you generate the counterfactual analysis for ID 567?
-Parsed: filter id 567 and cfe [E]
+User: Can you generate the counterfactual analysis for ID 17?
+Parsed: filter id 17 and cfe [E]
 
-User: Can you show me the alternative outcomes for ID 473 through counterfactual analysis?
-Parsed: filter id 473 and cfe [E]
+User: Can you show me the alternative outcomes for ID 73 through counterfactual analysis?
+Parsed: filter id 73 and cfe [E]
 
-User: I'd like to explore the counterfactuals for ID 1982, can you provide them?
-Parsed: filter id 1982 and cfe [E]
+User: I'd like to explore the counterfactuals for ID 6982, can you provide them?
+Parsed: filter id 6982 and cfe [E]
 
 User: What are the counterfactuals for ID 756, can you generate them?
 Parsed: filter id 756 and cfe [E]
 
-User: Can you provide the counterfactual analysis for ID 1239?
-Parsed: filter id 1239 and cfe [E]
+User: Can you provide the counterfactual analysis for ID 239?
+Parsed: filter id 239 and cfe [E]
 
 User: I'm interested in seeing the alternative outcomes for ID 628 through counterfactual analysis.
 Parsed: filter id 628 and cfe [E]

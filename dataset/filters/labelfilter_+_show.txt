@@ -1,0 +1,23 @@
+User: the label is true
+Parsed: labelfilter true and show [E]
+
+User: the true label is false
+Parsed: labelfilter false and show [E]
+
+User: the gold label is false
+Parsed: labelfilter false and show [E]
+
+User: the ground truth is true
+Parsed: labelfilter true and show [E]
+
+User: Show the data where the label is true.
+Parsed: labelfilter true and show [E]
+
+User: Show the data where the true label is false.
+Parsed: labelfilter false and show [E]
+
+User: Show the data where the gold label is false.
+Parsed: labelfilter false and show [E]
+
+User: Show the data where the ground truth is true.
+Parsed: labelfilter true and show [E]

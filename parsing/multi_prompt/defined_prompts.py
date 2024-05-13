@@ -236,7 +236,7 @@ operation2attributes = {
     ],
     "keywords": ["all"],
     "mistake": ["count", "sample"],
-    "score": ["accuracy", "f1", "micro", "macro", "weighted", "precision", "recall", "roc"],
+    "score": ["accuracy", "f1", "roc", "precision", "recall"],
     "influence": ["topk"],
 }
 

@@ -1,0 +1,29 @@
+User: the model predicts true
+Parsed: predictionfilter true and show [E]
+
+User: the model's prediction is false
+Parsed: predictionfilter false and show [E]
+
+User: show me all data points with prediction true
+Parsed: predictionfilter true and show [E]
+
+User: the model predicts true and the label is false
+Parsed: predictionfilter true and labelfilter false and show [E]
+
+User: the model predicts false but the label is true
+Parsed: predictionfilter false and labelfilter true and show [E]
+
+User: the model outcome is false but the label is true
+Parsed: predictionfilter false and labelfilter true and show [E]
+
+User: the model predicts false but actually are true
+Parsed: predictionfilter false and labelfilter true and show [E]
+
+User: the model predicts true but whose ground truth label is false
+Parsed: predictionfilter true and labelfilter false and show [E]
+
+User: where they are actually false but the model predicts true
+Parsed: predictionfilter false and labelfilter true and show [E]
+
+User: who are false but get predicted as true
+Parsed: predictionfilter false and labelfilter true and show [E]

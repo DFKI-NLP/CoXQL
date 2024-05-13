@@ -7,6 +7,8 @@ from typing import List
 
 from thefuzz import fuzz
 
+import torch.cuda
+
 parent = dirname(dirname(dirname(abspath(__file__))))
 sys.path.append(parent)
 
@@ -388,6 +390,7 @@ def main(model_id: str, test_file_path: str, verbose: bool):
     """parsing accuracy evaluation (exact matches)"""
     # loading model and tokenizer
     # model ids: "EleutherAI/pythia-2.8b-v0" #"TheBloke/Llama-2-7b-Chat-GPTQ" #"TheBloke/Mistral-7B-v0.1-GPTQ" #"tiiuae/falcon-rw-1b"
+
     if "GPTQ" in model_id:
         quantization_config = GPTQConfig(bits=4, disable_exllama=True)
         decoder_model = AutoModelForCausalLM.from_pretrained(
@@ -404,14 +407,22 @@ def main(model_id: str, test_file_path: str, verbose: bool):
     decoder_model.config.pad_token_id = decoder_model.config.eos_token_id
 
     tokenizer = AutoTokenizer.from_pretrained(model_id)
+
     # loading SBERT
-    st_model = SentenceTransformer("all-MiniLM-L6-v2")
-    device = "cuda"
+    st_model = SentenceTransformer(sbert_id)
+
+    if torch.cuda.is_available():
+        device = "cuda"
+    else:
+        device = "cpu"
+
     # initializing the multi-prompt parsing model
     parser = MultiPromptParser(decoder_model, tokenizer, st_model, device)
 
     f = open(test_file_path)
+
     gold_data = json.load(f)
+
     # evaluation
     correct_parses = []
     user_inputs = []
@@ -425,12 +436,28 @@ def main(model_id: str, test_file_path: str, verbose: bool):
             print("parsed: " + parsed_operation + " vs gold: " + correct_parses[ui] + " >>> " + user_input)
         sys_parses.append(parsed_operation)
     matched = 0
+
     assert len(sys_parses) == len(correct_parses)
+
     for i in range(len(sys_parses)):
         if sys_parses[i] == correct_parses[i]:
             matched += 1
+
+    # save results
+    output = []
+    for i in range(len(sys_parses)):
+        output.append({
+            "idx": i,
+            "parsed_text": sys_parses[i],
+            "label": correct_parses[i]
+        })
+    jsonFile = open(f"./results/{model_id.split('/')[1]}.json", "w")
+    jsonString = json.dumps(output)
+    jsonFile.write(jsonString)
+    jsonFile.close()
+
     print(
-        "matched:", matched, "total:", len(correct_parses), "acc:", matched / len(correct_parses)
+        f"Matched: {matched}; total: {len(correct_parses)}; acc: {round(matched / len(correct_parses), 4) * 100}%"
     )
 
 

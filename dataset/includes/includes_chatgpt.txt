@@ -1,0 +1,59 @@
+User: Show me all cases that involve the term "career".
+Parsed: includes [E]
+
+User: Can you give me a list of all the examples that contain the word "edition"?
+Parsed: includes [E]
+
+User: Please display all instances that have the token "reality".
+Parsed: includes [E]
+
+User: Show me all occurrences that feature the token "decrease".
+Parsed: includes [E]
+
+User: Can you provide me with all examples that have the term "shatter"?
+Parsed: includes [E]
+
+User: Please list all cases that contain the token "freighter".
+Parsed: includes [E]
+
+User: I want to see all instances that include the word "punish".
+Parsed: includes [E]
+
+User: Give me a list of all examples that include the token "evaluate".
+Parsed: includes [E]
+
+User: Show me all occurrences that have the term "set".
+Parsed: includes [E]
+
+User: Can you display all cases that comprise the term "village"?
+Parsed: includes [E]
+
+User: Please provide me with all examples that involve the token "stamp".
+Parsed: includes [E]
+
+User: Show me all instances that contain the phrase "development".
+Parsed: includes [E]
+
+User: Can you give me all the cases that incorporate the phrase "holiday"?
+Parsed: includes [E]
+
+User: Please display all occurrences that include the words "compartment".
+Parsed: includes [E]
+
+User: I would like to see all the examples that contain the phrase "urine".
+Parsed: includes [E]
+
+User: Can you list all cases that have the span "tube"?
+Parsed: includes [E]
+
+User: Show me all instances that comprise the phrase "monster".
+Parsed: includes [E]
+
+User: Give me all the occurrences that feature the phrase "quarrel".
+Parsed: includes [E]
+
+User: Please provide me with all examples that incorporate the words "enlarge".
+Parsed: includes [E]
+
+User: I want to see all the cases that contain the span "beard".
+Parsed: includes [E]

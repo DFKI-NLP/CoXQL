@@ -1,0 +1,32 @@
+User: could you show model performance on instances longer than 52 characters
+Parsed: lengthfilter chars greater than 52 and score accuracy [E]
+
+User: score on texts with less than 5 sentences
+Parsed: lengthfilter sents less than 5 and score accuracy [E]
+
+User: accuracy where number of words is larger than 28
+Parsed: lengthfilter greater than 28 and score accuracy [E]
+
+User: What is the score on texts with less than 3 sentences?
+Parsed: lengthfilter sents less than 3 and score accuracy [E]
+
+User: What is the accuracy where the number of words is larger than 42?
+Parsed: lengthfilter words greater than 42 and score accuracy [E]
+
+User: Please provide the model performance on instances where the length exceeds 23 characters.
+Parsed: lengthfilter chars greater than 23 and score accuracy [E]
+
+User: Can you give me the score on texts that have fewer than 4 sentences?
+Parsed: lengthfilter sents less than 4 and score accuracy [E]
+
+User: What is the accuracy for instances where the word count is greater than 22?
+Parsed: lengthfilter words greater than 22 and score accuracy [E]
+
+User: Could you share the model's accuracy on data points with character length above 41?
+Parsed: lengthfilter chars greater than 41 and score accuracy [E]
+
+User: I'd like to know the performance metrics for texts that have less than 2 sentences.
+Parsed: lengthfilter sents less than 2 and score accuracy [E]
+
+User: Please report the accuracy on data where the word count is larger than 11.
+Parsed: lengthfilter words greater than 11 and score accuracy [E]

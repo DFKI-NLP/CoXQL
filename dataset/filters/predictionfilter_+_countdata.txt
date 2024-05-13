@@ -1,0 +1,20 @@
+User: tell me the number of data points whose prediction is false
+Parsed: predictionfilter false and count [E]
+
+User: What is the number of data points whose prediction is true?
+Parsed: predictionfilter true and count [E]
+
+User: Can you provide the count of data points with false predictions?
+Parsed: predictionfilter false and count [E]
+
+User: What is the total number of data points that have a true prediction?
+Parsed: predictionfilter true and count [E]
+
+User: Please let me know the quantity of data points where the prediction is true.
+Parsed: predictionfilter true and count [E]
+
+User: Could you tell me how many data points have a predicted value of true?
+Parsed: predictionfilter true and count [E]
+
+User: What is the count of data points that have a true predicted value?
+Parsed: predictionfilter true and count [E]

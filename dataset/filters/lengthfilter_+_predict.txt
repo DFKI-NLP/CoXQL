@@ -1,0 +1,47 @@
+User: what are the predictions on instances shorter than 100 characters
+Parsed: lengthfilter chars greater than 100 and predict [E]
+
+User: What are the predictions for instances with less than 32 characters in length?
+Parsed: lengthfilter chars less than 32 and predict [E]
+
+User: For datapoints with more than 53 characters, please tell me what the model predicts?
+Parsed: lengthfilter chars greater than 53 and predict [E]
+
+User: display the predictions on examples with more than 4 sentences
+Parsed: lengthfilter sents greater than 4 and predict [E]
+
+User: Could you show me predictions for instances with 63 words or more?
+Parsed: lengthfilter sents greater than 63 and predict [E]
+
+User: Please tell me what the model predicts for instances with at least 2 sentences
+Parsed: lengthfilter sents greater equal than 2 and predict [E]
+
+User: What are the predictions for those with exactly 5 sentences?
+Parsed: lengthfilter sents equal to 5 and predict [E]
+
+User: What does the model predict for instances with more than 4 sentences?
+Parsed: lengthfilter sents greater than 4 and predict [E]
+
+User: Show the predictions on texts longer than 54 words
+Parsed: lengthfilter words greater than 54 and predict [E]
+
+User: Please tell me what the model predicts on examples with 88 words or less?
+Parsed: lengthfilter words less equal than 88 and predict [E]
+
+User: What are the predictions for data with less than 72 words?
+Parsed: lengthfilter words less than 72 and predict [E]
+
+User: What are the predictions for instances with at least 54 words?
+Parsed: lengthfilter words greater than 54 and predict [E]
+
+User: data with less than 124 chars. then predictions
+Parsed: lengthfilter chars less than 124 and show and predict [E]
+
+User: What data has more than 6 sentences and what does the model predict on this subset?
+Parsed: lengthfilter sents greater than 6 and show and predict [E]
+
+User: prediction of text data where more than 5 sentences are present followed by showing the data itself
+Parsed: lengthfilter sents less than 5 and predict and show [E]
+
+User: could you show me data with a length of no more than 50words and tell me what the model predictions are?
+Parsed: lengthfilter words less equal than 50 and show and predict [E]

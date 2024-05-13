@@ -1,0 +1,5 @@
+User: Including word counts smaller than 50 into the prior data, what are the model's predictions?
+Parsed: previousfilter or lengthfilter words less than 50 and predict [E]
+
+User: Only considering examples with more than 10 tokens, what are the model's predictions?
+Parsed: previousfilter or lengthfilter words greater than 10 and predict [E]
