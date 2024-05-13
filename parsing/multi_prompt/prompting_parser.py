@@ -409,7 +409,7 @@ def main(model_id: str, test_file_path: str, verbose: bool):
     tokenizer = AutoTokenizer.from_pretrained(model_id)
 
     # loading SBERT
-    st_model = SentenceTransformer(sbert_id)
+    st_model = SentenceTransformer("BAAI/bge-base-en-v1.5")
 
     if torch.cuda.is_available():
         device = "cuda"

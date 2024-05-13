@@ -1,5 +1,0 @@
-{
-  "model": "tiiuae/falcon-rw-1b",
-  "tokenizer": "tiiuae/falcon-rw-1b",
-  "sentence_transformer": "BAAI/bge-base-en-v1.5"
-}
