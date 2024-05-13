@@ -2,6 +2,10 @@ import argparse
 import json
 import sys
 from os.path import abspath, dirname
+from string import punctuation
+from typing import List
+
+from thefuzz import fuzz
 
 import torch.cuda
 
@@ -17,14 +21,19 @@ from parsing.multi_prompt.defined_prompts import (
     operation2attributes,
     operation2prompt,
     operation2tutorial,
+    operation2types,
     operation_needs_id,
     operation_type_prompt,
+    operations_with_default,
+    operations_with_number,
+    operations_with_topk_number,
     operations_wo_attributes,
     predict_prompt,
     rationalize_prompt,
     score_prompt,
     show_prompt,
     similar_prompt,
+    topk_operations,
     tutorial2operation,
     tutorial_operations,
     valid_operation_meanings,
@@ -37,7 +46,13 @@ from word2number import w2n
 
 
 class MultiPromptParser:
-    def __init__(self, decoder_model, tokenizer, st_model, device):
+    def __init__(
+        self,
+        decoder_model: AutoModelForCausalLM,
+        tokenizer: AutoTokenizer,
+        st_model: SentenceTransformer,
+        device: str,
+    ):
         self.decoder_model = decoder_model
         self.tokenizer = tokenizer
         self.st_model = st_model
@@ -45,9 +60,23 @@ class MultiPromptParser:
         self.encoded_operations_st = self.st_model.encode(
             valid_operation_names, convert_to_tensor=True
         )
-        self.encoded_op_meanings_st = self.st_model.encode(
-            valid_operation_meanings, convert_to_tensor=True
-        )
+
+        if (
+            "falcon" in self.decoder_model.name_or_path.lower()
+            or "pythia" in self.decoder_model.name_or_path.lower()
+        ):
+            valid_operation_prompt_samples_concatenated = []
+            for op_name in valid_operation_names:
+                valid_operation_prompt_samples_concatenated.append(
+                    " ".join(valid_operation_prompt_samples[op_name][:5])
+                )
+            self.encoded_op_meanings_st = self.st_model.encode(
+                valid_operation_prompt_samples_concatenated, convert_to_tensor=True
+            )
+        else:
+            self.encoded_op_meanings_st = self.st_model.encode(
+                valid_operation_meanings, convert_to_tensor=True
+            )
         self.attribute2st = dict()
         for operation in operation2attributes:
             for attribute in operation2attributes[operation]:
@@ -71,16 +100,15 @@ class MultiPromptParser:
             pad_token_id=2,
         )
 
-    def in_vocabulary(self, operation):
+    def in_vocabulary(self, operation: str):
         operation_words = operation.split()
         for op in valid_operation_names:
             if op in operation_words:
                 return True
         return False
 
-    """ checks if the parsed attributes are valid tokens for the operation """
-
-    def check_attribute(self, attribute, main_operation, user_input):
+    def check_attribute(self, attribute: str, main_operation: str, user_input: str):
+        """checks if the parsed attributes are valid tokens for the operation."""
         attribute = attribute.strip()
         for punct in [".", ",", ":"]:
             attribute = attribute.replace(punct, "")
@@ -115,9 +143,8 @@ class MultiPromptParser:
             else:
                 return ""
 
-    """generates the parse given a user input and a prompt"""
-
-    def generate_with_prompt(self, prompt, user_input):
+    def generate_with_prompt(self, prompt: str, user_input: str):
+        """generates the parse given a user input and a prompt."""
         inputs = self.tokenizer(
             prompt + "\nInput: " + user_input + " Output:", return_tensors="pt"
         ).to(self.device)
@@ -164,10 +191,10 @@ class MultiPromptParser:
             attributes = " ".join(splitted_main_op[1:])
             if "[E]" in attributes:
                 attributes = attributes[: attributes.rindex("[E]") + 3]
-            checked_attributes = []
+            checked_attributes: List[str] = []
             for attribute in attributes.split():
                 attribute = self.check_attribute(attribute, main_operation, user_input)
-                if not (attribute in checked_attributes):
+                if attribute not in checked_attributes:
                     if len(checked_attributes) <= 2 and len(attribute) > 0:
                         checked_attributes.append(attribute)
                     else:
@@ -187,19 +214,20 @@ class MultiPromptParser:
 
         return parsed_operation
 
-    """fallback in case the id was not parsed correctly"""
-
-    def find_id(self, user_input):
+    def find_id(self, user_input: str):
+        """fallback in case the id was not parsed correctly."""
         user_input = user_input.lower()
         correct_id = ""
-        id_words = ["id", "instance", "sample", "item"]
+        id_words = ["id", "instance", "sample", "item", "data point", "data"]
         for id_word in id_words:
             if id_word in user_input:
                 # if there is no id, e.g.: "counterfactual for this id"
                 for id_candidate in user_input[
                     user_input.rindex(id_word) + len(id_word) :
                 ].split():
-                    correct_id = id_candidate.replace("?", "").replace(".", "").replace(",", "")
+                    if len(id_candidate) == 0:
+                        continue
+                    correct_id = id_candidate.replace("'s", "")
                     try:
                         correct_id = w2n.word_to_num(correct_id)
                         correct_id = str(correct_id)
@@ -208,34 +236,57 @@ class MultiPromptParser:
                         correct_id = ""
         return correct_id
 
-    """implements similarity check with SBERT between the user input and available operations"""
+    def has_number(self, user_input: str):
+        """check numerical attributes in the user input."""
+        num_attr = None
+        sample_id = self.find_id(user_input)
+        for token in user_input.split():
+            if token.isnumeric() and token != sample_id:
+                return token
+        return num_attr
 
-    def find_similar_operation(self, user_input):
+    def fuzzy_match(self, attr: str, user_input: str):
+        """check fuzzy string matching between the attribute and user input."""
+        normalized_attr = " ".join(attr.split("_"))
+        if fuzz.partial_ratio(normalized_attr, user_input) > 85:
+            return True
+        return False
+
+    def find_similar_operation(self, user_input: str):
+        """implements similarity check with SBERT between the user input and available
+        operations."""
         encoded_user_input = self.st_model.encode(user_input, convert_to_tensor=True)
         op_scores = util.cos_sim(encoded_user_input, self.encoded_op_meanings_st)[0].tolist()
         best_match_op = valid_operation_names[op_scores.index(max(op_scores))]
         return best_match_op
 
-    """performs multi-prompt parsing for operations and their attributes"""
-
-    def parse_user_input(self, user_input):
+    def parse_user_input(self, user_input: str):
+        """performs multi-prompt parsing for operations and their attributes."""
+        user_input = "".join([ch for ch in user_input if ch not in punctuation])
         parsed_operation = (
             self.generate_with_prompt(operation_type_prompt, user_input).replace("[E]", "").strip()
         )
         op_start = parsed_operation.split()[0]
         if not ((op_start in valid_operation_names) or (op_start == "filter")):
             parsed_operation = self.find_similar_operation(user_input)
-        if parsed_operation in operations_wo_attributes:
-            parsed_operation = parsed_operation + " [E]"
-        else:
-            if parsed_operation in operation2prompt.keys():
-                operation_prompt = operation2prompt[parsed_operation]
-                parsed_operation = self.generate_with_prompt(operation_prompt, user_input)
+        splitted_parsed_op = parsed_operation.split()
+        # if splitted_parsed_op[0] in operations_wo_attributes:
+        #    # check if id is present
+        #    if len(splitted_parsed_op) > 1 and splitted_parsed_op[1].isnumeric():
+        #        if splitted_parsed_op[0] == "data":
+        #            parsed_operation = "filter id " + splitted_parsed_op[1] + " and show"
+        #    parsed_operation = parsed_operation + " [E]"
+        # else:
+        if (
+            splitted_parsed_op[0] not in operations_wo_attributes
+            and parsed_operation in operation2prompt.keys()
+        ):
+            operation_prompt = operation2prompt[parsed_operation]
+            parsed_operation = self.generate_with_prompt(operation_prompt, user_input)
         # if we have an id we cannot have a tutorial operation
         if parsed_operation in tutorial2operation:
-            user_input_words = user_input.split()
-            for word in user_input_words:
-                if word in ["id", "sample", "instance", "item", "this", "it"]:
+            for id_word in ["id", "sample", "instance", "item", "this", "it"]:
+                if id_word in user_input:
                     no_tutorial = True
                     operation = tutorial2operation[parsed_operation]
                     operation_prompt = operation2prompt[operation]
@@ -243,76 +294,102 @@ class MultiPromptParser:
                     break
         non_repeated_tokens = set()
         splitted_parsed_op = parsed_operation.split()
-        filtered_pased_op_tokens = []
+        filtered_parsed_op_tokens = []
         # check that tokens other than numbers do not appear more than once in the parsed output
         for token in splitted_parsed_op:
             is_number_token = isinstance(token, int)
             if (not (is_number_token) and not (token in non_repeated_tokens)) or is_number_token:
-                filtered_pased_op_tokens.append(token)
+                filtered_parsed_op_tokens.append(token)
                 non_repeated_tokens.add(token)
             if token == "[E]":
                 break
 
-        for i, token in enumerate(filtered_pased_op_tokens):
-            if token == "id" and not (filtered_pased_op_tokens[i + 1] in user_input):
+        for i, token in enumerate(filtered_parsed_op_tokens):
+            found_id = self.find_id(user_input)
+            if token == "id" and filtered_parsed_op_tokens[i + 1] != found_id:
                 # replace hallucinated id
-                found_id = self.find_id(user_input)
                 if len(found_id) > 0:
-                    filtered_pased_op_tokens[i + 1] = found_id
+                    filtered_parsed_op_tokens[i + 1] = found_id
                 else:
-                    filtered_pased_op_tokens = filtered_pased_op_tokens[i + 3 :]
+                    filtered_parsed_op_tokens = filtered_parsed_op_tokens[i + 3 :]
                 break
-        parsed_operation = " ".join(filtered_pased_op_tokens).strip()
+        parsed_operation = " ".join(filtered_parsed_op_tokens).strip()
 
         # check if we parsed a standard operation but there is no id
         splitted_op = parsed_operation.split()
-        if not (parsed_operation.startswith("filter")):
-            main_operation = splitted_op[0]
-        elif len(splitted_op) > 4:
+        if parsed_operation.startswith("filter") and len(splitted_op) > 4:
             main_operation = splitted_op[4]
+        else:
+            main_operation = splitted_op[0]
 
-        # if not "filter id " in parsed_operation and main_operation in operation2tutorial:  # no filter for tutorial operations
-        #    parsed_operation = operation2tutorial[main_operation]
-        if (
-            "filter id " in parsed_operation and main_operation in tutorial2operation
-        ):  # if we have filter it's not the tutorial
-            main_operation = tutorial2operation[main_operation]
+        if "filter id " in parsed_operation:
             splitted_op = parsed_operation.split()
             if len(splitted_op) > 3:
                 id_token = splitted_op[2]
-            parsed_operation = "filter id " + id_token + " and " + main_operation
+            # if we have filter it's not the tutorial
+            if main_operation in tutorial2operation:
+                main_operation = tutorial2operation[main_operation]
+                parsed_operation = "filter id " + id_token + " and " + main_operation
         elif not ("filter id " in parsed_operation) and main_operation in operation_needs_id:
             # check if we have a number in the parsed text, use it as id
             found_id = self.find_id(user_input)
             if len(found_id) > 0:
                 parsed_operation = "filter id " + found_id + " and " + main_operation
+        if not ("filter id " in parsed_operation) and (
+            main_operation in operation2tutorial
+        ):  # no filter for tutorial operations
+            parsed_operation = operation2tutorial[main_operation]
 
         if not (parsed_operation.endswith(" [E]")):
             parsed_operation += " [E]"
-        # show by default 10 top attributed tokens if the number was not identified
-        if parsed_operation.endswith("topk [E]"):
-            parsed_operation = parsed_operation.replace("topk [E]", "topk 10 [E]")
         # remove invalid insertion of the filter (e.g., happens with the inputs like "counterfactual for this id")
         parsed_operation = parsed_operation.replace("filter id and", "")
+
+        # check if operation needs default at the end of the parse
+        if main_operation in operations_with_default:
+            if parsed_operation.endswith(main_operation + " [E]"):
+                parsed_operation = parsed_operation.replace(" [E]", " all default [E]")
+            elif parsed_operation.endswith(main_operation + " all [E]"):
+                parsed_operation = parsed_operation.replace(" [E]", " default [E]")
+        # check if there is a number in the user input that is not an id and whether it should be added to the parse (e.g., as topk)
+        if main_operation in (
+            operations_with_number + operations_with_topk_number
+        ) and parsed_operation.endswith(main_operation + " [E]"):
+            num = self.has_number(user_input)
+            topk_prefix = " topk" if main_operation in operations_with_topk_number else ""
+            if num is not None:
+                parsed_operation = parsed_operation.replace(
+                    main_operation, main_operation + topk_prefix + " " + num
+                )
+            else:
+                parsed_operation = parsed_operation.replace(
+                    main_operation, main_operation + topk_prefix + " 1"
+                )
+        if " all " in parsed_operation:
+            topk_num = self.has_number(user_input)
+            if topk_num is not None:
+                parsed_operation = parsed_operation.replace(" all ", " topk " + topk_num + " ")
+        # check that if there is a number there should be also topk in front of it (for operations that require topk such as nlpattribute and influence)
+        if main_operation in topk_operations and "topk" not in parsed_operation:
+            num = self.has_number(parsed_operation)
+            if num is not None:
+                parsed_operation = parsed_operation.replace(" " + num + " ", " topk " + num + " ")
+        # check if whether default can be replaced with the fuzzy matched attribute
+        if main_operation in operations_with_default and "default" in parsed_operation:
+            for attr in operation2types[main_operation]:
+                if self.fuzzy_match(attr, user_input):
+                    parsed_operation = parsed_operation.replace("default", attr)
+                    break
         if parsed_operation.split()[0] in tutorial_operations:
             parsed_operation = "qatutorial " + parsed_operation
 
         return parsed_operation
 
 
-if __name__ == "__main__":
-    # parsing accuracy evaluation (exact matches)
-    parser = argparse.ArgumentParser()
-    parser.add_argument("config", type=str)
-    args = parser.parse_args()
-    config = args.config
-
-    f = open(f"./{config}")
-    data = json.load(f)
-    model_id = data['model']
-    sbert_id = data["sentence_transformer"]
-
-    print(f"[UPDATE] loading model - {model_id}")
+def main(model_id: str, test_file_path: str, verbose: bool):
+    """parsing accuracy evaluation (exact matches)"""
+    # loading model and tokenizer
+    # model ids: "EleutherAI/pythia-2.8b-v0" #"TheBloke/Llama-2-7b-Chat-GPTQ" #"TheBloke/Mistral-7B-v0.1-GPTQ" #"tiiuae/falcon-rw-1b"
 
     if "GPTQ" in model_id:
         quantization_config = GPTQConfig(bits=4, disable_exllama=True)
@@ -341,8 +418,9 @@ if __name__ == "__main__":
 
     # initializing the multi-prompt parsing model
     parser = MultiPromptParser(decoder_model, tokenizer, st_model, device)
-    evaluation_file = "dataset/coxql_test.json"
-    f = open(evaluation_file)
+
+    f = open(test_file_path)
+
     gold_data = json.load(f)
 
     # evaluation
@@ -352,9 +430,10 @@ if __name__ == "__main__":
         correct_parses.append(sample["sql"])
         user_inputs.append(sample["text"])
     sys_parses = []
-    for user_input in user_inputs:
+    for ui, user_input in enumerate(user_inputs):
         parsed_operation = parser.parse_user_input(user_input)
-        print(parsed_operation + " >>> " + user_input)
+        if verbose:
+            print("parsed: " + parsed_operation + " vs gold: " + correct_parses[ui] + " >>> " + user_input)
         sys_parses.append(parsed_operation)
     matched = 0
 
@@ -373,7 +452,34 @@ if __name__ == "__main__":
             "label": correct_parses[i]
         })
     jsonFile = open(f"./results/{model_id.split('/')[1]}.json", "w")
+    jsonString = json.dumps(output)
+    jsonFile.write(jsonString)
+    jsonFile.close()
 
     print(
         f"Matched: {matched}; total: {len(correct_parses)}; acc: {round(matched / len(correct_parses), 4) * 100}%"
     )
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--model_id",
+        type=str,
+        required=True,
+        help="Parsing model name or path, e.g., `tiiuae/falcon-rw-1b`.",
+    )
+    parser.add_argument(
+        "--test_file_path",
+        type=str,
+        required=True,
+        help="Path to the test file.",
+    )
+    parser.add_argument(
+        "--silent",
+        dest="verbose",
+        action="store_false",
+        help="Whether to show verbose output.",
+    )
+    args = vars(parser.parse_args())
+    main(**args)
