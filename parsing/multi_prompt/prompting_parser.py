@@ -3,23 +3,18 @@ import json
 import sys
 from os.path import abspath, dirname
 from string import punctuation
-from typing import List
-
-from thefuzz import fuzz
+from typing import Any, List
 
 import torch.cuda
+from thefuzz import fuzz
 
 parent = dirname(dirname(dirname(abspath(__file__))))
 sys.path.append(parent)
 
 from parsing.multi_prompt.defined_prompts import (
-    augment_prompt,
-    cfe_prompt,
-    keywords_prompt,
-    mistake_prompt,
-    nlpattribute_prompt,
     operation2attributes,
     operation2prompt,
+    operation2template,
     operation2tutorial,
     operation2types,
     operation_needs_id,
@@ -28,11 +23,6 @@ from parsing.multi_prompt.defined_prompts import (
     operations_with_number,
     operations_with_topk_number,
     operations_wo_attributes,
-    predict_prompt,
-    rationalize_prompt,
-    score_prompt,
-    show_prompt,
-    similar_prompt,
     topk_operations,
     tutorial2operation,
     tutorial_operations,
@@ -61,6 +51,23 @@ class MultiPromptParser:
             valid_operation_names, convert_to_tensor=True
         )
 
+        self.valid_operation_names_with_id = [
+            op for op in valid_operation_names if op in operation_needs_id
+        ]
+        self.valid_operation_names_wo_id = [
+            op for op in valid_operation_names if op not in operation_needs_id
+        ]
+        valid_operation_meanings_with_id = [
+            op
+            for idx, op in enumerate(valid_operation_meanings)
+            if valid_operation_names[idx] in operation_needs_id
+        ]
+        valid_operation_meanings_wo_id = [
+            op
+            for idx, op in enumerate(valid_operation_meanings)
+            if valid_operation_names[idx] not in operation_needs_id
+        ]
+
         if (
             "falcon" in self.decoder_model.name_or_path.lower()
             or "pythia" in self.decoder_model.name_or_path.lower()
@@ -70,23 +77,48 @@ class MultiPromptParser:
                 valid_operation_prompt_samples_concatenated.append(
                     " ".join(valid_operation_prompt_samples[op_name][:5])
                 )
+            valid_operation_prompt_samples_with_id_concatenated = []
+            valid_operation_prompt_samples_wo_id_concatenated = []
+            for op_name in valid_operation_names:
+                if op_name in operation_needs_id:
+                    valid_operation_prompt_samples_with_id_concatenated.append(
+                        " ".join(valid_operation_prompt_samples[op_name][:5])
+                    )
+                else:
+                    valid_operation_prompt_samples_wo_id_concatenated.append(
+                        " ".join(valid_operation_prompt_samples[op_name][:5])
+                    )
+
             self.encoded_op_meanings_st = self.st_model.encode(
                 valid_operation_prompt_samples_concatenated, convert_to_tensor=True
+            )
+            self.encoded_op_meanings_with_id_st = self.st_model.encode(
+                valid_operation_prompt_samples_with_id_concatenated, convert_to_tensor=True
+            )
+            self.encoded_op_meanings_wo_id_st = self.st_model.encode(
+                valid_operation_prompt_samples_wo_id_concatenated, convert_to_tensor=True
             )
         else:
             self.encoded_op_meanings_st = self.st_model.encode(
                 valid_operation_meanings, convert_to_tensor=True
             )
+            self.encoded_op_meanings_with_id_st = self.st_model.encode(
+                valid_operation_meanings_with_id, convert_to_tensor=True
+            )
+            self.encoded_op_meanings_wo_id_st = self.st_model.encode(
+                valid_operation_meanings_wo_id, convert_to_tensor=True
+            )
+
         self.attribute2st = dict()
         for operation in operation2attributes:
             for attribute in operation2attributes[operation]:
                 self.attribute2st[attribute] = self.st_model.encode(
                     attribute, convert_to_tensor=True
                 )
-        if "llama" in self.decoder_model.name_or_path.lower():
-            max_new_tokens = 20
-        else:
-            max_new_tokens = 10
+        # if "llama" in self.decoder_model.name_or_path.lower():
+        #    max_new_tokens = 20
+        # else:
+        max_new_tokens = 10
         self.generation_config = GenerationConfig(
             penalty_alpha=0.6,
             do_sample=True,
@@ -184,7 +216,11 @@ class MultiPromptParser:
 
         if not (self.in_vocabulary(main_operation)):
             # find a similar operation with SBERT
-            main_operation = self.find_similar_operation(user_input)
+            main_operation = self.find_similar_operation(
+                user_input,
+                valid_operation_names,
+                self.encoded_op_meanings_st,
+            )
 
         # check that the attributes are valid
         if len(splitted_main_op) > 1:
@@ -218,20 +254,26 @@ class MultiPromptParser:
         """fallback in case the id was not parsed correctly."""
         user_input = user_input.lower()
         correct_id = ""
-        id_words = ["id", "instance", "sample", "item", "data point", "data"]
+        id_words = ["data point ", "data ", "id ", "instance ", "sample ", "item "]
         for id_word in id_words:
             if id_word in user_input:
                 # if there is no id, e.g.: "counterfactual for this id"
-                for id_candidate in user_input[
-                    user_input.rindex(id_word) + len(id_word) :
-                ].split():
+                offset = user_input.rindex(id_word) + len(id_word)
+                if offset == len(user_input):
+                    continue
+                for id_candidate in user_input[offset:].split():
                     if len(id_candidate) == 0:
                         continue
-                    correct_id = id_candidate.replace("'s", "")
+                    correct_id = id_candidate.replace("s", "")
                     try:
-                        correct_id = w2n.word_to_num(correct_id)
-                        correct_id = str(correct_id)
-                        return correct_id
+                        if (
+                            correct_id != "point"
+                        ):  # because w2n parses point as a number (it outputs 0)!
+                            correct_id = w2n.word_to_num(correct_id)
+                            correct_id = str(correct_id)
+                            return correct_id
+                        else:
+                            correct_id = ""
                     except Exception:
                         correct_id = ""
         return correct_id
@@ -252,13 +294,113 @@ class MultiPromptParser:
             return True
         return False
 
-    def find_similar_operation(self, user_input: str):
+    def find_similar_operation(self, user_input: str, operation_names: List[str], encoded_op: Any):
         """implements similarity check with SBERT between the user input and available
         operations."""
         encoded_user_input = self.st_model.encode(user_input, convert_to_tensor=True)
-        op_scores = util.cos_sim(encoded_user_input, self.encoded_op_meanings_st)[0].tolist()
-        best_match_op = valid_operation_names[op_scores.index(max(op_scores))]
+        op_scores = util.cos_sim(encoded_user_input, encoded_op)[0].tolist()
+        best_match_op = operation_names[op_scores.index(max(op_scores))]
         return best_match_op
+
+    def check_num_attribute(self, parsed_token, template_element):
+        """checks whether there is a number in the user input."""
+        if template_element == "num" and parsed_token.isnumeric():
+            return parsed_token
+
+    def check_operation_template(
+        self,
+        parsed_operation: str,
+        user_input: str,
+        main_operation: str,
+        id_token: str,
+        template: List[Any],
+    ):
+        """checks the correspondence of the parsed operation to its template, 'imitating' guided
+        decoding."""
+        final_operation = []
+        user_input_tokens = user_input.split()
+        parsed_operation_tokens = parsed_operation.split()
+        allowed_tokens = []
+        for element in template:
+            if isinstance(element, list):
+                allowed_tokens.extend(element)
+            else:
+                allowed_tokens.append(element)
+        for token in parsed_operation_tokens:
+            if token.isnumeric() and "num" in allowed_tokens:
+                allowed_tokens += [token]
+        j = 0
+        skip_parsed_tokens = False
+        for i in range(len(template)):
+            template_token = template[i]
+            if j < len(parsed_operation_tokens):
+                parsed_token = parsed_operation_tokens[j].strip()
+                while parsed_token not in allowed_tokens and j + 1 < len(parsed_operation_tokens):
+                    j += 1
+                    parsed_token = parsed_operation_tokens[j].strip()
+            else:
+                skip_parsed_tokens = True
+            if isinstance(template_token, list):
+                # several options available
+                found_match = False
+                if not skip_parsed_tokens:
+                    for template_element in template_token:
+                        has_num_attr = self.check_num_attribute(parsed_token, template_element)
+                        if (
+                            parsed_token != id_token
+                            and template_element == parsed_token
+                            or has_num_attr
+                        ):
+                            if (
+                                has_num_attr
+                                and main_operation in operations_with_topk_number
+                                and "topk" not in final_operation
+                            ):
+                                final_operation.append("topk")
+                            final_operation.append(parsed_token)
+                            found_match = True
+                            break
+                if not found_match:
+                    for tkn in parsed_operation_tokens + user_input_tokens:
+                        if tkn in template_token or (tkn.isnumeric() and "num" in template_token):
+                            if not (tkn in final_operation):
+                                if (
+                                    tkn.isnumeric()
+                                    and main_operation in operations_with_topk_number
+                                    and "topk" not in final_operation
+                                ):
+                                    final_operation.append("topk")
+                                final_operation.append(tkn)
+                                break
+            else:
+                found_match = False
+                if not skip_parsed_tokens:
+                    has_num_attr = self.check_num_attribute(parsed_token, template_token)
+                    if template_token == parsed_token or has_num_attr:
+                        if (
+                            parsed_token != id_token
+                            and has_num_attr
+                            and main_operation in operations_with_topk_number
+                            and "topk" not in final_operation
+                        ):
+                            final_operation.append("topk")
+                        final_operation.append(parsed_token)
+                        found_match = True
+                if not found_match:
+                    for tkn in parsed_operation_tokens + user_input_tokens:
+                        if tkn == template_token or (tkn.isnumeric() and template_token == "num"):
+                            if not (tkn in final_operation):
+                                if (
+                                    tkn.isnumeric()
+                                    and main_operation in operations_with_topk_number
+                                    and "topk" not in final_operation
+                                ):
+                                    final_operation.append("topk")
+                                final_operation.append(tkn)
+                                break
+            j += 1
+
+        return " ".join(final_operation)
 
     def parse_user_input(self, user_input: str):
         """performs multi-prompt parsing for operations and their attributes."""
@@ -266,17 +408,14 @@ class MultiPromptParser:
         parsed_operation = (
             self.generate_with_prompt(operation_type_prompt, user_input).replace("[E]", "").strip()
         )
+
         op_start = parsed_operation.split()[0]
         if not ((op_start in valid_operation_names) or (op_start == "filter")):
-            parsed_operation = self.find_similar_operation(user_input)
+            parsed_operation = self.find_similar_operation(
+                user_input, valid_operation_names, self.encoded_op_meanings_st
+            )
         splitted_parsed_op = parsed_operation.split()
-        # if splitted_parsed_op[0] in operations_wo_attributes:
-        #    # check if id is present
-        #    if len(splitted_parsed_op) > 1 and splitted_parsed_op[1].isnumeric():
-        #        if splitted_parsed_op[0] == "data":
-        #            parsed_operation = "filter id " + splitted_parsed_op[1] + " and show"
-        #    parsed_operation = parsed_operation + " [E]"
-        # else:
+
         if (
             splitted_parsed_op[0] not in operations_wo_attributes
             and parsed_operation in operation2prompt.keys()
@@ -285,8 +424,8 @@ class MultiPromptParser:
             parsed_operation = self.generate_with_prompt(operation_prompt, user_input)
         # if we have an id we cannot have a tutorial operation
         if parsed_operation in tutorial2operation:
-            for id_word in ["id", "sample", "instance", "item", "this", "it"]:
-                if id_word in user_input:
+            for input_token in user_input:
+                if input_token in ["id", "sample", "instance", "item", "this", "it"]:
                     no_tutorial = True
                     operation = tutorial2operation[parsed_operation]
                     operation_prompt = operation2prompt[operation]
@@ -304,8 +443,9 @@ class MultiPromptParser:
             if token == "[E]":
                 break
 
+        found_id = self.find_id(user_input)
+
         for i, token in enumerate(filtered_parsed_op_tokens):
-            found_id = self.find_id(user_input)
             if token == "id" and filtered_parsed_op_tokens[i + 1] != found_id:
                 # replace hallucinated id
                 if len(found_id) > 0:
@@ -322,19 +462,15 @@ class MultiPromptParser:
         else:
             main_operation = splitted_op[0]
 
-        if "filter id " in parsed_operation:
-            splitted_op = parsed_operation.split()
-            if len(splitted_op) > 3:
-                id_token = splitted_op[2]
-            # if we have filter it's not the tutorial
-            if main_operation in tutorial2operation:
-                main_operation = tutorial2operation[main_operation]
-                parsed_operation = "filter id " + id_token + " and " + main_operation
-        elif not ("filter id " in parsed_operation) and main_operation in operation_needs_id:
-            # check if we have a number in the parsed text, use it as id
-            found_id = self.find_id(user_input)
-            if len(found_id) > 0:
+        if len(found_id) > 0:
+            if main_operation in operation_needs_id:
+                # check if we have a number in the parsed text, use it as id
                 parsed_operation = "filter id " + found_id + " and " + main_operation
+            # if we have filter it's not the tutorial
+            elif main_operation in tutorial2operation:
+                main_operation = tutorial2operation[main_operation]
+                parsed_operation = "filter id " + found_id + " and " + main_operation
+
         if not ("filter id " in parsed_operation) and (
             main_operation in operation2tutorial
         ):  # no filter for tutorial operations
@@ -380,8 +516,37 @@ class MultiPromptParser:
                 if self.fuzzy_match(attr, user_input):
                     parsed_operation = parsed_operation.replace("default", attr)
                     break
+
         if parsed_operation.split()[0] in tutorial_operations:
             parsed_operation = "qatutorial " + parsed_operation
+        else:
+            # no id but parsed operation requires it
+            if main_operation in operation_needs_id and len(found_id) == 0:
+                # match ops w/o id
+                main_operation = self.find_similar_operation(
+                    user_input, self.valid_operation_names_wo_id, self.encoded_op_meanings_wo_id_st
+                )
+                parsed_operation = main_operation
+            # has id but operation does not allow it
+            elif main_operation not in operation_needs_id and len(found_id) > 0:
+                # match ops with id
+                main_operation = self.find_similar_operation(
+                    user_input,
+                    self.valid_operation_names_with_id,
+                    self.encoded_op_meanings_with_id_st,
+                )
+                parsed_operation = "filter id " + found_id + " and " + main_operation
+            # check if the final operation corresponds to the template, adjust if necessary
+            parsed_operation = (
+                self.check_operation_template(
+                    parsed_operation,
+                    user_input,
+                    main_operation,
+                    self.find_id(user_input),
+                    operation2template[main_operation],
+                )
+                + " [E]"
+            )
 
         return parsed_operation
 
@@ -404,6 +569,8 @@ def main(model_id: str, test_file_path: str, verbose: bool):
             model_id, low_cpu_mem_usage=True, device_map="auto"
         )
 
+    decoder_model.eval()
+
     decoder_model.config.pad_token_id = decoder_model.config.eos_token_id
 
     tokenizer = AutoTokenizer.from_pretrained(model_id)
@@ -420,7 +587,6 @@ def main(model_id: str, test_file_path: str, verbose: bool):
     parser = MultiPromptParser(decoder_model, tokenizer, st_model, device)
 
     f = open(test_file_path)
-
     gold_data = json.load(f)
 
     # evaluation
@@ -433,7 +599,14 @@ def main(model_id: str, test_file_path: str, verbose: bool):
     for ui, user_input in enumerate(user_inputs):
         parsed_operation = parser.parse_user_input(user_input)
         if verbose:
-            print("parsed: " + parsed_operation + " vs gold: " + correct_parses[ui] + " >>> " + user_input)
+            print(
+                "parsed: "
+                + parsed_operation
+                + " vs gold: "
+                + correct_parses[ui]
+                + " >>> "
+                + user_input
+            )
         sys_parses.append(parsed_operation)
     matched = 0
 
@@ -446,13 +619,13 @@ def main(model_id: str, test_file_path: str, verbose: bool):
     # save results
     output = []
     for i in range(len(sys_parses)):
-        output.append({
-            "idx": i,
-            "parsed_text": sys_parses[i],
-            "label": correct_parses[i]
-        })
+       output.append({
+           "idx": i,
+           "parsed_text": sys_parses[i],
+           "label": correct_parses[i]
+       })
     jsonFile = open(f"./results/{model_id.split('/')[1]}.json", "w")
-    jsonString = json.dumps(output)
+    jsonString = json.dumps(output, indent=2)
     jsonFile.write(jsonString)
     jsonFile.close()
 
