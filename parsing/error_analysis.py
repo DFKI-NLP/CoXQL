@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 
@@ -13,7 +14,12 @@ category_2_idx = {
     "perturbation": [103, 112]
 }
 
-path = "./multi_prompt/results"
+parser = argparse.ArgumentParser()
+parser.add_argument("strategy", type=str, default="guided_decoding", help="Available strategies: guided_decoding, "
+                                                                          "multi_prompt")
+args = parser.parse_args()
+
+path = f"./{args.strategy}/results"
 files = os.listdir(path)
 os.chdir(path)
 
