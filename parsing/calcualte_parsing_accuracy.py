@@ -4,7 +4,7 @@ import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument("strategy", type=str, default="guided_decoding", help="Available strategies: guided_decoding, "
-                                                                          "multi_prompt")
+                                                                          "multi_prompt, multi_prompt_plus")
 args = parser.parse_args()
 
 prefix = f"./{args.strategy}/results/"
