@@ -43,11 +43,11 @@ Both `json` files have the same structure as follows:
 ```
 
 ## 🔍 Evaluation
-Parsing accuracy results can be found in `parsing/guided_decoding/results` and `parsing/multi_prompt/results`
+Parsing accuracy results can be found in `parsing/guided_decoding/results`, `parsing/multi_prompt/results` and `parsing/multi_prompt_plus/results`
 
 You can run `calculate_parsing_accuracy.py` to get an overview of parsing accuracy.
 ```bash
-python calcualte_parsing_accuracy.py {guided_decoding, multi_prompt}
+python calcualte_parsing_accuracy.py {guided_decoding, multi_prompt, multi_prompt_plus}
 ```
 
 🤗We evaluate in total seven state-of-the-art LMs:
