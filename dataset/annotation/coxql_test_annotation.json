@@ -1,0 +1,567 @@
+[
+  {
+    "idx": 53,
+    "text": "Explain me id 49's prediction in human understandable language",
+    "sql": ""
+  },
+  {
+    "idx": 63,
+    "text": "Help me predict data with id 475?",
+    "sql": ""
+  },
+  {
+    "idx": 30,
+    "text": "score accuracy",
+    "sql": ""
+  },
+  {
+    "idx": 111,
+    "text": "Can you display counterfactual examples for id 3953?",
+    "sql": ""
+  },
+  {
+    "idx": 16,
+    "text": "Would you please list me the instance with id 83?",
+    "sql": ""
+  },
+  {
+    "idx": 12,
+    "text": "Could you list me labels of the dataset?",
+    "sql": ""
+  },
+  {
+    "idx": 105,
+    "text": "Attack data point 2042",
+    "sql": ""
+  },
+  {
+    "idx": 60,
+    "text": "What's the prediction of data 921",
+    "sql": ""
+  },
+  {
+    "idx": 52,
+    "text": "Rationalization of id 2021",
+    "sql": ""
+  },
+  {
+    "idx": 40,
+    "text": "I want to see the feature importance result for id 931 using attention?",
+    "sql": ""
+  },
+  {
+    "idx": 33,
+    "text": "How accurate is the model",
+    "sql": ""
+  },
+  {
+    "idx": 80,
+    "text": "Show me the model description.",
+    "sql": ""
+  },
+  {
+    "idx": 77,
+    "text": "What tasks can you perform?",
+    "sql": ""
+  },
+  {
+    "idx": 68,
+    "text": "What is input gradient?",
+    "sql": ""
+  },
+  {
+    "idx": 69,
+    "text": "LIME? Can you clarify it?",
+    "sql": ""
+  },
+  {
+    "idx": 110,
+    "text": "provide a counterfactual for id 23",
+    "sql": ""
+  },
+  {
+    "idx": 5,
+    "text": "the most frequent keyword",
+    "sql": ""
+  },
+  {
+    "idx": 51,
+    "text": "How is the rationale look like for data 402?",
+    "sql": ""
+  },
+  {
+    "idx": 6,
+    "text": "I want to explore 8 words that show up in the data most",
+    "sql": ""
+  },
+  {
+    "idx": 71,
+    "text": "Do you use back translation for data augmentation?",
+    "sql": ""
+  },
+  {
+    "idx": 67,
+    "text": "How does data look like?",
+    "sql": ""
+  },
+  {
+    "idx": 103,
+    "text": "Adversarial example for id 3.",
+    "sql": ""
+  },
+  {
+    "idx": 36,
+    "text": "What's the precision on the data?",
+    "sql": ""
+  },
+  {
+    "idx": 14,
+    "text": "Can you present me data 9?",
+    "sql": ""
+  },
+  {
+    "idx": 109,
+    "text": "Would you generate some new instances for id 8521?",
+    "sql": ""
+  },
+  {
+    "idx": 90,
+    "text": "I'd like to know the concept \"learn\".",
+    "sql": ""
+  },
+  {
+    "idx": 44,
+    "text": "What is the most influential token that lead to the given prediction for id 873?",
+    "sql": ""
+  },
+  {
+    "idx": 35,
+    "text": "How often will you be correct?",
+    "sql": ""
+  },
+  {
+    "idx": 100,
+    "text": "Can you unlearn data 542",
+    "sql": ""
+  },
+  {
+    "idx": 84,
+    "text": "Tell me what's rationalization.",
+    "sql": ""
+  },
+  {
+    "idx": 86,
+    "text": "Counterfactual... What is it?",
+    "sql": ""
+  },
+  {
+    "idx": 41,
+    "text": "Top 3 important features for id 3!",
+    "sql": ""
+  },
+  {
+    "idx": 43,
+    "text": "Deliver top 4 features affecting the predictions for id 78 using attention",
+    "sql": ""
+  },
+  {
+    "idx": 31,
+    "text": "How about the score accuracy?",
+    "sql": ""
+  },
+  {
+    "idx": 95,
+    "text": "May I change the label of id 5021?",
+    "sql": ""
+  },
+  {
+    "idx": 22,
+    "text": "Can you present 5 data points which are almost identical to id 7532?",
+    "sql": ""
+  },
+  {
+    "idx": 85,
+    "text": "How does similarity work?",
+    "sql": ""
+  },
+  {
+    "idx": 21,
+    "text": "Within the dataset, what is the most closest text to id 103",
+    "sql": ""
+  },
+  {
+    "idx": 47,
+    "text": "Base on data with id 760, what are 3 dominant instances from the dataset",
+    "sql": ""
+  },
+  {
+    "idx": 58,
+    "text": "Likelihood of id 792",
+    "sql": ""
+  },
+  {
+    "idx": 48,
+    "text": "Can you provide me 2 most influential texts from the entire dataset for id 4?",
+    "sql": ""
+  },
+  {
+    "idx": 93,
+    "text": "I'd like to edit the label of data 904",
+    "sql": ""
+  },
+  {
+    "idx": 24,
+    "text": "Number of misclassified points?",
+    "sql": ""
+  },
+  {
+    "idx": 23,
+    "text": "List me 7 instances related to data 23?",
+    "sql": ""
+  },
+  {
+    "idx": 72,
+    "text": "What you can do?",
+    "sql": ""
+  },
+  {
+    "idx": 74,
+    "text": "What you can do for me?",
+    "sql": ""
+  },
+  {
+    "idx": 76,
+    "text": "Your capabilities?",
+    "sql": ""
+  },
+  {
+    "idx": 66,
+    "text": "I'd like to see more detailed information about the dataset",
+    "sql": ""
+  },
+  {
+    "idx": 104,
+    "text": "Show me how would you attack id 951",
+    "sql": ""
+  },
+  {
+    "idx": 70,
+    "text": "Can you explain me what is attention? Why it is useful?",
+    "sql": ""
+  },
+  {
+    "idx": 42,
+    "text": "Provide 5 most important features for data point 6512 using lime.",
+    "sql": ""
+  },
+  {
+    "idx": 26,
+    "text": "Count for the falsely predicted points?",
+    "sql": ""
+  },
+  {
+    "idx": 94,
+    "text": "Edit id 5's label!",
+    "sql": ""
+  },
+  {
+    "idx": 98,
+    "text": "I want to train the model using id 1142.",
+    "sql": ""
+  },
+  {
+    "idx": 87,
+    "text": "Can you tell me the definition of adversarial example",
+    "sql": ""
+  },
+  {
+    "idx": 39,
+    "text": "Why would you predict id 78 like this?",
+    "sql": ""
+  },
+  {
+    "idx": 61,
+    "text": "Can you show me the id 3's prediction",
+    "sql": ""
+  },
+  {
+    "idx": 78,
+    "text": "Can you tell me a bit more about the model?",
+    "sql": ""
+  },
+  {
+    "idx": 50,
+    "text": "Tell me the reason of the prediction for id 3 in natural language",
+    "sql": ""
+  },
+  {
+    "idx": 37,
+    "text": "Inform me the recall score please.",
+    "sql": ""
+  },
+  {
+    "idx": 34,
+    "text": "What is the f1 score on the data",
+    "sql": ""
+  },
+  {
+    "idx": 18,
+    "text": "Return the instance 6",
+    "sql": ""
+  },
+  {
+    "idx": 83,
+    "text": "What is feature attribution exactly?",
+    "sql": ""
+  },
+  {
+    "idx": 29,
+    "text": "Given me some wrongly classified examples",
+    "sql": ""
+  },
+  {
+    "idx": 11,
+    "text": "Label distribution",
+    "sql": ""
+  },
+  {
+    "idx": 2,
+    "text": "How many items are contained in the dataset?",
+    "sql": ""
+  },
+  {
+    "idx": 92,
+    "text": "How about editing the label of id 31?",
+    "sql": ""
+  },
+  {
+    "idx": 55,
+    "text": "How likely do you predict for id 984?",
+    "sql": ""
+  },
+  {
+    "idx": 4,
+    "text": "Show me the word that occurs in the dataset most often ",
+    "sql": ""
+  },
+  {
+    "idx": 28,
+    "text": "I'm curious about points that are not correctly predicted",
+    "sql": ""
+  },
+  {
+    "idx": 112,
+    "text": "cfe for data point 5?",
+    "sql": ""
+  },
+  {
+    "idx": 106,
+    "text": "Can you give me some adversarial examples for id 752?",
+    "sql": ""
+  },
+  {
+    "idx": 101,
+    "text": "Remove id 831 from the training data!",
+    "sql": ""
+  },
+  {
+    "idx": 73,
+    "text": "I want to know your functionalities?",
+    "sql": ""
+  },
+  {
+    "idx": 15,
+    "text": "tell me a little bit more about id 432",
+    "sql": ""
+  },
+  {
+    "idx": 27,
+    "text": "Tell me a couple of misclassified points.",
+    "sql": ""
+  },
+  {
+    "idx": 89,
+    "text": "What is the meaning of edit label?",
+    "sql": ""
+  },
+  {
+    "idx": 97,
+    "text": "Would you fine tune the model with id 581 again?",
+    "sql": ""
+  },
+  {
+    "idx": 56,
+    "text": "Confidence score of prediction for data 5",
+    "sql": ""
+  },
+  {
+    "idx": 20,
+    "text": "Kindly ask for the most similar instance to data 530.",
+    "sql": ""
+  },
+  {
+    "idx": 107,
+    "text": "Apply data augmentation of id 7821.",
+    "sql": ""
+  },
+  {
+    "idx": 9,
+    "text": "Curious about the label distribution?",
+    "sql": ""
+  },
+  {
+    "idx": 91,
+    "text": "what's \"unlearn\" functionality?",
+    "sql": ""
+  },
+  {
+    "idx": 1,
+    "text": "Number of data points?",
+    "sql": ""
+  },
+  {
+    "idx": 8,
+    "text": "Could you give me the most frequent word?",
+    "sql": ""
+  },
+  {
+    "idx": 82,
+    "text": "What does data augmentation mean?",
+    "sql": ""
+  },
+  {
+    "idx": 38,
+    "text": "Hmmm, then roc score",
+    "sql": ""
+  },
+  {
+    "idx": 57,
+    "text": "I'd like to know the likelihood of data 8412?",
+    "sql": ""
+  },
+  {
+    "idx": 108,
+    "text": "Can you augment instance 34?",
+    "sql": ""
+  },
+  {
+    "idx": 99,
+    "text": "Can you finetune the model with id 95 please?",
+    "sql": ""
+  },
+  {
+    "idx": 88,
+    "text": "What is influence function?",
+    "sql": ""
+  },
+  {
+    "idx": 13,
+    "text": "I'm eager to see the label distribution!",
+    "sql": ""
+  },
+  {
+    "idx": 25,
+    "text": "Would you mind telling me the amount of points that are wrongly classified?",
+    "sql": ""
+  },
+  {
+    "idx": 79,
+    "text": "What's the deployed model?",
+    "sql": ""
+  },
+  {
+    "idx": 96,
+    "text": "Learn id 30!?",
+    "sql": ""
+  },
+  {
+    "idx": 17,
+    "text": "What's the text of id 4673",
+    "sql": ""
+  },
+  {
+    "idx": 19,
+    "text": "For id 9, what are other 3 instances that are similar to it?",
+    "sql": ""
+  },
+  {
+    "idx": 0,
+    "text": "what's the dataset size",
+    "sql": ""
+  },
+  {
+    "idx": 81,
+    "text": "Can you provide me details about the model?",
+    "sql": ""
+  },
+  {
+    "idx": 75,
+    "text": "I'm curious about your abilities?",
+    "sql": ""
+  },
+  {
+    "idx": 10,
+    "text": "I want to see labels",
+    "sql": ""
+  },
+  {
+    "idx": 62,
+    "text": "Can you predict id 1842?",
+    "sql": ""
+  },
+  {
+    "idx": 46,
+    "text": "Considering id 1023, what are 5 most influential instances in the dataset that affect it?",
+    "sql": ""
+  },
+  {
+    "idx": 3,
+    "text": "Total number of points?",
+    "sql": ""
+  },
+  {
+    "idx": 45,
+    "text": "By using input gradient, what will be 5 most important words for id 64?",
+    "sql": ""
+  },
+  {
+    "idx": 54,
+    "text": "Natural langauge explanation of data point 502",
+    "sql": ""
+  },
+  {
+    "idx": 65,
+    "text": "I'd be happy if you could tell me more about the dataset.",
+    "sql": ""
+  },
+  {
+    "idx": 64,
+    "text": "Overview of the dataset",
+    "sql": ""
+  },
+  {
+    "idx": 32,
+    "text": "Show me the accuracy of this model",
+    "sql": ""
+  },
+  {
+    "idx": 102,
+    "text": "I want to unlearn data point 1",
+    "sql": ""
+  },
+  {
+    "idx": 7,
+    "text": "6 keywords from the data",
+    "sql": ""
+  },
+  {
+    "idx": 59,
+    "text": "Predict id 3!",
+    "sql": ""
+  },
+  {
+    "idx": 49,
+    "text": "Tell me 5 data points that are important during training for id 655",
+    "sql": ""
+  }
+]
