@@ -2,566 +2,566 @@
   {
     "idx": 97,
     "text": "Would you fine tune the model with id 581 again?",
-    "sql": ""
+    "sql": "filter id 581 and learn [E]"
   },
   {
     "idx": 98,
     "text": "I want to train the model using id 1142.",
-    "sql": ""
+    "sql": "filter id 1142 and learn [E]"
   },
   {
     "idx": 77,
     "text": "What tasks can you perform?",
-    "sql": ""
+    "sql": "function [E]"
   },
   {
     "idx": 100,
     "text": "Can you unlearn data 542",
-    "sql": ""
+    "sql": "filter id 542 and unlearn [E]"
   },
   {
     "idx": 21,
     "text": "Within the dataset, what is the most closest text to id 103",
-    "sql": ""
+    "sql": "filter id 103 and similar 1 [E]"
   },
   {
     "idx": 32,
     "text": "Show me the accuracy of this model",
-    "sql": ""
+    "sql": "score accuracy [E]"
   },
   {
     "idx": 94,
     "text": "Edit id 5's label!",
-    "sql": ""
+    "sql": "filter id 5 and editlabel [E]"
   },
   {
     "idx": 49,
     "text": "Tell me 5 data points that are important during training for id 655",
-    "sql": ""
+    "sql": "filter id 655 and influence 5 [E]"
   },
   {
     "idx": 60,
     "text": "What's the prediction of data 921",
-    "sql": ""
+    "sql": "filter id 921 and predict [E]"
   },
   {
     "idx": 28,
     "text": "I'm curious about points that are not correctly predicted",
-    "sql": ""
+    "sql": "mistake sample [E]"
   },
   {
     "idx": 76,
     "text": "Your capabilities?",
-    "sql": ""
+    "sql": "function [E]"
   },
   {
     "idx": 55,
     "text": "How likely do you predict for id 984?",
-    "sql": ""
+    "sql": "filter id 984 and likelihood [E]"
   },
   {
     "idx": 64,
     "text": "Overview of the dataset",
-    "sql": ""
+    "sql": "data [E]"
   },
   {
     "idx": 9,
     "text": "Curious about the label distribution?",
-    "sql": ""
+    "sql": "label [E]"
   },
   {
     "idx": 67,
     "text": "How does data look like?",
-    "sql": ""
+    "sql": "data [E]"
   },
   {
     "idx": 50,
     "text": "Tell me the reason of the prediction for id 3 in natural language",
-    "sql": ""
+    "sql": "filter id 3 and rationalize [E]"
   },
   {
     "idx": 7,
     "text": "6 keywords from the data",
-    "sql": ""
+    "sql": "keywords 6 [E]"
   },
   {
     "idx": 82,
     "text": "What does data augmentation mean?",
-    "sql": ""
+    "sql": "qatutorial qada [E]"
   },
   {
     "idx": 99,
     "text": "Can you finetune the model with id 95 please?",
-    "sql": ""
+    "sql": "filter id 95 and learn [E]"
   },
   {
     "idx": 66,
     "text": "I'd like to see more detailed information about the dataset",
-    "sql": ""
+    "sql": "data [E]"
   },
   {
     "idx": 43,
     "text": "Deliver top 4 features affecting the predictions for id 78 using attention",
-    "sql": ""
+    "sql": "filter id 78 and nlpattribute topk 4 [E]"
   },
   {
     "idx": 107,
     "text": "Apply data augmentation of id 7821.",
-    "sql": ""
+    "sql": "filter id 7821 and augment [E]"
   },
   {
     "idx": 74,
     "text": "What you can do for me?",
-    "sql": ""
+    "sql": "function [E]"
   },
   {
     "idx": 27,
     "text": "Tell me a couple of misclassified points.",
-    "sql": ""
+    "sql": "mistake sample [E]"
   },
   {
     "idx": 39,
     "text": "Why would you predict id 78 like this?",
-    "sql": ""
+    "sql": "filter id 78 and nlpattribute [E]"
   },
   {
     "idx": 40,
     "text": "I want to see the feature importance result for id 931 using attention?",
-    "sql": ""
+    "sql": "filter id 931 and nlpattribute attention [E]"
   },
   {
     "idx": 58,
     "text": "Likelihood of id 792",
-    "sql": ""
+    "sql": "filter id 792 and likelihood [E]"
   },
   {
     "idx": 89,
     "text": "What is the meaning of edit label?",
-    "sql": ""
+    "sql": "qatutorial qaedit [E]"
   },
   {
     "idx": 70,
     "text": "Can you explain me what is attention? Why it is useful?",
-    "sql": ""
+    "sql": "domain [E]"
   },
   {
     "idx": 57,
     "text": "I'd like to know the likelihood of data 8412?",
-    "sql": ""
+    "sql": "filter id 8412 and likelihood [E]"
   },
   {
     "idx": 6,
     "text": "I want to explore 8 words that show up in the data most",
-    "sql": ""
+    "sql": "keywords 8 [E]"
   },
   {
     "idx": 8,
     "text": "Could you give me the most frequent word?",
-    "sql": ""
+    "sql": "keywords 1 [E]"
   },
   {
     "idx": 31,
     "text": "How about the score accuracy?",
-    "sql": ""
+    "sql": "score accuracy [E]"
   },
   {
     "idx": 103,
     "text": "Adversarial example for id 3.",
-    "sql": ""
+    "sql": "filter id 3 and adversarial [E]"
   },
   {
     "idx": 29,
     "text": "Given me some wrongly classified examples",
-    "sql": ""
+    "sql": "mistake sample [E]"
   },
   {
     "idx": 33,
     "text": "How accurate is the model",
-    "sql": ""
+    "sql": "score accuracy [E]"
   },
   {
     "idx": 51,
     "text": "How is the rationale look like for data 402?",
-    "sql": ""
+    "sql": "filter id 402 and rationalize [E]"
   },
   {
     "idx": 68,
     "text": "What is input gradient?",
-    "sql": ""
+    "sql": "domain [E]"
   },
   {
     "idx": 41,
     "text": "Top 3 important features for id 3!",
-    "sql": ""
+    "sql": "filter id 3 and nlpattribute topk 3 [E]"
   },
   {
     "idx": 83,
     "text": "What is feature attribution exactly?",
-    "sql": ""
+    "sql": "qatutorial qafa [E]"
   },
   {
     "idx": 81,
     "text": "Can you provide me details about the model?",
-    "sql": ""
+    "sql": "model [E]"
   },
   {
     "idx": 72,
     "text": "What you can do?",
-    "sql": ""
+    "sql": "function [E]"
   },
   {
     "idx": 16,
     "text": "Would you please list me the instance with id 83?",
-    "sql": ""
+    "sql": "filter id 83 and show [E]"
   },
   {
     "idx": 84,
     "text": "Tell me what's rationalization.",
-    "sql": ""
+    "sql": "qatutorial qarationale [E]"
   },
   {
     "idx": 13,
     "text": "I'm eager to see the label distribution!",
-    "sql": ""
+    "sql": "label [E]"
   },
   {
     "idx": 30,
     "text": "score accuracy",
-    "sql": ""
+    "sql": "score accuracy [E]"
   },
   {
     "idx": 91,
     "text": "what's \"unlearn\" functionality?",
-    "sql": ""
+    "sql": "qatutorial qaunlearn [E]"
   },
   {
     "idx": 24,
     "text": "Number of misclassified points?",
-    "sql": ""
+    "sql": "mistake count [E]"
   },
   {
     "idx": 53,
     "text": "Explain me id 49's prediction in human understandable language",
-    "sql": ""
+    "sql": "filter id 49 and rationalize [E]"
   },
   {
     "idx": 59,
     "text": "Predict id 3!",
-    "sql": ""
+    "sql": "filter id 3 and predict [E]"
   },
   {
     "idx": 38,
     "text": "Hmmm, then roc score",
-    "sql": ""
+    "sql": "score roc [E]"
   },
   {
     "idx": 111,
     "text": "Can you display counterfactual examples for id 3953?",
-    "sql": ""
+    "sql": "filter id 3953 and cfe [E]"
   },
   {
     "idx": 85,
     "text": "How does similarity work?",
-    "sql": ""
+    "sql": "qatutorial qasim [E]"
   },
   {
     "idx": 35,
     "text": "How often will you be correct?",
-    "sql": ""
+    "sql": "score accuracy [E]"
   },
   {
     "idx": 12,
     "text": "Could you list me labels of the dataset?",
-    "sql": ""
+    "sql": "label [E]"
   },
   {
     "idx": 109,
     "text": "Would you generate some new instances for id 8521?",
-    "sql": ""
+    "sql": "filter id 8521 and augment [E]"
   },
   {
     "idx": 101,
     "text": "Remove id 831 from the training data!",
-    "sql": ""
+    "sql": "filter id 831 and unlearn [E]"
   },
   {
     "idx": 10,
     "text": "I want to see labels",
-    "sql": ""
+    "sql": "label [E]"
   },
   {
     "idx": 42,
     "text": "Provide 5 most important features for data point 6512 using lime.",
-    "sql": ""
+    "sql": "filter id 6512 and nlpattribute topk 5 lime [E]"
   },
   {
     "idx": 20,
     "text": "Kindly ask for the most similar instance to data 530.",
-    "sql": ""
+    "sql": "filter id 530 and similar 1 [E]"
   },
   {
     "idx": 79,
     "text": "What's the deployed model?",
-    "sql": ""
+    "sql": "model [E]"
   },
   {
     "idx": 56,
     "text": "Confidence score of prediction for data 5",
-    "sql": ""
+    "sql": "filter id 5 and likelihood [E]"
   },
   {
     "idx": 2,
     "text": "How many items are contained in the dataset?",
-    "sql": ""
+    "sql": "countdata [E]"
   },
   {
     "idx": 86,
     "text": "Counterfactual... What is it?",
-    "sql": ""
+    "sql": "domain [E]"
   },
   {
     "idx": 14,
     "text": "Can you present me data 9?",
-    "sql": ""
+    "sql": "filter id 9 and show [E]"
   },
   {
     "idx": 4,
     "text": "Show me the word that occurs in the dataset most often ",
-    "sql": ""
+    "sql": "keywords 1 [E]"
   },
   {
     "idx": 15,
     "text": "tell me a little bit more about id 432",
-    "sql": ""
+    "sql": "filter id 432 and show [E]"
   },
   {
     "idx": 65,
     "text": "I'd be happy if you could tell me more about the dataset.",
-    "sql": ""
+    "sql": "data [E]"
   },
   {
     "idx": 69,
     "text": "LIME? Can you clarify it?",
-    "sql": ""
+    "sql": "domain [E]"
   },
   {
     "idx": 92,
     "text": "How about editing the label of id 31?",
-    "sql": ""
+    "sql": "filter id 31 and editlabel [E]"
   },
   {
     "idx": 87,
     "text": "Can you tell me the definition of adversarial example",
-    "sql": ""
+    "sql": "qatutorial qaadv [E]"
   },
   {
     "idx": 102,
     "text": "I want to unlearn data point 1",
-    "sql": ""
+    "sql": "filter id 1 and unlearn [E]"
   },
   {
     "idx": 19,
     "text": "For id 9, what are other 3 instances that are similar to it?",
-    "sql": ""
+    "sql": "filter id 9 and similar topk 3 [E]"
   },
   {
     "idx": 44,
     "text": "What is the most influential token that lead to the given prediction for id 873?",
-    "sql": ""
+    "sql": "filter id 873 and nlpattribute [E]"
   },
   {
     "idx": 108,
     "text": "Can you augment instance 34?",
-    "sql": ""
+    "sql": "filter id 34 and augment [E]"
   },
   {
     "idx": 47,
     "text": "Base on data with id 760, what are 3 dominant instances from the dataset",
-    "sql": ""
+    "sql": "filter id 760 and influence topk 3 [E]"
   },
   {
     "idx": 5,
     "text": "the most frequent keyword",
-    "sql": ""
+    "sql": "keywords 1 [E]"
   },
   {
     "idx": 22,
     "text": "Can you present 5 data points which are almost identical to id 7532?",
-    "sql": ""
+    "sql": "filter id 7532 and similar 5 [E]"
   },
   {
     "idx": 80,
     "text": "Show me the model description.",
-    "sql": ""
+    "sql": "model [E]"
   },
   {
     "idx": 78,
     "text": "Can you tell me a bit more about the model?",
-    "sql": ""
+    "sql": "model [E]"
   },
   {
     "idx": 73,
     "text": "I want to know your functionalities?",
-    "sql": ""
+    "sql": "function [E]"
   },
   {
     "idx": 1,
     "text": "Number of data points?",
-    "sql": ""
+    "sql": "countdata [E]"
   },
   {
     "idx": 52,
     "text": "Rationalization of id 2021",
-    "sql": ""
+    "sql": "filter id 2021 and rationalize [E]"
   },
   {
     "idx": 88,
     "text": "What is influence function?",
-    "sql": ""
+    "sql": "qatutorial qainflu [E]"
   },
   {
     "idx": 90,
     "text": "I'd like to know the concept \"learn\".",
-    "sql": ""
+    "sql": "qatutorial qalearn [E]"
   },
   {
     "idx": 63,
     "text": "Help me predict data with id 475?",
-    "sql": ""
+    "sql": "filter id 475 and predict [E]"
   },
   {
     "idx": 26,
     "text": "Count for the falsely predicted points?",
-    "sql": ""
+    "sql": "mistake count [E]"
   },
   {
     "idx": 104,
     "text": "Show me how would you attack id 951",
-    "sql": ""
+    "sql": "filter id 951 and adversarial [E]"
   },
   {
     "idx": 105,
     "text": "Attack data point 2042",
-    "sql": ""
+    "sql": "filter id 2042 and adversarial [E]"
   },
   {
     "idx": 110,
     "text": "provide a counterfactual for id 23",
-    "sql": ""
+    "sql": "filter id 23 and cfe [E]"
   },
   {
     "idx": 0,
     "text": "what's the dataset size",
-    "sql": ""
+    "sql": "countdata [E]"
   },
   {
     "idx": 106,
     "text": "Can you give me some adversarial examples for id 752?",
-    "sql": ""
+    "sql": "filter id 752 and adversarial [E]"
   },
   {
     "idx": 17,
     "text": "What's the text of id 4673",
-    "sql": ""
+    "sql": "filter id 4673 and show [E]"
   },
   {
     "idx": 11,
     "text": "Label distribution",
-    "sql": ""
+    "sql": "label [E]"
   },
   {
     "idx": 96,
     "text": "Learn id 30!?",
-    "sql": ""
+    "sql": "filter id 30 and learn [E]"
   },
   {
     "idx": 46,
     "text": "Considering id 1023, what are 5 most influential instances in the dataset that affect it?",
-    "sql": ""
+    "sql": "filter id 1023 and influence topk5 [E]"
   },
   {
     "idx": 61,
     "text": "Can you show me the id 3's prediction",
-    "sql": ""
+    "sql": "filter id 3 and predict [E]"
   },
   {
     "idx": 95,
     "text": "May I change the label of id 5021?",
-    "sql": ""
+    "sql": "filter id 5021 and editlabel [E]"
   },
   {
     "idx": 71,
     "text": "Do you use back translation for data augmentation?",
-    "sql": ""
+    "sql": "qatutorial qada [E]"
   },
   {
     "idx": 45,
     "text": "By using input gradient, what will be 5 most important words for id 64?",
-    "sql": ""
+    "sql": "filter id 64 and nlpattribute topk 5 input_x_gradient [E]"
   },
   {
     "idx": 34,
     "text": "What is the f1 score on the data",
-    "sql": ""
+    "sql": "score f1 [E]"
   },
   {
     "idx": 18,
     "text": "Return the instance 6",
-    "sql": ""
+    "sql": "filter id 6 and show [E]"
   },
   {
     "idx": 93,
     "text": "I'd like to edit the label of data 904",
-    "sql": ""
+    "sql": "filter id 904 and editlabel [E]"
   },
   {
     "idx": 62,
     "text": "Can you predict id 1842?",
-    "sql": ""
+    "sql": "filter id 1842 and predict [E]"
   },
   {
     "idx": 75,
     "text": "I'm curious about your abilities?",
-    "sql": ""
+    "sql": "function [E]"
   },
   {
     "idx": 48,
     "text": "Can you provide me 2 most influential texts from the entire dataset for id 4?",
-    "sql": ""
+    "sql": "filter id 4 and influence topk 2 [E]"
   },
   {
     "idx": 23,
     "text": "List me 7 instances related to data 23?",
-    "sql": ""
+    "sql": "filter id 23 and similar 7 [E]"
   },
   {
     "idx": 36,
     "text": "What's the precision on the data?",
-    "sql": ""
+    "sql": "score precision [E]"
   },
   {
     "idx": 54,
     "text": "Natural langauge explanation of data point 502",
-    "sql": ""
+    "sql": "filter id 502 and rationalize [E]"
   },
   {
     "idx": 37,
     "text": "Inform me the recall score please.",
-    "sql": ""
+    "sql": "score recall [E]"
   },
   {
     "idx": 112,
     "text": "cfe for data point 5?",
-    "sql": ""
+    "sql": "filter id 5 and cfe [E]"
   },
   {
     "idx": 3,
     "text": "Total number of points?",
-    "sql": ""
+    "sql": "countdata [E]"
   },
   {
     "idx": 25,
     "text": "Would you mind telling me the amount of points that are wrongly classified?",
-    "sql": ""
+    "sql": "mistake count [E]"
   }
 ]

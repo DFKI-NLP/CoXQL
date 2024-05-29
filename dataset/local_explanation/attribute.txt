@@ -32,10 +32,10 @@ User: What is the prediction for id 1553 and why do you predict it?
 Parsed: filter id 1553 and predict and nlpattribute all  default[E]
 
 User: What does my model predict for data 33? Next, once you've completed this, could you tell me why the model predicts it?
-Parsed: filter id 33 and predict and nlpattribute all  default[E]
+Parsed: filter id 33 and predict and nlpattribute all default [E]
 
 User: Explain my model's prediction for data 21 and then follow up with the rationale for the prediction!
-Parsed: filter id 21 and predict and nlpattribute all  default[E]
+Parsed: filter id 21 and predict and nlpattribute all default [E]
 
 User: what's the most important feature for data point 33 by lime?
 Parsed: filter id 33 and nlpattribute all lime [E]
