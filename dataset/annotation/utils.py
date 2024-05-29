@@ -42,7 +42,7 @@ def get_annotation_with_order(data):
 
 def calculate_IAA():
 
-    f = open("./coxql_test_annotation1.json.json")
+    f = open("./coxql_test_annotation1.json")
     data = json.load(f)
     rater1 = [i["sql"] for i in data]
 
