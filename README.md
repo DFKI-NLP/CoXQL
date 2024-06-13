@@ -1,6 +1,8 @@
 
 # CoXQL: A Dataset for Parsing Explanation Requests in Conversational XAI Systems
 
+🗒️ arXiv link: https://arxiv.org/abs/2406.08101
+
 **Co**nversational E**x**planation **Q**uery **L**anguage (CoXQL): A text-to-SQL-like benchmark.
 
 ## 🚀 Setup
