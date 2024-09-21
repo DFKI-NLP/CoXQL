@@ -1,6 +1,6 @@
 
 # CoXQL: A Dataset for Parsing Explanation Requests in Conversational XAI Systems
-
+**2024-09-20:** 🍻 Accepted to [EMNLP 2024](https://2024.emnlp.org/) Findings!<br>
 🗒️ arXiv link: https://arxiv.org/abs/2406.08101
 
 **Co**nversational E**x**planation **Q**uery **L**anguage (CoXQL): A text-to-SQL-like benchmark.
@@ -63,3 +63,16 @@ python calcualte_parsing_accuracy.py {guided_decoding, multi_prompt, multi_promp
 | **sqlcoder** | 7B | https://huggingface.co/defog/sqlcoder-7b-2|
 | **Llama3** | 8B | https://huggingface.co/meta-llama/Meta-Llama-3-8B|
 | **Llama3** | 70B | https://huggingface.co/meta-llama/Meta-Llama-3-70B|
+
+## Citation
+```bibtex
+@misc{wang2024coxqldatasetparsingexplanation,
+      title={CoXQL: A Dataset for Parsing Explanation Requests in Conversational XAI Systems}, 
+      author={Qianli Wang and Tatiana Anikina and Nils Feldhus and Simon Ostermann and Sebastian Möller},
+      year={2024},
+      eprint={2406.08101},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2406.08101}, 
+}
+```
